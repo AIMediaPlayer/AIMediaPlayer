@@ -14,7 +14,7 @@ namespace AIMediaPlayer
         public override void Initialize()
         {
             AvaloniaXamlLoader.Load(this);
-
+            LibVLCSharp.Shared.Core.Initialize();
         }
 
         public override void OnFrameworkInitializationCompleted()

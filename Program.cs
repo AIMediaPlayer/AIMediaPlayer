@@ -21,5 +21,6 @@ namespace AIMediaPlayer
 #endif
                 .WithInterFont()
                 .LogToTrace();
+                
     }
 }
