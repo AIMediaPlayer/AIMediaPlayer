@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\ViewModels\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ViewModelBase.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\ViewModels\\ViewModelBase.cs",
+              "RelativeToolTip": "ViewModels\\ViewModelBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T19:24:57.651Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -35,38 +52,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "App.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\App.axaml.cs",
-              "RelativeDocumentMoniker": "App.axaml.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\App.axaml.cs",
-              "RelativeToolTip": "App.axaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAUAAAAAAAAAA==",
+              "Title": "MainWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\Views\\MainWindow.axaml.cs",
+              "RelativeDocumentMoniker": "Views\\MainWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\Views\\MainWindow.axaml.cs",
+              "RelativeToolTip": "Views\\MainWindow.axaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T17:12:00.832Z",
+              "WhenOpened": "2026-04-11T18:11:45.068Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainWindow.axaml",
               "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\Views\\MainWindow.axaml",
               "RelativeDocumentMoniker": "Views\\MainWindow.axaml",
               "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\Views\\MainWindow.axaml",
               "RelativeToolTip": "Views\\MainWindow.axaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-11T17:05:05.246Z"
+              "WhenOpened": "2026-04-11T17:05:05.246Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainWindowViewModel.cs",
               "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\ViewModels\\MainWindowViewModel.cs",
               "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T17:04:58.032Z"
+              "WhenOpened": "2026-04-11T17:04:58.032Z",
+              "EditorCaption": ""
             }
           ]
         }

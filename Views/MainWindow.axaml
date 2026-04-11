@@ -1,20 +1,50 @@
-<Window xmlns="https://github.com/avaloniaui"
+﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:AIMediaPlayer.ViewModels"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:vlc="clr-namespace:LibVLCSharp.Avalonia;assembly=LibVLCSharp.Avalonia"
         x:Class="AIMediaPlayer.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="AIMediaPlayer">
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d" 
+        d:DesignWidth="1000" d:DesignHeight="550"
+        Title="AI Media Player"
+        Icon="/Assets/logo.ico">
 
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
+    <Grid RowDefinitions="*, Auto" Background="gray">
+        <vlc:VideoView Name="VideoPlayer" 
+                       Grid.Row="0" 
+                       HorizontalAlignment="Stretch" 
+                       VerticalAlignment="Stretch" />
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Border Grid.Row="1" Background="#2b2b2b" Padding="15,10">
+            <Grid ColumnDefinitions="Auto, *, Auto">
+                
+                <Button Grid.Column="0" 
+                        Content="Open file" 
+                        Command="{Binding OpenFileCommand}" 
+                        CommandParameter="{Binding $parent[Window].StorageProvider}"
+                        Padding="10,5"/>
 
+                <StackPanel Grid.Column="1" 
+                            Orientation="Horizontal" 
+                            HorizontalAlignment="Center" 
+                            Spacing="10">
+                    <Button Content="Play" 
+                            Click="Play_OnClick" 
+                            Background="#4CAF50" 
+                            Foreground="White"
+                            Width="80"
+                            HorizontalContentAlignment="Center"/>
+                    <Button Content="Pause" 
+                            Click="Pause_OnClick" 
+                            Width="80"
+                            HorizontalContentAlignment="Center"/>
+                </StackPanel>
+
+                <Rectangle Grid.Column="2" Width="110" Height="0" />
+                
+            </Grid>
+        </Border>
+    </Grid>
 </Window>
