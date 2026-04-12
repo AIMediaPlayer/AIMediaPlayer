@@ -21,12 +21,11 @@ namespace AIMediaPlayer.ViewModels
             var result = await storageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
             {
                 Title = "Alege un fișier video",
-                // Create a custom filter for video files
                 FileTypeFilter = new[]
                 {
             new FilePickerFileType("Fișiere Video")
             {
-                Patterns = new[] { "*.mp4", "*.mkv", "*.avi", "*.mov", "*.wmv" }
+                Patterns = new[] { "*.mp4", "*.mkv", "*.avi", "*.mov", "*.wmv","*.mp3" }
             }
         },
                 AllowMultiple = false

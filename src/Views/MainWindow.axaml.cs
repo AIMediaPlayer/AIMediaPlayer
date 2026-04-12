@@ -25,6 +25,22 @@ public partial class MainWindow : Window
 
         _mediaPlayer = new MediaPlayer(_libVLC);
 
+        _mediaPlayer.Playing += (s, e) =>
+        {
+            Dispatcher.UIThread.Post(() =>
+            {
+                PlayPauseButton.Content = "❚❚";
+            });
+        };
+
+        _mediaPlayer.Paused += (s, e) =>
+        {
+            Dispatcher.UIThread.Post(() =>
+            {
+                PlayPauseButton.Content = "▶";
+            });
+        };
+
         this.Loaded += (s, e) =>
         {
             VideoPlayer.MediaPlayer = _mediaPlayer;
@@ -41,7 +57,22 @@ public partial class MainWindow : Window
                 {
                     if (args.PropertyName == nameof(vm.VideoSource) && vm.VideoSource != null)
                     {
-                        _mediaPlayer.Media = new Media(_libVLC, vm.VideoSource);
+                        string baseDir = AppDomain.CurrentDomain.BaseDirectory;
+                        // TO DO
+                        //pentru subitrari, merge doar pentru un anumit fisier, nu pentru toate !!!!!!
+                        //string subtitlePath = System.IO.Path.Combine(baseDir, "resources", "transcript.srt");
+
+                        //if (!System.IO.File.Exists(subtitlePath))
+                        //{
+                        //    System.Diagnostics.Debug.WriteLine($"!!! EROARE: Fișierul nu există la: {subtitlePath}");
+                        //    return;
+                        //}
+
+                        var media = new Media(_libVLC, vm.VideoSource);
+                        //media.AddOption($":sub-file={subtitlePath}");
+                        //media.AddOption(":subsdec-encoding=UTF-8"); 
+
+                        _mediaPlayer.Media = media;
                         _mediaPlayer.Play();
                     }
                 };
@@ -97,21 +128,36 @@ public partial class MainWindow : Window
     //    _inactivityTimer.Stop();
     //    _inactivityTimer.Start();
     //}
-    private void Play_OnClick(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-    {
-        _mediaPlayer.Play();
-    }
+    //private void Play_OnClick(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    //{
+    //    _mediaPlayer.Play();
+        
+    //}
     protected override void OnClosed(EventArgs e)
     {
         _mediaPlayer?.Dispose();
         _libVLC?.Dispose();
         base.OnClosed(e);
     }
-    private void Pause_OnClick(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    //private void Pause_OnClick(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    //{
+    //    if (_mediaPlayer.IsPlaying)
+    //    {
+    //        _mediaPlayer.SetPause(true);
+    //    }
+    //}
+
+    private void PlayPause_OnClick(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
+        if (_mediaPlayer == null) return;
+
         if (_mediaPlayer.IsPlaying)
         {
             _mediaPlayer.SetPause(true);
+        }
+        else
+        {
+            _mediaPlayer.Play();
         }
     }
 }

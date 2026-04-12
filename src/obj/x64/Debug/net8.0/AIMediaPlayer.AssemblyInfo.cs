@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AIMediaPlayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8db4fe4ba3c1a3dd4fd1017fe6c640a6329ad2fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb33f718e9ebf34b2227c39bec76951d20951502")]
 [assembly: System.Reflection.AssemblyProductAttribute("AIMediaPlayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AIMediaPlayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
