@@ -1006,3 +1006,4 @@ C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\obj\x64\Debug\net8.0\refint
 C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\obj\x64\Debug\net8.0\AIMediaPlayer.pdb
 C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\obj\x64\Debug\net8.0\AIMediaPlayer.genruntimeconfig.cache
 C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\obj\x64\Debug\net8.0\ref\AIMediaPlayer.dll
+C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\bin\x64\Debug\net8.0\resources\transcript.srt

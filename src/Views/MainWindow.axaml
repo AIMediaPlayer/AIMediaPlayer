@@ -8,6 +8,28 @@
         Width="1000" Height="550"
         Icon="/Assets/logo.ico">
 
+    <Window.Styles>
+        <Style Selector="Button#PlayPauseButton">
+            <Setter Property="Background" Value="#00C853" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Transitions">
+                <Transitions>
+                    <BrushTransition Property="Background" Duration="0:0:0.2"/>
+                </Transitions>
+            </Setter>
+        </Style>
+
+       <Style Selector="Button#PlayPauseButton:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="#22FFFFFF"/> 
+        <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style Selector="Button#PlayPauseButton:pressed /template/ ContentPresenter">
+            <Setter Property="Background" Value="#44FFFFFF"/> 
+        </Style>
+
+        </Window.Styles>
+
     <Grid Name="InputLayer" Background="#FF000000">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -36,9 +58,14 @@
                         CommandParameter="{Binding $parent[Window].StorageProvider}" Padding="10,5"/>
 
                 <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
-                    <Button Content="Play" Click="Play_OnClick" Background="#4CAF50" Foreground="White" Width="80" HorizontalContentAlignment="Center"/>
-                    <Button Content="Pause" Click="Pause_OnClick" Width="80" HorizontalContentAlignment="Center"/>
-                </StackPanel>
+              <Button Name="PlayPauseButton" 
+                Content="▶" 
+                Click="PlayPause_OnClick" 
+                Width="65" 
+                FontSize="20"
+                HorizontalContentAlignment="Center"/>
+
+            </StackPanel>
 
                 <Rectangle Grid.Column="2" Width="110" Height="0" />
             </Grid>
