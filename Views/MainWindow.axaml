@@ -4,46 +4,43 @@
         xmlns:vlc="clr-namespace:LibVLCSharp.Avalonia;assembly=LibVLCSharp.Avalonia"
         x:Class="AIMediaPlayer.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        mc:Ignorable="d" 
-        d:DesignWidth="1000" d:DesignHeight="550"
         Title="AI Media Player"
+        Width="1000" Height="550"
         Icon="/Assets/logo.ico">
 
-    <Grid RowDefinitions="*, Auto" Background="gray">
+    <Grid Name="InputLayer" Background="#FF000000">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
         <vlc:VideoView Name="VideoPlayer" 
-                       Grid.Row="0" 
+                       Grid.Row="0"
                        HorizontalAlignment="Stretch" 
                        VerticalAlignment="Stretch" />
 
-        <Border Grid.Row="1" Background="#2b2b2b" Padding="15,10">
-            <Grid ColumnDefinitions="Auto, *, Auto">
-                
-                <Button Grid.Column="0" 
-                        Content="Open file" 
-                        Command="{Binding OpenFileCommand}" 
-                        CommandParameter="{Binding $parent[Window].StorageProvider}"
-                        Padding="10,5"/>
+        <Border Name="ControlBar" 
+                Grid.Row="1"
+                Background="#2b2b2b" 
+                Padding="15,10"
+                Opacity="1">
 
-                <StackPanel Grid.Column="1" 
-                            Orientation="Horizontal" 
-                            HorizontalAlignment="Center" 
-                            Spacing="10">
-                    <Button Content="Play" 
-                            Click="Play_OnClick" 
-                            Background="#4CAF50" 
-                            Foreground="White"
-                            Width="80"
-                            HorizontalContentAlignment="Center"/>
-                    <Button Content="Pause" 
-                            Click="Pause_OnClick" 
-                            Width="80"
-                            HorizontalContentAlignment="Center"/>
+            <Border.Transitions>
+                <Transitions>
+                    <DoubleTransition Property="Opacity" Duration="0:0:1"/>
+                </Transitions>
+            </Border.Transitions>
+
+            <Grid ColumnDefinitions="Auto, *, Auto">
+                <Button Grid.Column="0" Content="Open file" Command="{Binding OpenFileCommand}" 
+                        CommandParameter="{Binding $parent[Window].StorageProvider}" Padding="10,5"/>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+                    <Button Content="Play" Click="Play_OnClick" Background="#4CAF50" Foreground="White" Width="80" HorizontalContentAlignment="Center"/>
+                    <Button Content="Pause" Click="Pause_OnClick" Width="80" HorizontalContentAlignment="Center"/>
                 </StackPanel>
 
                 <Rectangle Grid.Column="2" Width="110" Height="0" />
-                
             </Grid>
         </Border>
     </Grid>
