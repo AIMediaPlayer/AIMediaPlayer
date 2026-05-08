@@ -37,11 +37,12 @@ namespace local
             this.buttonLoadFile = new System.Windows.Forms.Button();
             this.videoView = new LibVLCSharp.WinForms.VideoView();
             this.panelVideo = new System.Windows.Forms.Panel();
+            this.mediaProgressBarAudio = new MediaPlayerLocal.MediaProgressBar();
             this.labelMediaTimeSpan = new System.Windows.Forms.Label();
+            this.mediaProgressBar = new MediaPlayerLocal.MediaProgressBar();
             this.textBoxCurrentMediaTitle = new System.Windows.Forms.TextBox();
             this.panelPlaylist = new System.Windows.Forms.Panel();
             this.timerUpdateUI = new System.Windows.Forms.Timer(this.components);
-            this.mediaProgressBar = new MediaPlayerLocal.MediaProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.videoView)).BeginInit();
             this.panelVideo.SuspendLayout();
             this.panelPlaylist.SuspendLayout();
@@ -111,6 +112,7 @@ namespace local
             // panelVideo
             // 
             this.panelVideo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelVideo.Controls.Add(this.mediaProgressBarAudio);
             this.panelVideo.Controls.Add(this.labelMediaTimeSpan);
             this.panelVideo.Controls.Add(this.mediaProgressBar);
             this.panelVideo.Controls.Add(this.textBoxCurrentMediaTitle);
@@ -122,6 +124,17 @@ namespace local
             this.panelVideo.Size = new System.Drawing.Size(893, 578);
             this.panelVideo.TabIndex = 7;
             // 
+            // mediaProgressBarAudio
+            // 
+            this.mediaProgressBarAudio.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.mediaProgressBarAudio.Location = new System.Drawing.Point(696, 440);
+            this.mediaProgressBarAudio.Name = "mediaProgressBarAudio";
+            this.mediaProgressBarAudio.Size = new System.Drawing.Size(177, 25);
+            this.mediaProgressBarAudio.TabIndex = 13;
+            this.mediaProgressBarAudio.Value = 0.5F;
+            this.mediaProgressBarAudio.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBarAudio_MouseMove);
+            this.mediaProgressBarAudio.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBarAudio_MouseUp);
+            // 
             // labelMediaTimeSpan
             // 
             this.labelMediaTimeSpan.AutoSize = true;
@@ -131,6 +144,18 @@ namespace local
             this.labelMediaTimeSpan.Size = new System.Drawing.Size(165, 22);
             this.labelMediaTimeSpan.TabIndex = 12;
             this.labelMediaTimeSpan.Text = "00:00:00 / 00:00:00";
+            // 
+            // mediaProgressBar
+            // 
+            this.mediaProgressBar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.mediaProgressBar.Location = new System.Drawing.Point(18, 407);
+            this.mediaProgressBar.Name = "mediaProgressBar";
+            this.mediaProgressBar.Size = new System.Drawing.Size(855, 33);
+            this.mediaProgressBar.TabIndex = 11;
+            this.mediaProgressBar.Value = 0F;
+            this.mediaProgressBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseDown);
+            this.mediaProgressBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseMove);
+            this.mediaProgressBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseUp);
             // 
             // textBoxCurrentMediaTitle
             // 
@@ -158,19 +183,6 @@ namespace local
             // 
             this.timerUpdateUI.Enabled = true;
             this.timerUpdateUI.Interval = 500;
-            // 
-            // mediaProgressBar
-            // 
-            this.mediaProgressBar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.mediaProgressBar.Location = new System.Drawing.Point(18, 407);
-            this.mediaProgressBar.Name = "mediaProgressBar";
-            this.mediaProgressBar.Size = new System.Drawing.Size(855, 33);
-            this.mediaProgressBar.TabIndex = 11;
-            this.mediaProgressBar.Value = 0F;
-            this.mediaProgressBar.Load += new System.EventHandler(this.mediaProgressBar_Load);
-            this.mediaProgressBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseDown);
-            this.mediaProgressBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseMove);
-            this.mediaProgressBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseUp);
             // 
             // Form1
             // 
@@ -203,6 +215,7 @@ namespace local
 
         private MediaProgressBar mediaProgressBar;
         private System.Windows.Forms.Label labelMediaTimeSpan;
+        private MediaProgressBar mediaProgressBarAudio;
     }
 }
 

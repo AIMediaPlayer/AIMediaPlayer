@@ -291,9 +291,23 @@ namespace local
             }
         }
 
-        private void mediaProgressBar_Load(object sender, EventArgs e)
+        private void mediaProgressBarAudio_MouseUp(object sender, MouseEventArgs e)
         {
+            if (_player.WillPlay)
+            {
+                _player.Volume = (int)(mediaProgressBarAudio.Value * 100);
+            }
+        }
 
+        private void mediaProgressBarAudio_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mediaProgressBarAudio.IsDragging)
+            {
+                if (_player.WillPlay)
+                {
+                    _player.Volume = (int)(mediaProgressBarAudio.Value * 100);
+                }
+            }
         }
     }
 }
