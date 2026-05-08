@@ -1,4 +1,6 @@
-﻿namespace local
+﻿using MediaPlayerLocal;
+
+namespace local
 {
     partial class Form1
     {
@@ -35,13 +37,13 @@
             this.buttonLoadFile = new System.Windows.Forms.Button();
             this.videoView = new LibVLCSharp.WinForms.VideoView();
             this.panelVideo = new System.Windows.Forms.Panel();
-            this.trackBarMediaSeek = new System.Windows.Forms.TrackBar();
+            this.labelMediaTimeSpan = new System.Windows.Forms.Label();
             this.textBoxCurrentMediaTitle = new System.Windows.Forms.TextBox();
             this.panelPlaylist = new System.Windows.Forms.Panel();
             this.timerUpdateUI = new System.Windows.Forms.Timer(this.components);
+            this.mediaProgressBar = new MediaPlayerLocal.MediaProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.videoView)).BeginInit();
             this.panelVideo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarMediaSeek)).BeginInit();
             this.panelPlaylist.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +82,7 @@
             this.listBoxTitles.Size = new System.Drawing.Size(314, 468);
             this.listBoxTitles.TabIndex = 3;
             this.listBoxTitles.SelectedIndexChanged += new System.EventHandler(this.listBoxTitles_SelectedIndexChanged);
+            this.listBoxTitles.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxTitles_DoubleClick);
             // 
             // buttonLoadFile
             // 
@@ -98,7 +101,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.videoView.BackColor = System.Drawing.Color.Black;
-            this.videoView.Location = new System.Drawing.Point(18, 39);
+            this.videoView.Location = new System.Drawing.Point(18, 29);
             this.videoView.MediaPlayer = null;
             this.videoView.Name = "videoView";
             this.videoView.Size = new System.Drawing.Size(855, 372);
@@ -108,7 +111,8 @@
             // panelVideo
             // 
             this.panelVideo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelVideo.Controls.Add(this.trackBarMediaSeek);
+            this.panelVideo.Controls.Add(this.labelMediaTimeSpan);
+            this.panelVideo.Controls.Add(this.mediaProgressBar);
             this.panelVideo.Controls.Add(this.textBoxCurrentMediaTitle);
             this.panelVideo.Controls.Add(this.videoView);
             this.panelVideo.Controls.Add(this.buttonOpenFile);
@@ -118,15 +122,15 @@
             this.panelVideo.Size = new System.Drawing.Size(893, 578);
             this.panelVideo.TabIndex = 7;
             // 
-            // trackBarMediaSeek
+            // labelMediaTimeSpan
             // 
-            this.trackBarMediaSeek.Location = new System.Drawing.Point(18, 417);
-            this.trackBarMediaSeek.Name = "trackBarMediaSeek";
-            this.trackBarMediaSeek.Size = new System.Drawing.Size(855, 56);
-            this.trackBarMediaSeek.TabIndex = 10;
-            this.trackBarMediaSeek.Scroll += new System.EventHandler(this.trackBarMediaSeek_Scroll);
-            this.trackBarMediaSeek.MouseDown += new System.Windows.Forms.MouseEventHandler(this.trackBarMediaSeek_MouseDown);
-            this.trackBarMediaSeek.MouseUp += new System.Windows.Forms.MouseEventHandler(this.trackBarMediaSeek_MouseUp);
+            this.labelMediaTimeSpan.AutoSize = true;
+            this.labelMediaTimeSpan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.labelMediaTimeSpan.Location = new System.Drawing.Point(21, 443);
+            this.labelMediaTimeSpan.Name = "labelMediaTimeSpan";
+            this.labelMediaTimeSpan.Size = new System.Drawing.Size(165, 22);
+            this.labelMediaTimeSpan.TabIndex = 12;
+            this.labelMediaTimeSpan.Text = "00:00:00 / 00:00:00";
             // 
             // textBoxCurrentMediaTitle
             // 
@@ -155,6 +159,19 @@
             this.timerUpdateUI.Enabled = true;
             this.timerUpdateUI.Interval = 500;
             // 
+            // mediaProgressBar
+            // 
+            this.mediaProgressBar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.mediaProgressBar.Location = new System.Drawing.Point(18, 407);
+            this.mediaProgressBar.Name = "mediaProgressBar";
+            this.mediaProgressBar.Size = new System.Drawing.Size(855, 33);
+            this.mediaProgressBar.TabIndex = 11;
+            this.mediaProgressBar.Value = 0F;
+            this.mediaProgressBar.Load += new System.EventHandler(this.mediaProgressBar_Load);
+            this.mediaProgressBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseDown);
+            this.mediaProgressBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseMove);
+            this.mediaProgressBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseUp);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -167,7 +184,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.videoView)).EndInit();
             this.panelVideo.ResumeLayout(false);
             this.panelVideo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarMediaSeek)).EndInit();
             this.panelPlaylist.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -183,8 +199,10 @@
         private System.Windows.Forms.TextBox textBoxCurrentMediaTitle;
         private System.Windows.Forms.Panel panelVideo;
         private System.Windows.Forms.Panel panelPlaylist;
-        private System.Windows.Forms.TrackBar trackBarMediaSeek;
         private System.Windows.Forms.Timer timerUpdateUI;
+
+        private MediaProgressBar mediaProgressBar;
+        private System.Windows.Forms.Label labelMediaTimeSpan;
     }
 }
 

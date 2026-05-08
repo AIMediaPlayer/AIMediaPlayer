@@ -7,6 +7,7 @@ using LibVLCSharp.Shared;
 using MediaModel;
 using MediaPresenter;
 using System.Threading.Tasks;
+using MediaPlayerLocal;
 
 
 namespace local
@@ -18,6 +19,8 @@ namespace local
 
         private LibVLC _vlc;
         private MediaPlayer _player;
+        private Media _currentMedia;
+        private MediaProgressBar _mediaProgressBar;
 
         private bool _isUserSeeking;
 
@@ -30,14 +33,23 @@ namespace local
         /// </remarks>
         public Media CurrentMedia
         {
-            get { return _player.Media; }
+            get { return _currentMedia; }
             set 
             { 
-                _player.Media = value;
-                trackBarMediaSeek.Maximum = (int)_player.Media.Duration;
+                _currentMedia = value;
             }
         }
 
+        public Media SetPlayer
+        {
+            set
+            {
+                _player.Media = value;
+                TimeSpan currentTimeSpan = TimeSpan.FromMilliseconds(_player.Time);
+                TimeSpan totalTimeSpan = TimeSpan.FromMilliseconds(_player.Media.Duration);
+                labelMediaTimeSpan.Text = $"{currentTimeSpan:hh\\:mm\\:ss} / {totalTimeSpan:hh\\:mm\\:ss}";
+            }
+        }
         public Form1()
         {
             InitializeComponent();
@@ -47,13 +59,8 @@ namespace local
             // Creare componente
             _vlc = new LibVLC();
             _player = new MediaPlayer(_vlc);
-
-            Panel videoPanel = new Panel()
-            {
-                Dock = DockStyle.Fill,
-            };
-            
             _playlistManager = new PlaylistManager(_vlc);
+            _mediaProgressBar = new MediaProgressBar();
 
 
             // Atasare MediaPlayer la un control de tip VideoView specific din WinForms
@@ -65,7 +72,11 @@ namespace local
                 // La fiecare tick, se modifica bara de redare cu timpul de redare
                 if (_player.IsPlaying)
                 {
-                    trackBarMediaSeek.Value = (int)_player.Time;
+                    mediaProgressBar.Value = (float)_player.Time / _player.Media.Duration;
+                    mediaProgressBar.Invalidate();
+                    TimeSpan currentTimeSpan = TimeSpan.FromMilliseconds(_player.Time);
+                    TimeSpan totalTimeSpan = TimeSpan.FromMilliseconds(_player.Media.Duration);
+                    labelMediaTimeSpan.Text = $"{currentTimeSpan:hh\\:mm\\:ss} / {totalTimeSpan:hh\\:mm\\:ss}";
                 }
             };
 
@@ -104,7 +115,8 @@ namespace local
                     // Daca parsarea a avut succes, se incepe redarea noului media
                     if (parsedResult == MediaParsedStatus.Done)
                     {
-                        StartMedia(media);
+                        CurrentMedia = media;
+                        StartMedia();
                     }
                 }
                 catch(Exception ex)
@@ -178,18 +190,23 @@ namespace local
         /// <param name="e"></param>
         private void buttonPlayMedia_Click(object sender, EventArgs e)
         {
-            if(!_player.IsPlaying)
+            if (!_player.WillPlay)
             {
-                _player.Play();
-                buttonPlayMedia.Text = "PAUSE";
+                StartMedia();
             }
             else
             {
-                _player.Pause();
-                buttonPlayMedia.Text = "PLAY";
+                if (!_player.IsPlaying)
+                {
+                    _player.Play();
+                    buttonPlayMedia.Text = "PAUSE";
+                }
+                else
+                {
+                    _player.Pause();
+                    buttonPlayMedia.Text = "PLAY";
+                }
             }
-
-
         }
 
 
@@ -200,65 +217,83 @@ namespace local
         /// <param name="e"></param>
         private void listBoxTitles_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string title = listBoxTitles.Text;
+            int index = listBoxTitles.SelectedIndex;
 
-            // Cautarea se face prin modelul playlist-ului
-            Media selectedMedia = _playlistManager.GetMedia(title);
-
-            if (selectedMedia != null)
+            if (index != -1)
             {
-                StartMedia(selectedMedia);
+                string title = listBoxTitles.GetItemText(listBoxTitles.Items[index]);
+
+                // Cautarea se face prin modelul playlist-ului
+                Media selectedMedia = _playlistManager.GetMedia(title);
+
+                if (selectedMedia != null)
+                {
+                    CurrentMedia = selectedMedia;
+                }
             }
 
+        }
+        private void listBoxTitles_DoubleClick(object sender, MouseEventArgs e)
+        {
+            // Find the index of the item under the mouse pointer
+            int index = listBoxTitles.IndexFromPoint(e.Location);
+
+            // If index is ListBox.NoMatches (-1), they clicked empty space
+            if (index != ListBox.NoMatches)
+            {
+                // Get the actual object or text
+                string title = listBoxTitles.GetItemText(listBoxTitles.Items[index]);
+
+                // Cautarea se face prin modelul playlist-ului
+                Media selectedMedia = _playlistManager.GetMedia(title);
+
+                if (selectedMedia != null)
+                {
+                    CurrentMedia = selectedMedia;
+                    StartMedia();
+                }
+            }
         }
 
         /// <summary>
         /// Seteaza obiectul media curent, incepe redarea si afiseaza informatiile despre media
         /// </summary>
         /// <param name="media"></param>
-        private void StartMedia(Media media)
+        private void StartMedia()
         {
-            CurrentMedia = media;
+            SetPlayer = CurrentMedia;
             _player.Play();
             buttonPlayMedia.Text = "PAUSE";
             textBoxCurrentMediaTitle.Text = CurrentMedia.Meta(MetadataType.Title);
         }
 
-        /// <summary>
-        /// Seteaza flag ce indica ca utilizatorul a inceput functia de Seek
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void trackBarMediaSeek_MouseDown(object sender, MouseEventArgs e)
+        private void mediaProgressBar_MouseDown(object sender, MouseEventArgs e)
         {
-            _isUserSeeking = true;
+
         }
 
-        /// <summary>
-        /// Reseteaza flag ce indica ca utilizatorul a inceput functia de Seek si modifica timpul redarii cu cel cautat
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void trackBarMediaSeek_MouseUp(object sender, MouseEventArgs e)
+        private void mediaProgressBar_MouseUp(object sender, MouseEventArgs e)
         {
-            _isUserSeeking = false;
-
-            // apply final position
-            _player.Time = trackBarMediaSeek.Value;
-        }
-
-        /// <summary>
-        /// Cat timp se modifica trackBar, se cauta si un nou timp de redare
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void trackBarMediaSeek_Scroll(object sender, EventArgs e)
-        {
-            if (_isUserSeeking)
+            if (_player.WillPlay)
             {
-                // optional: live seeking while dragging
-                _player.Time = trackBarMediaSeek.Value;
+                _player.Time = (int)(mediaProgressBar.Value * _player.Media.Duration);
             }
+        }
+
+        private void mediaProgressBar_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mediaProgressBar.IsDragging)
+            {
+                if (_player.WillPlay)
+                {
+                    _player.Time = (int)(mediaProgressBar.Value * _player.Media.Duration);
+                }
+            }
+        }
+
+        private void mediaProgressBar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

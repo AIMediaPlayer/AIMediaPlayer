@@ -1299,3 +1299,4 @@ C:\Users\leo\Desktop\FACULTATE\ANUL III\sem2\IP\proiect\mediaPlayer\local\MediaP
 C:\Users\leo\Desktop\FACULTATE\ANUL III\sem2\IP\proiect\mediaPlayer\local\MediaPlayerLocal\obj\Debug\MediaPla.69619BCB.Up2Date
 C:\Users\leo\Desktop\FACULTATE\ANUL III\sem2\IP\proiect\mediaPlayer\local\MediaPlayerLocal\obj\Debug\MediaPlayerLocal.exe
 C:\Users\leo\Desktop\FACULTATE\ANUL III\sem2\IP\proiect\mediaPlayer\local\MediaPlayerLocal\obj\Debug\MediaPlayerLocal.pdb
+C:\Users\leo\Desktop\FACULTATE\ANUL III\sem2\IP\proiect\mediaPlayer\local\MediaPlayerLocal\obj\Debug\MediaPlayerLocal.MediaProgressBar.resources
