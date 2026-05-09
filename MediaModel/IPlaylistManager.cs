@@ -14,9 +14,21 @@ namespace MediaModel
     public interface IPlaylistManager
     {
         Task<bool> Add(Uri uri);
-
         Media GetMedia(string title);
         List<string> ListAll();
+        void SetCurrentIndex(int index);
+
+        void Next();
+        void Previous();
+        void Shuffle();
+        void Repeat();
+        void Remove(string title);
+
+        void Save(string path);
+
+        void Load(string path);
+
+        Media GetCurrent();
 
     }
 }

@@ -26,3 +26,31 @@ C:\Users\leo\Desktop\FACULTATE\ANUL III\sem2\IP\proiect\mediaPlayer\local\MediaC
 C:\Users\leo\Desktop\FACULTATE\ANUL III\sem2\IP\proiect\mediaPlayer\local\MediaCommons\obj\Debug\MediaCom.10E942DA.Up2Date
 C:\Users\leo\Desktop\FACULTATE\ANUL III\sem2\IP\proiect\mediaPlayer\local\MediaCommons\obj\Debug\MediaCommons.dll
 C:\Users\leo\Desktop\FACULTATE\ANUL III\sem2\IP\proiect\mediaPlayer\local\MediaCommons\obj\Debug\MediaCommons.pdb
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\MediaCommons.dll
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\MediaCommons.pdb
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\LibVLCSharp.dll
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\LibVLCSharp.Forms.dll
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\System.Buffers.dll
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\System.Memory.dll
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\System.Numerics.Vectors.dll
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\Xamarin.Forms.Core.dll
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\Xamarin.Forms.Platform.dll
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\LibVLCSharp.xml
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\LibVLCSharp.Forms.xml
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\System.Buffers.xml
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\System.Memory.xml
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\System.Numerics.Vectors.xml
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\Xamarin.Forms.Core.pdb
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\Xamarin.Forms.Core.xml
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\Xamarin.Forms.Xaml.pdb
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\bin\Debug\fr\LibVLCSharp.Forms.resources.dll
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\obj\Debug\MediaCommons.csproj.AssemblyReference.cache
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\obj\Debug\MediaCommons.csproj.CoreCompileInputs.cache
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\obj\Debug\XamlC.stamp
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\obj\Debug\MediaCom.10E942DA.Up2Date
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\obj\Debug\MediaCommons.dll
+D:\IP\Proiect\AIMediaPlayer\MediaCommons\obj\Debug\MediaCommons.pdb

@@ -218,17 +218,13 @@ namespace local
 
             if (index != -1)
             {
-                string title = listBoxTitles.GetItemText(listBoxTitles.Items[index]);
+                _playlistManager.SetCurrentIndex(index); // 🔥 IMPORTANT FIX
 
-                // Cautarea se face prin modelul playlist-ului
-                Media selectedMedia = _playlistManager.GetMedia(title);
+                CurrentMedia = _playlistManager.GetCurrent();
 
-                if (selectedMedia != null)
-                {
-                    CurrentMedia = selectedMedia;
-                }
+                if (CurrentMedia != null)
+                    StartMedia();
             }
-
         }
         private void listBoxTitles_DoubleClick(object sender, MouseEventArgs e)
         {
@@ -333,6 +329,57 @@ namespace local
                 {
                     _player.Play();
                     buttonPlayMedia.Text = "PAUSE";
+                }
+            }
+        }
+
+        private void buttonNext_Click(object sender, EventArgs e)
+        {
+            CurrentMedia = _presenter.Next();
+            StartMedia();
+        }
+
+        private void buttonPrevious_Click(object sender, EventArgs e)
+        {
+            CurrentMedia = _presenter.Previous();
+            StartMedia();
+        }
+
+        private void buttonShuffle_Click(object sender, EventArgs e)
+        {
+            CurrentMedia = _presenter.Shuffle();
+            StartMedia();
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = "Playlist (*.json)|*.json";
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                _playlistManager.Save(dlg.FileName);
+                MessageBox.Show("Media curentă salvată în playlist!");
+            }
+        }
+
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "Playlist (*.json)|*.json";
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                _playlistManager.Load(dlg.FileName);
+
+                UpdateMediaList();
+
+                var media = _playlistManager.GetCurrent();
+
+                if (media != null)
+                {
+                    CurrentMedia = media;
+                    StartMedia();
                 }
             }
         }

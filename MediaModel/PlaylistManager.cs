@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LibVLCSharp.Forms;
+﻿using LibVLCSharp.Forms;
 using LibVLCSharp.Forms.Shared;
 using LibVLCSharp.Shared;
-using System.Security.Policy;
 using MediaCommons;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Security.Policy;
+using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace MediaModel
 {
@@ -17,6 +19,8 @@ namespace MediaModel
     /// </summary>
     public class PlaylistManager : IPlaylistManager
     {
+        private int _currentIndex = 0;
+        private bool _repeat = false;
         private List<Media> _mediaList;
         private LibVLC _vlc;
 
@@ -85,6 +89,121 @@ namespace MediaModel
             }
 
             return titleList;
+        }
+
+        public void SetCurrentIndex(int index)
+        {
+            if (index >= 0 && index < _mediaList.Count)
+                _currentIndex = index;
+        }
+
+        public void Next()
+        {
+            if (_mediaList.Count == 0) return;
+
+            _currentIndex++;
+
+            if (_currentIndex >= _mediaList.Count)
+                _currentIndex = _repeat ? 0 : _mediaList.Count - 1;
+        }
+
+        public void Previous()
+        {
+            if (_mediaList.Count == 0) return;
+
+            _currentIndex--;
+
+            if (_currentIndex < 0)
+                _currentIndex = 0;
+        }
+
+        public void Shuffle()
+        {
+            _mediaList = _mediaList.OrderBy(x => Guid.NewGuid()).ToList();
+            _currentIndex = 0;
+        }
+
+        public void Repeat()
+        {
+            _repeat = !_repeat;
+        }
+
+        public void Remove(string title)
+        {
+            var media = _mediaList.FirstOrDefault(m => m.Meta(MetadataType.Title) == title);
+
+            if (media != null)
+            {
+                int index = _mediaList.IndexOf(media);
+                _mediaList.Remove(media);
+
+                if (index <= _currentIndex && _currentIndex > 0)
+                    _currentIndex--;
+            }
+        }
+
+        public void Save(string path)
+        {
+            List<string> items = new List<string>();
+
+            // 1. dacă fișierul există, îl citim
+            if (File.Exists(path))
+            {
+                var json = File.ReadAllText(path);
+                dynamic state = JsonConvert.DeserializeObject(json);
+
+                foreach (var item in state.Items)
+                {
+                    items.Add(item.ToString());
+                }
+            }
+
+            // 2. adăugăm media curentă
+            if (_mediaList.Count > 0 && _currentIndex >= 0)
+            {
+                string current = _mediaList[_currentIndex].Mrl;
+
+                if (!items.Contains(current)) // evităm duplicate
+                    items.Add(current);
+            }
+
+            // 3. salvăm înapoi
+            var obj = new
+            {
+                CurrentIndex = items.Count - 1,
+                Items = items
+            };
+
+            File.WriteAllText(path, JsonConvert.SerializeObject(obj, Formatting.Indented));
+        }
+
+        public void Load(string path)
+        {
+            if (!File.Exists(path))
+                return;
+
+            var json = File.ReadAllText(path);
+            dynamic state = JsonConvert.DeserializeObject(json);
+
+            _mediaList.Clear();
+
+            foreach (var item in state.Items)
+            {
+                string url = item.ToString();
+                var media = new Media(_vlc, new Uri(url));
+                _mediaList.Add(media);
+            }
+
+            _currentIndex = (int)state.CurrentIndex;
+
+            if (_currentIndex < 0 || _currentIndex >= _mediaList.Count)
+                _currentIndex = 0;
+        }
+
+        public Media GetCurrent()
+        {
+            if (_mediaList.Count == 0) return null;
+            return _mediaList[_currentIndex];
         }
 
     }

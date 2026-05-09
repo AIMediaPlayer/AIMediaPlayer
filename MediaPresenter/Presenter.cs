@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MediaModel;
+﻿using MediaModel;
+using LibVLCSharp.Shared;
 
 
 namespace MediaPresenter
@@ -17,6 +13,22 @@ namespace MediaPresenter
             _playlistManager = playlistManager;
         }
 
-        
+        public Media Next()
+        {
+            _playlistManager.Next();
+            return _playlistManager.GetCurrent();
+        }
+
+        public Media Previous()
+        {
+            _playlistManager.Previous();
+            return _playlistManager.GetCurrent();
+        }
+
+        public Media Shuffle()
+        {
+            _playlistManager.Shuffle();
+            return _playlistManager.GetCurrent();
+        }
     }
 }

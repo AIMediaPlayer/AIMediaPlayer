@@ -20,3 +20,40 @@ C:\Users\leo\Desktop\FACULTATE\ANUL III\sem2\IP\proiect\mediaPlayer\local\MediaP
 C:\Users\leo\Desktop\FACULTATE\ANUL III\sem2\IP\proiect\mediaPlayer\local\MediaPresenter\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\leo\Desktop\FACULTATE\ANUL III\sem2\IP\proiect\mediaPlayer\local\MediaPresenter\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\leo\Desktop\FACULTATE\ANUL III\sem2\IP\proiect\mediaPlayer\local\MediaPresenter\obj\Debug\MediaPre.E1FD3044.Up2Date
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\MediaPresenter.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\MediaPresenter.pdb
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\MediaCommons.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\MediaModel.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\LibVLCSharp.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\System.Memory.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\System.Buffers.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\System.Numerics.Vectors.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\MediaCommons.pdb
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\MediaModel.pdb
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\MediaModel.dll.config
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\LibVLCSharp.xml
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\System.Memory.xml
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\System.Buffers.xml
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\System.Numerics.Vectors.xml
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\obj\Debug\MediaPresenter.csproj.AssemblyReference.cache
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\obj\Debug\MediaPresenter.csproj.CoreCompileInputs.cache
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\obj\Debug\MediaPre.E1FD3044.Up2Date
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\obj\Debug\MediaPresenter.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\obj\Debug\MediaPresenter.pdb
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\LibVLCSharp.Forms.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\LibVLCSharp.WinForms.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\Xamarin.Forms.Core.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\Xamarin.Forms.Platform.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\LibVLCSharp.Forms.xml
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\LibVLCSharp.WinForms.xml
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\Xamarin.Forms.Core.pdb
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\Xamarin.Forms.Core.xml
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\Xamarin.Forms.Xaml.pdb
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\fr\LibVLCSharp.Forms.resources.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\obj\Debug\XamlC.stamp
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\Newtonsoft.Json.dll
+D:\IP\Proiect\AIMediaPlayer\MediaPresenter\bin\Debug\Newtonsoft.Json.xml
