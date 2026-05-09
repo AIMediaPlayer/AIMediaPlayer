@@ -45,11 +45,10 @@ namespace local
             set
             {
                 _player.Media = value;
-                TimeSpan currentTimeSpan = TimeSpan.FromMilliseconds(_player.Time);
-                TimeSpan totalTimeSpan = TimeSpan.FromMilliseconds(_player.Media.Duration);
-                labelMediaTimeSpan.Text = $"{currentTimeSpan:hh\\:mm\\:ss} / {totalTimeSpan:hh\\:mm\\:ss}";
+                UpdateTimeSpan();
             }
         }
+
         public Form1()
         {
             InitializeComponent();
@@ -70,13 +69,11 @@ namespace local
             timerUpdateUI.Tick += (sender, args) =>
             {
                 // La fiecare tick, se modifica bara de redare cu timpul de redare
-                if (_player.IsPlaying)
+                if (_player.Media != null)
                 {
                     mediaProgressBar.Value = (float)_player.Time / _player.Media.Duration;
                     mediaProgressBar.Invalidate();
-                    TimeSpan currentTimeSpan = TimeSpan.FromMilliseconds(_player.Time);
-                    TimeSpan totalTimeSpan = TimeSpan.FromMilliseconds(_player.Media.Duration);
-                    labelMediaTimeSpan.Text = $"{currentTimeSpan:hh\\:mm\\:ss} / {totalTimeSpan:hh\\:mm\\:ss}";
+                    UpdateTimeSpan();
                 }
             };
 
@@ -276,7 +273,7 @@ namespace local
         {
             if (_player.WillPlay)
             {
-                _player.Time = (int)(mediaProgressBar.Value * _player.Media.Duration);
+                _player.SeekTo(TimeSpan.FromMilliseconds((long)(mediaProgressBar.Value * _player.Media.Duration)));
             }
         }
 
@@ -286,7 +283,7 @@ namespace local
             {
                 if (_player.WillPlay)
                 {
-                    _player.Time = (int)(mediaProgressBar.Value * _player.Media.Duration);
+                    _player.SeekTo(TimeSpan.FromMilliseconds((long)(mediaProgressBar.Value * _player.Media.Duration)));
                 }
             }
         }
@@ -306,6 +303,36 @@ namespace local
                 if (_player.WillPlay)
                 {
                     _player.Volume = (int)(mediaProgressBarAudio.Value * 100);
+                }
+            }
+        }
+
+        private void UpdateTimeSpan()
+        {
+            TimeSpan currentTimeSpan = TimeSpan.FromMilliseconds(_player.Time);
+            TimeSpan totalTimeSpan = TimeSpan.FromMilliseconds(_player.Media.Duration);
+            labelMediaTimeSpan.Text = $"{currentTimeSpan:hh\\:mm\\:ss} / {totalTimeSpan:hh\\:mm\\:ss}";
+        }
+
+        private void buttonStop_Click(object sender, EventArgs e)
+        {
+            if (_player.IsPlaying)
+            {
+                _player.Stop();
+                buttonPlayMedia.Text = "PLAY";
+            }
+            //UpdateTimeSpan();
+        }
+
+        private void buttonRepeat_Click(object sender, EventArgs e)
+        {
+            if (_player.Media != null)
+            {
+                _player.SeekTo(TimeSpan.FromMilliseconds(0));
+                if(!_player.IsPlaying)
+                {
+                    _player.Play();
+                    buttonPlayMedia.Text = "PAUSE";
                 }
             }
         }
