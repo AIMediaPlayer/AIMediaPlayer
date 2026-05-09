@@ -60,6 +60,7 @@ namespace local
             _player = new MediaPlayer(_vlc);
             _playlistManager = new PlaylistManager(_vlc);
             _mediaProgressBar = new MediaProgressBar();
+            _presenter = new Presenter(_playlistManager);
 
 
             // Atasare MediaPlayer la un control de tip VideoView specific din WinForms
@@ -260,6 +261,23 @@ namespace local
             textBoxCurrentMediaTitle.Text = CurrentMedia.Meta(MetadataType.Title);
         }
 
+        private void SyncListBoxToCurrent()
+        {
+            int index = listBoxTitles.SelectedIndex;
+
+            // dacă vrei corect 100%, refacem index din playlist
+            Media current = _playlistManager.GetCurrent();
+
+            for (int i = 0; i < listBoxTitles.Items.Count; i++)
+            {
+                if (listBoxTitles.Items[i].ToString() == current.Meta(MetadataType.Title))
+                {
+                    listBoxTitles.SelectedIndex = i;
+                    break;
+                }
+            }
+        }
+
         private void mediaProgressBar_MouseDown(object sender, MouseEventArgs e)
         {
 
@@ -335,8 +353,15 @@ namespace local
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            CurrentMedia = _presenter.Next();
-            StartMedia();
+            var media = _presenter.Next();
+
+            if (media != null)
+            {
+                CurrentMedia = media;
+                StartMedia();
+
+                SyncListBoxToCurrent();
+            }
         }
 
         private void buttonPrevious_Click(object sender, EventArgs e)
