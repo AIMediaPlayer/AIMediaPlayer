@@ -9,7 +9,6 @@ using MediaPresenter;
 using System.Threading.Tasks;
 using MediaPlayerLocal;
 
-
 namespace local
 {
     public partial class Form1 : Form
@@ -22,6 +21,7 @@ namespace local
         private Media _currentMedia;
         private MediaProgressBar _mediaProgressBar;
 
+        private string _currentPlaylistPath;
         private bool _isUserSeeking;
 
         /// <summary>
@@ -34,8 +34,8 @@ namespace local
         public Media CurrentMedia
         {
             get { return _currentMedia; }
-            set 
-            { 
+            set
+            {
                 _currentMedia = value;
             }
         }
@@ -55,21 +55,27 @@ namespace local
 
             Core.Initialize();
 
-            // Creare componente
             _vlc = new LibVLC();
             _player = new MediaPlayer(_vlc);
             _playlistManager = new PlaylistManager(_vlc);
             _mediaProgressBar = new MediaProgressBar();
             _presenter = new Presenter(_playlistManager);
 
-
-            // Atasare MediaPlayer la un control de tip VideoView specific din WinForms
             videoView.MediaPlayer = _player;
 
-            // Adaugare eveniment la timer.Tick
+            _player.EndReached += (s, e) =>
+            {
+                var next = _presenter.Next();
+
+                if (next != null)
+                {
+                    CurrentMedia = next;
+                    BeginInvoke(new Action(StartMedia));
+                }
+            };
+
             timerUpdateUI.Tick += (sender, args) =>
             {
-                // La fiecare tick, se modifica bara de redare cu timpul de redare
                 if (_player.Media != null)
                 {
                     mediaProgressBar.Value = (float)_player.Time / _player.Media.Duration;
@@ -77,7 +83,6 @@ namespace local
                     UpdateTimeSpan();
                 }
             };
-
         }
 
         /// <summary>
@@ -91,33 +96,28 @@ namespace local
         private async void buttonOpenFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
-            dlg.Filter = "Media Files|*.mp4;*.mp3;*.avi;*.wav;*.mkv;*.m4a" ;
+            dlg.Filter = "Media Files|*.mp4;*.mp3;*.avi;*.wav;*.mkv;*.m4a";
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    // Creare continut media
                     Uri uri = new Uri(dlg.FileName);
                     Media media = new Media(_vlc, uri);
 
-                    // Dizabilitare buton pentru deschiderea unui alt fisier
                     buttonOpenFile.Enabled = false;
 
-                    // Se asteapta parsarea noului media object
                     MediaParsedStatus parsedResult = await media.Parse(MediaParseOptions.ParseLocal);
 
-                    // Reabilitare buton pentru deschiderea unui alt fisier
                     buttonOpenFile.Enabled = true;
 
-                    // Daca parsarea a avut succes, se incepe redarea noului media
                     if (parsedResult == MediaParsedStatus.Done)
                     {
                         CurrentMedia = media;
                         StartMedia();
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
@@ -140,30 +140,22 @@ namespace local
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                // Se creaza resursa ce identifica fisierul selectat
                 Uri uri = new Uri(dlg.FileName);
 
-            // Se dizabiliteaza TEMPORAR butonul de incarcare a fisierelor,
-            // deoarece parsarea presupune o operatie mai costisitoare,
-            // iar controlul nu trebuie folosit pana la finalizarea parsarii
                 buttonLoadFile.Enabled = false;
 
-                // Se trimite resursa catre modelul playlist-ului care va crea si parsa noul obiect Media
                 bool addResult = await _playlistManager.Add(uri);
 
                 buttonLoadFile.Enabled = true;
 
-                // Daca operatia s-a finalizat fara erori
                 if (addResult == true)
                 {
-                    // se actualizeaza controlul de tip lista cu noul media
                     UpdateMediaList();
                 }
                 else
                 {
                     MessageBox.Show("Cannot add selected file");
                 }
-                //presenter.AddMedia(media);
             }
         }
 
@@ -207,7 +199,6 @@ namespace local
             }
         }
 
-
         /// <summary>
         /// Selecteaza o valoare din listBox pentru care se doreste a reda
         /// </summary>
@@ -219,26 +210,27 @@ namespace local
 
             if (index != -1)
             {
-                _playlistManager.SetCurrentIndex(index); // 🔥 IMPORTANT FIX
+                _playlistManager.SetCurrentIndex(index);
 
-                CurrentMedia = _playlistManager.GetCurrent();
-
-                if (CurrentMedia != null)
-                    StartMedia();
-            }
-        }
-        private void listBoxTitles_DoubleClick(object sender, MouseEventArgs e)
-        {
-            // Find the index of the item under the mouse pointer
-            int index = listBoxTitles.IndexFromPoint(e.Location);
-
-            // If index is ListBox.NoMatches (-1), they clicked empty space
-            if (index != ListBox.NoMatches)
-            {
-                // Get the actual object or text
                 string title = listBoxTitles.GetItemText(listBoxTitles.Items[index]);
 
-                // Cautarea se face prin modelul playlist-ului
+                Media selectedMedia = _playlistManager.GetMedia(title);
+
+                if (selectedMedia != null)
+                {
+                    CurrentMedia = selectedMedia;
+                }
+            }
+        }
+
+        private void listBoxTitles_DoubleClick(object sender, MouseEventArgs e)
+        {
+            int index = listBoxTitles.IndexFromPoint(e.Location);
+
+            if (index != ListBox.NoMatches)
+            {
+                string title = listBoxTitles.GetItemText(listBoxTitles.Items[index]);
+
                 Media selectedMedia = _playlistManager.GetMedia(title);
 
                 if (selectedMedia != null)
@@ -265,7 +257,6 @@ namespace local
         {
             int index = listBoxTitles.SelectedIndex;
 
-            // dacă vrei corect 100%, refacem index din playlist
             Media current = _playlistManager.GetCurrent();
 
             for (int i = 0; i < listBoxTitles.Items.Count; i++)
@@ -278,10 +269,7 @@ namespace local
             }
         }
 
-        private void mediaProgressBar_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
+        private void mediaProgressBar_MouseDown(object sender, MouseEventArgs e) { }
 
         private void mediaProgressBar_MouseUp(object sender, MouseEventArgs e)
         {
@@ -335,20 +323,6 @@ namespace local
                 _player.Stop();
                 buttonPlayMedia.Text = "PLAY";
             }
-            //UpdateTimeSpan();
-        }
-
-        private void buttonRepeat_Click(object sender, EventArgs e)
-        {
-            if (_player.Media != null)
-            {
-                _player.SeekTo(TimeSpan.FromMilliseconds(0));
-                if(!_player.IsPlaying)
-                {
-                    _player.Play();
-                    buttonPlayMedia.Text = "PAUSE";
-                }
-            }
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
@@ -359,7 +333,6 @@ namespace local
             {
                 CurrentMedia = media;
                 StartMedia();
-
                 SyncListBoxToCurrent();
             }
         }
@@ -383,7 +356,10 @@ namespace local
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
+                _currentPlaylistPath = dlg.FileName;
+
                 _playlistManager.Save(dlg.FileName);
+
                 MessageBox.Show("Media curentă salvată în playlist!");
             }
         }
@@ -395,6 +371,8 @@ namespace local
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
+                _currentPlaylistPath = dlg.FileName;
+
                 _playlistManager.Load(dlg.FileName);
 
                 UpdateMediaList();
@@ -407,6 +385,38 @@ namespace local
                     StartMedia();
                 }
             }
+        }
+
+        private void buttonSavePlaylist_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = "JSON Playlist|*.json";
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                _currentPlaylistPath = dlg.FileName;
+
+                _playlistManager.SavePlaylist(dlg.FileName);
+
+                MessageBox.Show("Playlist saved!");
+            }
+        }
+
+        private void buttonRepeatPlaylist_Click(object sender, EventArgs e)
+        {
+            _playlistManager.Repeat();
+        }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            if (listBoxTitles.SelectedIndex == -1)
+                return;
+
+            int index = listBoxTitles.SelectedIndex;
+
+            _playlistManager.Remove(index, _currentPlaylistPath);
+
+            UpdateMediaList();
         }
     }
 }

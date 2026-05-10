@@ -31,7 +31,7 @@ namespace MediaModel
         }
 
         /// <summary>
-        /// Functie asincrona ce asteapta parsarea fisierului media si-l adauaga in lista de obiecte Media 
+        /// Functie asincrona ce asteapta parsarea fisierului media si-l adauaga in lista de obiecte Media
         /// </summary>
         /// <param name="uri"></param>
         /// <returns></returns>
@@ -43,7 +43,7 @@ namespace MediaModel
 
                 var status = await media.Parse(MediaParseOptions.ParseLocal);
 
-                if(status == MediaParsedStatus.Done)
+                if (status == MediaParsedStatus.Done)
                 {
                     _mediaList.Add(media);
                     return true;
@@ -65,7 +65,7 @@ namespace MediaModel
         /// <returns></returns>
         public Media GetMedia(string title)
         {
-            foreach(Media media in _mediaList)
+            foreach (Media media in _mediaList)
             {
                 string mediaTitle = media.Meta(MetadataType.Title);
                 if (mediaTitle == title)
@@ -99,22 +99,38 @@ namespace MediaModel
 
         public void Next()
         {
-            if (_mediaList.Count == 0) return;
+            if (_mediaList.Count == 0)
+                return;
 
-            _currentIndex++;
-
-            if (_currentIndex >= _mediaList.Count)
-                _currentIndex = _repeat ? 0 : _mediaList.Count - 1;
+            if (_currentIndex < _mediaList.Count - 1)
+            {
+                _currentIndex++;
+            }
+            else
+            {
+                if (_repeat)
+                    _currentIndex = 0;
+                else
+                    _currentIndex = _mediaList.Count - 1;
+            }
         }
 
         public void Previous()
         {
-            if (_mediaList.Count == 0) return;
+            if (_mediaList.Count == 0)
+                return;
 
-            _currentIndex--;
-
-            if (_currentIndex < 0)
-                _currentIndex = 0;
+            if (_currentIndex > 0)
+            {
+                _currentIndex--;
+            }
+            else
+            {
+                if (_repeat)
+                    _currentIndex = _mediaList.Count - 1;
+                else
+                    _currentIndex = 0;
+            }
         }
 
         public void Shuffle()
@@ -128,25 +144,49 @@ namespace MediaModel
             _repeat = !_repeat;
         }
 
-        public void Remove(string title)
+        public void Remove(int index, string playlistPath)
         {
-            var media = _mediaList.FirstOrDefault(m => m.Meta(MetadataType.Title) == title);
+            if (!File.Exists(playlistPath))
+                return;
 
-            if (media != null)
+            var json = File.ReadAllText(playlistPath);
+
+            dynamic state = JsonConvert.DeserializeObject(json);
+
+            if (state == null || state.Items == null)
+                return;
+
+            if (index < 0 || index >= state.Items.Count)
+                return;
+
+            state.Items.RemoveAt(index);
+
+            File.WriteAllText(
+                playlistPath,
+                JsonConvert.SerializeObject(state, Formatting.Indented)
+            );
+
+            Load(playlistPath);
+        }
+
+        public void SavePlaylist(string path)
+        {
+            PlaylistState state = new PlaylistState
             {
-                int index = _mediaList.IndexOf(media);
-                _mediaList.Remove(media);
+                CurrentIndex = _currentIndex,
+                Items = _mediaList.Select(m => m.Mrl).ToList()
+            };
 
-                if (index <= _currentIndex && _currentIndex > 0)
-                    _currentIndex--;
-            }
+            File.WriteAllText(
+                path,
+                JsonConvert.SerializeObject(state, Formatting.Indented)
+            );
         }
 
         public void Save(string path)
         {
             List<string> items = new List<string>();
 
-            // 1. dacă fișierul există, îl citim
             if (File.Exists(path))
             {
                 var json = File.ReadAllText(path);
@@ -158,16 +198,14 @@ namespace MediaModel
                 }
             }
 
-            // 2. adăugăm media curentă
             if (_mediaList.Count > 0 && _currentIndex >= 0)
             {
                 string current = _mediaList[_currentIndex].Mrl;
 
-                if (!items.Contains(current)) // evităm duplicate
+                if (!items.Contains(current))
                     items.Add(current);
             }
 
-            // 3. salvăm înapoi
             var obj = new
             {
                 CurrentIndex = items.Count - 1,
@@ -205,6 +243,5 @@ namespace MediaModel
             if (_mediaList.Count == 0) return null;
             return _mediaList[_currentIndex];
         }
-
     }
 }

@@ -22,8 +22,8 @@ namespace MediaModel
         void Previous();
         void Shuffle();
         void Repeat();
-        void Remove(string title);
-
+        void Remove(int index, string playlistPath);
+        void SavePlaylist(string path);
         void Save(string path);
 
         void Load(string path);
