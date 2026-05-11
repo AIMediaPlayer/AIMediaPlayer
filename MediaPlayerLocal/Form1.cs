@@ -208,24 +208,27 @@ namespace local
         /// <param name="e"></param>
         private void buttonPlayMedia_Click(object sender, EventArgs e)
         {
-            // se verifica daca player-ul are atasat un obiect Media
-            if (!_player.WillPlay)
+            if (CurrentMedia != null)
             {
-                // daca nu are niciun fisier media atasat 
-                StartMedia();
-            }
-            else
-            {
-                // daca are un fisier media atasat
-                if (!_player.IsPlaying)
+                // se verifica daca player-ul are atasat un obiect Media
+                if (!_player.WillPlay)
                 {
-                    _player.Play();
-                    buttonPlayMedia.Text = "PAUSE";
+                    // daca nu are niciun fisier media atasat 
+                    StartMedia();
                 }
                 else
                 {
-                    _player.Pause();
-                    buttonPlayMedia.Text = "PLAY";
+                    // daca are un fisier media atasat
+                    if (!_player.IsPlaying)
+                    {
+                        _player.Play();
+                        buttonPlayMedia.Text = "PAUSE";
+                    }
+                    else
+                    {
+                        _player.Pause();
+                        buttonPlayMedia.Text = "PLAY";
+                    }
                 }
             }
         }
@@ -254,7 +257,6 @@ namespace local
             }
         }
 
-        }
 
         /// <summary>
         /// Gestionează dublu-click-ul pe un element din listă pentru redare imediată.
@@ -597,5 +599,6 @@ namespace local
                 }
             }
         }
+
     }
 }

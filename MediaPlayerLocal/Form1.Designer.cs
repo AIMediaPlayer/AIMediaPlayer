@@ -46,9 +46,7 @@ namespace local
             this.buttonNext = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonStop = new System.Windows.Forms.Button();
-            this.mediaProgressBarAudio = new MediaPlayerLocal.MediaProgressBar();
             this.labelMediaTimeSpan = new System.Windows.Forms.Label();
-            this.mediaProgressBar = new MediaPlayerLocal.MediaProgressBar();
             this.textBoxCurrentMediaTitle = new System.Windows.Forms.TextBox();
             this.panelPlaylist = new System.Windows.Forms.Panel();
             this.timerUpdateUI = new System.Windows.Forms.Timer(this.components);
@@ -56,6 +54,8 @@ namespace local
             this.subtitleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subtitleAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subtitleListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mediaProgressBarAudio = new MediaPlayerLocal.MediaProgressBar();
+            this.mediaProgressBar = new MediaPlayerLocal.MediaProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.videoView)).BeginInit();
             this.panelVideo.SuspendLayout();
             this.panelPlaylist.SuspendLayout();
@@ -66,7 +66,7 @@ namespace local
             // 
             this.buttonPlayMedia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonPlayMedia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.12F);
-            this.buttonPlayMedia.Location = new System.Drawing.Point(14, 426);
+            this.buttonPlayMedia.Location = new System.Drawing.Point(14, 400);
             this.buttonPlayMedia.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPlayMedia.Name = "buttonPlayMedia";
             this.buttonPlayMedia.Size = new System.Drawing.Size(114, 42);
@@ -119,11 +119,11 @@ namespace local
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.videoView.BackColor = System.Drawing.Color.Black;
-            this.videoView.Location = new System.Drawing.Point(14, 24);
+            this.videoView.Location = new System.Drawing.Point(14, 21);
             this.videoView.Margin = new System.Windows.Forms.Padding(2);
             this.videoView.MediaPlayer = null;
             this.videoView.Name = "videoView";
-            this.videoView.Size = new System.Drawing.Size(641, 302);
+            this.videoView.Size = new System.Drawing.Size(641, 279);
             this.videoView.TabIndex = 5;
             this.videoView.Text = "videoView";
             // 
@@ -145,17 +145,17 @@ namespace local
             this.panelVideo.Controls.Add(this.textBoxCurrentMediaTitle);
             this.panelVideo.Controls.Add(this.videoView);
             this.panelVideo.Controls.Add(this.buttonPlayMedia);
-            this.panelVideo.Location = new System.Drawing.Point(0, 0);
+            this.panelVideo.Location = new System.Drawing.Point(0, 26);
             this.panelVideo.Margin = new System.Windows.Forms.Padding(2);
             this.panelVideo.Name = "panelVideo";
-            this.panelVideo.Size = new System.Drawing.Size(670, 470);
+            this.panelVideo.Size = new System.Drawing.Size(670, 444);
             this.panelVideo.TabIndex = 7;
             // 
-            // labelMediaTimeSpan
+            // buttonRepeatPlaylist
             // 
             this.buttonRepeatPlaylist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonRepeatPlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.12F);
-            this.buttonRepeatPlaylist.Location = new System.Drawing.Point(486, 428);
+            this.buttonRepeatPlaylist.Location = new System.Drawing.Point(486, 402);
             this.buttonRepeatPlaylist.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRepeatPlaylist.Name = "buttonRepeatPlaylist";
             this.buttonRepeatPlaylist.Size = new System.Drawing.Size(169, 42);
@@ -164,23 +164,11 @@ namespace local
             this.buttonRepeatPlaylist.UseVisualStyleBackColor = true;
             this.buttonRepeatPlaylist.Click += new System.EventHandler(this.buttonRepeatPlaylist_Click);
             // 
-            // mediaProgressBar
-            // 
-            this.mediaProgressBar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.mediaProgressBar.Location = new System.Drawing.Point(18, 407);
-            this.mediaProgressBar.Name = "mediaProgressBar";
-            this.mediaProgressBar.Size = new System.Drawing.Size(855, 33);
-            this.mediaProgressBar.TabIndex = 11;
-            this.mediaProgressBar.Value = 0F;
-            this.mediaProgressBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseDown);
-            this.mediaProgressBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseMove);
-            this.mediaProgressBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseUp);
-            // 
-            // textBoxCurrentMediaTitle
+            // buttonSavePlaylist
             // 
             this.buttonSavePlaylist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonSavePlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.12F);
-            this.buttonSavePlaylist.Location = new System.Drawing.Point(486, 380);
+            this.buttonSavePlaylist.Location = new System.Drawing.Point(486, 354);
             this.buttonSavePlaylist.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSavePlaylist.Name = "buttonSavePlaylist";
             this.buttonSavePlaylist.Size = new System.Drawing.Size(169, 42);
@@ -193,7 +181,7 @@ namespace local
             // 
             this.buttonLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.12F);
-            this.buttonLoad.Location = new System.Drawing.Point(368, 426);
+            this.buttonLoad.Location = new System.Drawing.Point(368, 400);
             this.buttonLoad.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(114, 42);
@@ -206,7 +194,7 @@ namespace local
             // 
             this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.12F);
-            this.buttonSave.Location = new System.Drawing.Point(368, 380);
+            this.buttonSave.Location = new System.Drawing.Point(368, 354);
             this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(114, 42);
@@ -219,7 +207,7 @@ namespace local
             // 
             this.buttonShuffle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonShuffle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.12F);
-            this.buttonShuffle.Location = new System.Drawing.Point(250, 380);
+            this.buttonShuffle.Location = new System.Drawing.Point(250, 354);
             this.buttonShuffle.Margin = new System.Windows.Forms.Padding(2);
             this.buttonShuffle.Name = "buttonShuffle";
             this.buttonShuffle.Size = new System.Drawing.Size(114, 42);
@@ -232,7 +220,7 @@ namespace local
             // 
             this.buttonPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonPrevious.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.12F);
-            this.buttonPrevious.Location = new System.Drawing.Point(132, 380);
+            this.buttonPrevious.Location = new System.Drawing.Point(132, 354);
             this.buttonPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPrevious.Name = "buttonPrevious";
             this.buttonPrevious.Size = new System.Drawing.Size(114, 42);
@@ -245,7 +233,7 @@ namespace local
             // 
             this.buttonNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.12F);
-            this.buttonNext.Location = new System.Drawing.Point(14, 380);
+            this.buttonNext.Location = new System.Drawing.Point(14, 354);
             this.buttonNext.Margin = new System.Windows.Forms.Padding(2);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(114, 42);
@@ -258,7 +246,7 @@ namespace local
             // 
             this.buttonRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.12F);
-            this.buttonRemove.Location = new System.Drawing.Point(250, 426);
+            this.buttonRemove.Location = new System.Drawing.Point(250, 400);
             this.buttonRemove.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(114, 42);
@@ -267,11 +255,11 @@ namespace local
             this.buttonRemove.UseVisualStyleBackColor = true;
             this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
-            // menuStripSubtitle
+            // buttonStop
             // 
             this.buttonStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.12F);
-            this.buttonStop.Location = new System.Drawing.Point(131, 426);
+            this.buttonStop.Location = new System.Drawing.Point(131, 400);
             this.buttonStop.Margin = new System.Windows.Forms.Padding(2);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(115, 42);
@@ -279,60 +267,17 @@ namespace local
             this.buttonStop.Text = "STOP";
             this.buttonStop.UseVisualStyleBackColor = true;
             this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
-            this.menuStripSubtitle.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStripSubtitle.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.subtitleToolStripMenuItem});
-            this.menuStripSubtitle.Location = new System.Drawing.Point(0, 0);
-            this.menuStripSubtitle.Name = "menuStripSubtitle";
-            this.menuStripSubtitle.Size = new System.Drawing.Size(1234, 28);
-            this.menuStripSubtitle.TabIndex = 10;
-            // 
-            // subtitleToolStripMenuItem
-            // 
-            this.subtitleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.subtitleAddToolStripMenuItem,
-            this.subtitleListToolStripMenuItem});
-            this.subtitleToolStripMenuItem.Name = "subtitleToolStripMenuItem";
-            this.subtitleToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
-            this.subtitleToolStripMenuItem.Text = "Subtitle";
-            this.mediaProgressBarAudio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.mediaProgressBarAudio.Location = new System.Drawing.Point(522, 358);
-            this.mediaProgressBarAudio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.mediaProgressBarAudio.Name = "mediaProgressBarAudio";
-            this.mediaProgressBarAudio.Size = new System.Drawing.Size(133, 20);
-            this.mediaProgressBarAudio.TabIndex = 13;
-            this.mediaProgressBarAudio.Value = 0.5F;
-            this.mediaProgressBarAudio.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBarAudio_MouseMove);
-            this.mediaProgressBarAudio.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBarAudio_MouseUp);
             // 
             // labelMediaTimeSpan
             // 
             this.labelMediaTimeSpan.AutoSize = true;
             this.labelMediaTimeSpan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
-            this.labelMediaTimeSpan.Location = new System.Drawing.Point(16, 360);
+            this.labelMediaTimeSpan.Location = new System.Drawing.Point(11, 333);
             this.labelMediaTimeSpan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMediaTimeSpan.Name = "labelMediaTimeSpan";
             this.labelMediaTimeSpan.Size = new System.Drawing.Size(132, 18);
             this.labelMediaTimeSpan.TabIndex = 12;
             this.labelMediaTimeSpan.Text = "00:00:00 / 00:00:00";
-            // 
-            // mediaProgressBar
-            // 
-            this.mediaProgressBar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.mediaProgressBar.Location = new System.Drawing.Point(14, 331);
-            this.mediaProgressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.mediaProgressBar.Name = "mediaProgressBar";
-            this.mediaProgressBar.Size = new System.Drawing.Size(641, 27);
-            this.mediaProgressBar.TabIndex = 11;
-            this.mediaProgressBar.Value = 0F;
-            this.mediaProgressBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseDown);
-            this.mediaProgressBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseMove);
-            this.mediaProgressBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseUp);
-            this.subtitleAddToolStripMenuItem.Enabled = false;
-            this.subtitleAddToolStripMenuItem.Name = "subtitleAddToolStripMenuItem";
-            this.subtitleAddToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.subtitleAddToolStripMenuItem.Text = "Add subtitle file";
-            this.subtitleAddToolStripMenuItem.Click += new System.EventHandler(this.addSubtitleFileToolStripMenuItem_Click);
             // 
             // textBoxCurrentMediaTitle
             // 
@@ -341,7 +286,7 @@ namespace local
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxCurrentMediaTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCurrentMediaTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCurrentMediaTitle.Location = new System.Drawing.Point(14, 16);
+            this.textBoxCurrentMediaTitle.Location = new System.Drawing.Point(14, 0);
             this.textBoxCurrentMediaTitle.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCurrentMediaTitle.Name = "textBoxCurrentMediaTitle";
             this.textBoxCurrentMediaTitle.Size = new System.Drawing.Size(641, 17);
@@ -361,12 +306,68 @@ namespace local
             // 
             // timerUpdateUI
             // 
-            this.subtitleListToolStripMenuItem.Enabled = false;
-            this.subtitleListToolStripMenuItem.Name = "subtitleListToolStripMenuItem";
-            this.subtitleListToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.subtitleListToolStripMenuItem.Text = "Subtitle list";
             this.timerUpdateUI.Enabled = true;
             this.timerUpdateUI.Interval = 500;
+            // 
+            // menuStripSubtitle
+            // 
+            this.menuStripSubtitle.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStripSubtitle.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStripSubtitle.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.subtitleToolStripMenuItem});
+            this.menuStripSubtitle.Location = new System.Drawing.Point(0, 0);
+            this.menuStripSubtitle.Name = "menuStripSubtitle";
+            this.menuStripSubtitle.Size = new System.Drawing.Size(926, 24);
+            this.menuStripSubtitle.TabIndex = 10;
+            // 
+            // subtitleToolStripMenuItem
+            // 
+            this.subtitleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.subtitleAddToolStripMenuItem,
+            this.subtitleListToolStripMenuItem});
+            this.subtitleToolStripMenuItem.Name = "subtitleToolStripMenuItem";
+            this.subtitleToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.subtitleToolStripMenuItem.Text = "Subtitle";
+            // 
+            // subtitleAddToolStripMenuItem
+            // 
+            this.subtitleAddToolStripMenuItem.Enabled = false;
+            this.subtitleAddToolStripMenuItem.Name = "subtitleAddToolStripMenuItem";
+            this.subtitleAddToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.subtitleAddToolStripMenuItem.Text = "Add subtitle file";
+            this.subtitleAddToolStripMenuItem.Click += new System.EventHandler(this.addSubtitleFileToolStripMenuItem_Click);
+            // 
+            // subtitleListToolStripMenuItem
+            // 
+            this.subtitleListToolStripMenuItem.Enabled = false;
+            this.subtitleListToolStripMenuItem.Name = "subtitleListToolStripMenuItem";
+            this.subtitleListToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.subtitleListToolStripMenuItem.Text = "Subtitle list";
+            // 
+            // mediaProgressBarAudio
+            // 
+            this.mediaProgressBarAudio.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.mediaProgressBarAudio.Location = new System.Drawing.Point(522, 358);
+            this.mediaProgressBarAudio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mediaProgressBarAudio.Name = "mediaProgressBarAudio";
+            this.mediaProgressBarAudio.Size = new System.Drawing.Size(133, 20);
+            this.mediaProgressBarAudio.TabIndex = 13;
+            this.mediaProgressBarAudio.Value = 0.5F;
+            this.mediaProgressBarAudio.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBarAudio_MouseMove);
+            this.mediaProgressBarAudio.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBarAudio_MouseUp);
+            // 
+            // mediaProgressBar
+            // 
+            this.mediaProgressBar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.mediaProgressBar.Location = new System.Drawing.Point(14, 304);
+            this.mediaProgressBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mediaProgressBar.Name = "mediaProgressBar";
+            this.mediaProgressBar.Size = new System.Drawing.Size(641, 27);
+            this.mediaProgressBar.TabIndex = 11;
+            this.mediaProgressBar.Value = 0F;
+            this.mediaProgressBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseDown);
+            this.mediaProgressBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseMove);
+            this.mediaProgressBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseUp);
             // 
             // Form1
             // 
@@ -375,6 +376,7 @@ namespace local
             this.ClientSize = new System.Drawing.Size(926, 470);
             this.Controls.Add(this.panelPlaylist);
             this.Controls.Add(this.panelVideo);
+            this.Controls.Add(this.menuStripSubtitle);
             this.MainMenuStrip = this.menuStripSubtitle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
