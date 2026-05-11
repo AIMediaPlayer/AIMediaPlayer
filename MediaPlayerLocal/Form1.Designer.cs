@@ -52,9 +52,14 @@ namespace local
             this.textBoxCurrentMediaTitle = new System.Windows.Forms.TextBox();
             this.panelPlaylist = new System.Windows.Forms.Panel();
             this.timerUpdateUI = new System.Windows.Forms.Timer(this.components);
+            this.menuStripSubtitle = new System.Windows.Forms.MenuStrip();
+            this.subtitleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subtitleAddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subtitleListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.videoView)).BeginInit();
             this.panelVideo.SuspendLayout();
             this.panelPlaylist.SuspendLayout();
+            this.menuStripSubtitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonPlayMedia
@@ -146,7 +151,7 @@ namespace local
             this.panelVideo.Size = new System.Drawing.Size(670, 470);
             this.panelVideo.TabIndex = 7;
             // 
-            // buttonRepeatPlaylist
+            // labelMediaTimeSpan
             // 
             this.buttonRepeatPlaylist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonRepeatPlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.12F);
@@ -159,7 +164,19 @@ namespace local
             this.buttonRepeatPlaylist.UseVisualStyleBackColor = true;
             this.buttonRepeatPlaylist.Click += new System.EventHandler(this.buttonRepeatPlaylist_Click);
             // 
-            // buttonSavePlaylist
+            // mediaProgressBar
+            // 
+            this.mediaProgressBar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.mediaProgressBar.Location = new System.Drawing.Point(18, 407);
+            this.mediaProgressBar.Name = "mediaProgressBar";
+            this.mediaProgressBar.Size = new System.Drawing.Size(855, 33);
+            this.mediaProgressBar.TabIndex = 11;
+            this.mediaProgressBar.Value = 0F;
+            this.mediaProgressBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseDown);
+            this.mediaProgressBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseMove);
+            this.mediaProgressBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseUp);
+            // 
+            // textBoxCurrentMediaTitle
             // 
             this.buttonSavePlaylist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonSavePlaylist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.12F);
@@ -250,7 +267,7 @@ namespace local
             this.buttonRemove.UseVisualStyleBackColor = true;
             this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
-            // buttonStop
+            // menuStripSubtitle
             // 
             this.buttonStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.12F);
@@ -262,9 +279,22 @@ namespace local
             this.buttonStop.Text = "STOP";
             this.buttonStop.UseVisualStyleBackColor = true;
             this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
+            this.menuStripSubtitle.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStripSubtitle.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.subtitleToolStripMenuItem});
+            this.menuStripSubtitle.Location = new System.Drawing.Point(0, 0);
+            this.menuStripSubtitle.Name = "menuStripSubtitle";
+            this.menuStripSubtitle.Size = new System.Drawing.Size(1234, 28);
+            this.menuStripSubtitle.TabIndex = 10;
             // 
-            // mediaProgressBarAudio
+            // subtitleToolStripMenuItem
             // 
+            this.subtitleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.subtitleAddToolStripMenuItem,
+            this.subtitleListToolStripMenuItem});
+            this.subtitleToolStripMenuItem.Name = "subtitleToolStripMenuItem";
+            this.subtitleToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.subtitleToolStripMenuItem.Text = "Subtitle";
             this.mediaProgressBarAudio.ForeColor = System.Drawing.SystemColors.ControlText;
             this.mediaProgressBarAudio.Location = new System.Drawing.Point(522, 358);
             this.mediaProgressBarAudio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -298,6 +328,11 @@ namespace local
             this.mediaProgressBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseDown);
             this.mediaProgressBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseMove);
             this.mediaProgressBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mediaProgressBar_MouseUp);
+            this.subtitleAddToolStripMenuItem.Enabled = false;
+            this.subtitleAddToolStripMenuItem.Name = "subtitleAddToolStripMenuItem";
+            this.subtitleAddToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.subtitleAddToolStripMenuItem.Text = "Add subtitle file";
+            this.subtitleAddToolStripMenuItem.Click += new System.EventHandler(this.addSubtitleFileToolStripMenuItem_Click);
             // 
             // textBoxCurrentMediaTitle
             // 
@@ -326,6 +361,10 @@ namespace local
             // 
             // timerUpdateUI
             // 
+            this.subtitleListToolStripMenuItem.Enabled = false;
+            this.subtitleListToolStripMenuItem.Name = "subtitleListToolStripMenuItem";
+            this.subtitleListToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.subtitleListToolStripMenuItem.Text = "Subtitle list";
             this.timerUpdateUI.Enabled = true;
             this.timerUpdateUI.Interval = 500;
             // 
@@ -336,6 +375,7 @@ namespace local
             this.ClientSize = new System.Drawing.Size(926, 470);
             this.Controls.Add(this.panelPlaylist);
             this.Controls.Add(this.panelVideo);
+            this.MainMenuStrip = this.menuStripSubtitle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -343,7 +383,10 @@ namespace local
             this.panelVideo.ResumeLayout(false);
             this.panelVideo.PerformLayout();
             this.panelPlaylist.ResumeLayout(false);
+            this.menuStripSubtitle.ResumeLayout(false);
+            this.menuStripSubtitle.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -371,6 +414,11 @@ namespace local
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonRepeatPlaylist;
         private System.Windows.Forms.Button buttonSavePlaylist;
+        private System.Windows.Forms.Button buttonRepeat;
+        private System.Windows.Forms.MenuStrip menuStripSubtitle;
+        private System.Windows.Forms.ToolStripMenuItem subtitleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subtitleAddToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subtitleListToolStripMenuItem;
     }
 }
 
