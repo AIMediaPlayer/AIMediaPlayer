@@ -80,14 +80,17 @@ namespace MediaModel
         /// <returns></returns>
         public List<string> ListAll()
         {
+            int count = 0;
             List<string> titleList = new List<string>();
 
             foreach (Media media in _mediaList)
             {
                 string title = media.Meta(MetadataType.Title);
                 titleList.Add(title);
+                count++;
             }
-
+            if (count == 0)
+                return null;
             return titleList;
         }
 

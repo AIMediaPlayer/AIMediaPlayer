@@ -285,13 +285,15 @@ namespace local
         /// <param name="media"></param>
         private void StartMedia()
         {
+            if (CurrentMedia != null)
+            {
+                SetPlayer = CurrentMedia;
+                _player.Play();
 
-            SetPlayer = CurrentMedia;
-            _player.Play();
-            
-            buttonPlayMedia.Text = "PAUSE";
-            textBoxCurrentMediaTitle.Text = CurrentMedia.Meta(MetadataType.Title);
-            subtitleAddToolStripMenuItem.Enabled = true;
+                buttonPlayMedia.Text = "PAUSE";
+                textBoxCurrentMediaTitle.Text = CurrentMedia.Meta(MetadataType.Title);
+                subtitleAddToolStripMenuItem.Enabled = true;
+            }
         }
 
         private void SyncListBoxToCurrent()
@@ -370,9 +372,12 @@ namespace local
         /// </remarks>
         private void UpdateTimeSpan()
         {
-            TimeSpan currentTimeSpan = TimeSpan.FromMilliseconds(_player.Time);
-            TimeSpan totalTimeSpan = TimeSpan.FromMilliseconds(_player.Media.Duration);
-            labelMediaTimeSpan.Text = $"{currentTimeSpan:hh\\:mm\\:ss} / {totalTimeSpan:hh\\:mm\\:ss}";
+            if (CurrentMedia != null)
+            {
+                TimeSpan currentTimeSpan = TimeSpan.FromMilliseconds(_player.Time);
+                TimeSpan totalTimeSpan = TimeSpan.FromMilliseconds(_player.Media.Duration);
+                labelMediaTimeSpan.Text = $"{currentTimeSpan:hh\\:mm\\:ss} / {totalTimeSpan:hh\\:mm\\:ss}";
+            }
         }
 
         /// <summary>
@@ -482,16 +487,23 @@ namespace local
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dlg = new SaveFileDialog();
-            dlg.Filter = "Playlist (*.json)|*.json";
-
-            if (dlg.ShowDialog() == DialogResult.OK)
+            if (CurrentMedia != null)
             {
-                _currentPlaylistPath = dlg.FileName;
+                SaveFileDialog dlg = new SaveFileDialog();
+                dlg.Filter = "Playlist (*.json)|*.json";
 
-                _playlistManager.Save(dlg.FileName);
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    _currentPlaylistPath = dlg.FileName;
 
-                MessageBox.Show("Media curentă salvată în playlist!");
+                    _playlistManager.Save(dlg.FileName);
+
+                    MessageBox.Show("Media curentă salvată în playlist!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Niciun fisier media selectat");
             }
         }
 
@@ -520,16 +532,22 @@ namespace local
 
         private void buttonSavePlaylist_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dlg = new SaveFileDialog();
-            dlg.Filter = "JSON Playlist|*.json";
+            if (_playlistManager.ListAll() != null) {
+                SaveFileDialog dlg = new SaveFileDialog();
+                dlg.Filter = "JSON Playlist|*.json";
 
-            if (dlg.ShowDialog() == DialogResult.OK)
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    _currentPlaylistPath = dlg.FileName;
+
+                    _playlistManager.SavePlaylist(dlg.FileName);
+
+                    MessageBox.Show("Playlist saved!");
+                }
+            }
+            else
             {
-                _currentPlaylistPath = dlg.FileName;
-
-                _playlistManager.SavePlaylist(dlg.FileName);
-
-                MessageBox.Show("Playlist saved!");
+                MessageBox.Show("Niciun fisier media incarcat.");
             }
         }
 
