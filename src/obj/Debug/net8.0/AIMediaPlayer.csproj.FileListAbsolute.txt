@@ -1857,3 +1857,4 @@ C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\obj\Debug\net8.0\refint\AIM
 C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\obj\Debug\net8.0\AIMediaPlayer.pdb
 C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\obj\Debug\net8.0\AIMediaPlayer.genruntimeconfig.cache
 C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\obj\Debug\net8.0\ref\AIMediaPlayer.dll
+C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\bin\Debug\net8.0\Newtonsoft.Json.dll

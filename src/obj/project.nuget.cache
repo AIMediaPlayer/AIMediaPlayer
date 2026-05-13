@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rXp/2Rnc3m4=",
+  "dgSpecHash": "7gaNcWf1WRo=",
   "success": true,
   "projectFilePath": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\AIMediaPlayer.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "C:\\Users\\loghi\\.nuget\\packages\\microsoft.io.recyclablememorystream\\3.0.1\\microsoft.io.recyclablememorystream.3.0.1.nupkg.sha512",
     "C:\\Users\\loghi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\loghi\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\loghi\\.nuget\\packages\\newtonsoft.json\\13.0.5-beta1\\newtonsoft.json.13.0.5-beta1.nupkg.sha512",
     "C:\\Users\\loghi\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\loghi\\.nuget\\packages\\skiasharp\\2.88.9\\skiasharp.2.88.9.nupkg.sha512",
     "C:\\Users\\loghi\\.nuget\\packages\\skiasharp.nativeassets.linux\\2.88.9\\skiasharp.nativeassets.linux.2.88.9.nupkg.sha512",

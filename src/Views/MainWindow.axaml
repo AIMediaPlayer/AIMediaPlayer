@@ -19,56 +19,75 @@
             </Setter>
         </Style>
 
-       <Style Selector="Button#PlayPauseButton:pointerover /template/ ContentPresenter">
-        <Setter Property="Background" Value="#22FFFFFF"/> 
-        <Setter Property="Foreground" Value="White"/>
+        <Style Selector="Button#PlayPauseButton:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#22FFFFFF"/>
+            <Setter Property="Foreground" Value="White"/>
         </Style>
 
         <Style Selector="Button#PlayPauseButton:pressed /template/ ContentPresenter">
-            <Setter Property="Background" Value="#44FFFFFF"/> 
+            <Setter Property="Background" Value="#44FFFFFF"/>
         </Style>
+    </Window.Styles>
 
-        </Window.Styles>
+    <Grid Name="InputLayer" Background="Transparent" IsHitTestVisible="True">
 
-    <Grid Name="InputLayer" Background="#FF000000">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+        <vlc:VideoView Name="VideoPlayer"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch">
 
-        <vlc:VideoView Name="VideoPlayer" 
-                       Grid.Row="0"
-                       HorizontalAlignment="Stretch" 
-                       VerticalAlignment="Stretch" />
+            <Grid>
 
-        <Border Name="ControlBar" 
-                Grid.Row="1"
-                Background="#2b2b2b" 
-                Padding="15,10"
-                Opacity="1">
+                <Grid Name="VideoOverlay" Background="Transparent" IsHitTestVisible="True" />
 
-            <Border.Transitions>
-                <Transitions>
-                    <DoubleTransition Property="Opacity" Duration="0:0:1"/>
-                </Transitions>
-            </Border.Transitions>
+                <Border Name="ControlBar"
+                        Background="#2b2b2b"
+                        Padding="15,10"
+                        VerticalAlignment="Bottom"
+                        Opacity="1">
 
-            <Grid ColumnDefinitions="Auto, *, Auto">
-                <Button Grid.Column="0" Content="Open file" Command="{Binding OpenFileCommand}" 
-                        CommandParameter="{Binding $parent[Window].StorageProvider}" Padding="10,5"/>
+                    <Border.Transitions>
+                        <Transitions>
+                            <DoubleTransition Property="Opacity" Duration="0:0:0.4"/>
+                        </Transitions>
+                    </Border.Transitions>
 
-                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
-              <Button Name="PlayPauseButton" 
-                Content="▶" 
-                Click="PlayPause_OnClick" 
-                Width="65" 
-                FontSize="20"
-                HorizontalContentAlignment="Center"/>
+                    <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, 250">
+                        <ListBox Name="PlaylistBox"
+                                 Grid.Row="0" Grid.RowSpan="2" Grid.Column="1"
+                                 Background="#333333" Foreground="White"
+                                 Margin="10,0,0,0">
+                        </ListBox>
 
-            </StackPanel>
+                        <Slider Name="ProgressSlider"
+                                Grid.Row="0" Grid.Column="0"
+                                Minimum="0" Maximum="1"
+                                Margin="0,0,0,10"/>
 
-                <Rectangle Grid.Column="2" Width="110" Height="0" />
+                        <Grid Grid.Row="1" Grid.Column="0" ColumnDefinitions="Auto, *, Auto">
+                            <Button Grid.Column="0" Content="Open file"
+                                    Command="{Binding OpenFileCommand}"
+                                    CommandParameter="{Binding $parent[Window].StorageProvider}"
+                                    Padding="10,5"/>
+
+                            <StackPanel Grid.Column="1" Orientation="Horizontal"
+                                        HorizontalAlignment="Center" Spacing="10">
+                                <Button Name="PrevButton" Content="⏮" Click="Prev_OnClick" FontSize="20"/>
+                                <Button Name="PlayPauseButton" Content="▶" Click="PlayPause_OnClick"
+                                        Width="65" FontSize="20" HorizontalContentAlignment="Center"/>
+                                <Button Name="NextButton" Content="⏭" Click="Next_OnClick" FontSize="20"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="5">
+                                <TextBlock Text="🔊" VerticalAlignment="Center" Foreground="White"/>
+                                <Slider Name="VolumeSlider" Width="100" Minimum="0" Maximum="100" Value="100"
+                                        PropertyChanged="VolumeSlider_PropertyChanged" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Border>
             </Grid>
-        </Border>
+
+        </vlc:VideoView>
+
     </Grid>
 </Window>
