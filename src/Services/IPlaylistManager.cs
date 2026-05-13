@@ -24,9 +24,11 @@ namespace AIMediaPlayer.Services
         void SavePlaylist(string path);
         void Save(string path);
 
-        void Load(string path);
+        Task Load(string path);
 
         Media GetCurrent();
+
+        List<AIMediaPlayer.Models.PlaylistItemState> GetPlaylistInfo();
 
     }
 }

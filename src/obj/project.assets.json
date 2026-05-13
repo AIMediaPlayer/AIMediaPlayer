@@ -539,6 +539,28 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/10.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.5-beta1": {
         "type": "package",
         "compile": {
@@ -661,6 +683,37 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "System.Drawing.Common/10.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.8"
+        },
+        "compile": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net8.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net8.0/System.Private.Windows.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/net8.0/System.Private.Windows.GdiPlus.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "System.Globalization/4.3.0": {
@@ -888,6 +941,27 @@
         "type": "package",
         "build": {
           "build/VideoLAN.LibVLC.Windows.targets": {}
+        }
+      },
+      "WindowsAPICodePack-Core/1.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.WindowsAPICodePack.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.WindowsAPICodePack.dll": {}
+        }
+      },
+      "WindowsAPICodePack-Shell/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "WindowsAPICodePack-Core": "1.1.1"
+        },
+        "compile": {
+          "lib/Microsoft.WindowsAPICodePack.Shell.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.WindowsAPICodePack.Shell.dll": {}
         }
       }
     }
@@ -1729,6 +1803,41 @@
         "runtime.json"
       ]
     },
+    "Microsoft.Win32.SystemEvents/10.0.8": {
+      "sha512": "J9+VT0lkrA7wW38CGxO2sZd+iH9C0qzioMi/2ztpT32WOVr+04uNqFIrxisTRf+mvtXLtdqcio1AoS0vfAVLLQ==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/10.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "lib/net10.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net10.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net462/Microsoft.Win32.SystemEvents.dll",
+        "lib/net462/Microsoft.Win32.SystemEvents.xml",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net9.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net9.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.10.0.8.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net10.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net9.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Newtonsoft.Json/13.0.5-beta1": {
       "sha512": "cGxikAY78u8CPfIT7mkICvI2ZNL7oDsC+DzgVWxtU5DmNhF2qDcU3YheDitdO9TKIra6Y5rHRD2T7oEexbAbLA==",
       "type": "package",
@@ -1949,6 +2058,59 @@
         "runtimes/win-x86/native/libSkiaSharp.dll",
         "skiasharp.nativeassets.win32.2.88.9.nupkg.sha512",
         "skiasharp.nativeassets.win32.nuspec"
+      ]
+    },
+    "System.Drawing.Common/10.0.8": {
+      "sha512": "LCISd6JAF80vsy9L6wuetZeOMR3FH+SwKovw5Zl0Nov9pB9ZOiCSqvOfMzooypPItQLv0mGfEePjJ1nCCQztNw==",
+      "type": "package",
+      "path": "system.drawing.common/10.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Drawing.Common.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net10.0/System.Drawing.Common.dll",
+        "lib/net10.0/System.Drawing.Common.pdb",
+        "lib/net10.0/System.Drawing.Common.xml",
+        "lib/net10.0/System.Private.Windows.Core.dll",
+        "lib/net10.0/System.Private.Windows.Core.xml",
+        "lib/net10.0/System.Private.Windows.GdiPlus.dll",
+        "lib/net10.0/System.Private.Windows.GdiPlus.xml",
+        "lib/net462/System.Drawing.Common.dll",
+        "lib/net462/System.Drawing.Common.pdb",
+        "lib/net462/System.Drawing.Common.xml",
+        "lib/net8.0/System.Drawing.Common.dll",
+        "lib/net8.0/System.Drawing.Common.pdb",
+        "lib/net8.0/System.Drawing.Common.xml",
+        "lib/net8.0/System.Private.Windows.Core.dll",
+        "lib/net8.0/System.Private.Windows.Core.xml",
+        "lib/net8.0/System.Private.Windows.GdiPlus.dll",
+        "lib/net8.0/System.Private.Windows.GdiPlus.xml",
+        "lib/net9.0/System.Drawing.Common.dll",
+        "lib/net9.0/System.Drawing.Common.pdb",
+        "lib/net9.0/System.Drawing.Common.xml",
+        "lib/net9.0/System.Private.Windows.Core.dll",
+        "lib/net9.0/System.Private.Windows.Core.xml",
+        "lib/net9.0/System.Private.Windows.GdiPlus.dll",
+        "lib/net9.0/System.Private.Windows.GdiPlus.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.pdb",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "system.drawing.common.10.0.8.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Globalization/4.3.0": {
@@ -3923,6 +4085,32 @@
         "videolan.libvlc.windows.3.0.23.nupkg.sha512",
         "videolan.libvlc.windows.nuspec"
       ]
+    },
+    "WindowsAPICodePack-Core/1.1.2": {
+      "sha512": "tGEkicg61OvHHuFyD4Vu8H4R0q5H1dlpN6fqjdYG+MGIp16znEVo/I+LhMTx3nKpM46reCcE6oC8fJqVJix2Bg==",
+      "type": "package",
+      "path": "windowsapicodepack-core/1.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.WindowsAPICodePack.dll",
+        "lib/Microsoft.WindowsAPICodePack.xml",
+        "windowsapicodepack-core.1.1.2.nupkg.sha512",
+        "windowsapicodepack-core.nuspec"
+      ]
+    },
+    "WindowsAPICodePack-Shell/1.1.1": {
+      "sha512": "CPFamhL3jPo8O6+ErGsLS4LK3DWP5ncxqhbzpPnYkIW9rjatunUij35iTjprbr9mlYR/5Pbguw21MwSmTOKR4g==",
+      "type": "package",
+      "path": "windowsapicodepack-shell/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Microsoft.WindowsAPICodePack.Shell.dll",
+        "lib/Microsoft.WindowsAPICodePack.Shell.xml",
+        "windowsapicodepack-shell.1.1.1.nupkg.sha512",
+        "windowsapicodepack-shell.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -3935,7 +4123,10 @@
       "CommunityToolkit.Mvvm >= 8.4.2",
       "LibVLCSharp.Avalonia >= 3.9.6",
       "Newtonsoft.Json >= 13.0.5-beta1",
-      "VideoLAN.LibVLC.Windows >= 3.0.23"
+      "System.Drawing.Common >= 10.0.8",
+      "VideoLAN.LibVLC.Windows >= 3.0.23",
+      "WindowsAPICodePack-Core >= 1.1.2",
+      "WindowsAPICodePack-Shell >= 1.1.1"
     ]
   },
   "packageFolders": {
@@ -4020,9 +4211,21 @@
             "target": "Package",
             "version": "[13.0.5-beta1, )"
           },
+          "System.Drawing.Common": {
+            "target": "Package",
+            "version": "[10.0.8, )"
+          },
           "VideoLAN.LibVLC.Windows": {
             "target": "Package",
             "version": "[3.0.23, )"
+          },
+          "WindowsAPICodePack-Core": {
+            "target": "Package",
+            "version": "[1.1.2, )"
+          },
+          "WindowsAPICodePack-Shell": {
+            "target": "Package",
+            "version": "[1.1.1, )"
           }
         },
         "imports": [
@@ -4044,5 +4247,27 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'WindowsAPICodePack-Core 1.1.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "WindowsAPICodePack-Core",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'WindowsAPICodePack-Shell 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "WindowsAPICodePack-Shell",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

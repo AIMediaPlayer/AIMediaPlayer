@@ -1,16 +1,19 @@
 ﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:AIMediaPlayer.ViewModels"
+        xmlns:m="using:AIMediaPlayer.Models"
         xmlns:vlc="clr-namespace:LibVLCSharp.Avalonia;assembly=LibVLCSharp.Avalonia"
+        xmlns:sys="using:System"
         x:Class="AIMediaPlayer.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Title="AI Media Player"
-        Width="1000" Height="550"
-        Icon="/Assets/logo.ico">
+        Width="1100" Height="650"
+        Icon="/Assets/logo.ico"
+        Background="#000000">
 
     <Window.Styles>
         <Style Selector="Button#PlayPauseButton">
-            <Setter Property="Background" Value="#00C853" />
+            <Setter Property="Background" Value="#CCFF0000" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="Transitions">
                 <Transitions>
@@ -18,76 +21,149 @@
                 </Transitions>
             </Setter>
         </Style>
-
         <Style Selector="Button#PlayPauseButton:pointerover /template/ ContentPresenter">
-            <Setter Property="Background" Value="#22FFFFFF"/>
-            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#FFFF0000"/>
         </Style>
+    <Style Selector="Button.IconButton:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="#22FFFFFF"/> </Style>
 
-        <Style Selector="Button#PlayPauseButton:pressed /template/ ContentPresenter">
+    <Style Selector="Button.IconButton:pressed /template/ ContentPresenter">
+    <Setter Property="Background" Value="#44FFFFFF"/> </Style>
+
+        <Style Selector="ListBoxItem:selected /template/ ContentPresenter">
             <Setter Property="Background" Value="#44FFFFFF"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style Selector="ListBoxItem:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#22FFFFFF"/>
         </Style>
     </Window.Styles>
 
-    <Grid Name="InputLayer" Background="Transparent" IsHitTestVisible="True">
-
-        <vlc:VideoView Name="VideoPlayer"
-                       HorizontalAlignment="Stretch"
-                       VerticalAlignment="Stretch">
+    <Grid Name="InputLayer" Background="Black" IsHitTestVisible="True">
+        <vlc:VideoView Name="VideoPlayer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
             <Grid>
-
                 <Grid Name="VideoOverlay" Background="Transparent" IsHitTestVisible="True" />
 
-                <Border Name="ControlBar"
-                        Background="#2b2b2b"
-                        Padding="15,10"
-                        VerticalAlignment="Bottom"
-                        Opacity="1">
-
-                    <Border.Transitions>
+                <DockPanel Name="OverlayControls" Opacity="1" LastChildFill="False">
+                    <DockPanel.Transitions>
                         <Transitions>
                             <DoubleTransition Property="Opacity" Duration="0:0:0.4"/>
                         </Transitions>
-                    </Border.Transitions>
+                    </DockPanel.Transitions>
 
-                    <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, 250">
-                        <ListBox Name="PlaylistBox"
-                                 Grid.Row="0" Grid.RowSpan="2" Grid.Column="1"
-                                 Background="#333333" Foreground="White"
-                                 Margin="10,0,0,0">
-                        </ListBox>
+                    <Border DockPanel.Dock="Top" Background="#B3000000" Padding="5">
+                        <Menu Background="Transparent" Foreground="White">
+                            <MenuItem Header="Subtitles">
+                                <MenuItem Header="Add subtitle file..." Click="AddSubtitleFile_Click" ToolTip.Tip="Load a custom .srt or .ass file"/>
+                                <Separator Background="Gray"/>
+                                <MenuItem Header="Subtitle list" Name="SubtitleListMenu" IsEnabled="False" ToolTip.Tip="Select an embedded subtitle track"/>
+                            </MenuItem>
+                        </Menu>
+                    </Border>
 
-                        <Slider Name="ProgressSlider"
-                                Grid.Row="0" Grid.Column="0"
-                                Minimum="0" Maximum="1"
-                                Margin="0,0,0,10"/>
+                    <Border DockPanel.Dock="Bottom" Background="#e60f0f0f" Padding="20,15" BorderBrush="#272727" BorderThickness="0,1,0,0">
+                        <Grid RowDefinitions="Auto, Auto, Auto">
+                            <Grid Grid.Row="0" ColumnDefinitions="*, Auto" Margin="0,0,0,10">
+                                <TextBlock Name="TitleLabel" Grid.Column="0" Foreground="White" FontWeight="Bold" Text="No media loaded" TextTrimming="CharacterEllipsis" Margin="0,0,10,0"/>
+                                <TextBlock Name="TimeLabel" Grid.Column="1" Foreground="#aaaaaa" Text="00:00:00 / 00:00:00" />
+                            </Grid>
 
-                        <Grid Grid.Row="1" Grid.Column="0" ColumnDefinitions="Auto, *, Auto">
-                            <Button Grid.Column="0" Content="Open file"
-                                    Command="{Binding OpenFileCommand}"
-                                    CommandParameter="{Binding $parent[Window].StorageProvider}"
-                                    Padding="10,5"/>
+                            <Slider Name="ProgressSlider"
+                                    Grid.Row="1"
+                                    Minimum="0" Maximum="1"
+                                    Margin="0,0,0,10"
+                                    Foreground="#FF0000"/>
 
-                            <StackPanel Grid.Column="1" Orientation="Horizontal"
-                                        HorizontalAlignment="Center" Spacing="10">
-                                <Button Name="PrevButton" Content="⏮" Click="Prev_OnClick" FontSize="20"/>
-                                <Button Name="PlayPauseButton" Content="▶" Click="PlayPause_OnClick"
-                                        Width="65" FontSize="20" HorizontalContentAlignment="Center"/>
-                                <Button Name="NextButton" Content="⏭" Click="Next_OnClick" FontSize="20"/>
-                            </StackPanel>
+                            <Grid Grid.Row="2" ColumnDefinitions="Auto, *, Auto">
+                                <StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="5">
+                                    <Button Content="Open file" Command="{Binding OpenFileCommand}" CommandParameter="{Binding $parent[Window].StorageProvider}" Background="Transparent" Foreground="White" ToolTip.Tip="Quickly open a single file"/>
+                                    <Button Content="Stop" Click="Stop_OnClick" Background="Transparent" Foreground="White" ToolTip.Tip="Stop playback entirely"/>
+                                </StackPanel>
 
-                            <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="5">
-                                <TextBlock Text="🔊" VerticalAlignment="Center" Foreground="White"/>
-                                <Slider Name="VolumeSlider" Width="100" Minimum="0" Maximum="100" Value="100"
-                                        PropertyChanged="VolumeSlider_PropertyChanged" VerticalAlignment="Center"/>
-                            </StackPanel>
+                                <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+                                    <Button Name="ShuffleButton" Classes="IconButton" Content="🔀" Click="Shuffle_OnClick" FontSize="20" Background="Transparent" Foreground="White" ToolTip.Tip="Shuffle queue"/>
+                                    <Button Name="PrevButton" Content="⏮" Click="Prev_OnClick" FontSize="20" Background="Transparent" Foreground="White" ToolTip.Tip="Previous"/>
+                                    <Button Name="PlayPauseButton" Content="▶" Click="PlayPause_OnClick" Width="65" FontSize="20" HorizontalContentAlignment="Center" CornerRadius="5"/>
+                                    <Button Name="NextButton" Content="⏭" Click="Next_OnClick" FontSize="20" Background="Transparent" Foreground="White" ToolTip.Tip="Next"/>
+                                    <Button Name="RepeatButton" Content="🔁" Click="Repeat_OnClick" FontSize="20" Background="Transparent" Foreground="White" ToolTip.Tip="Repeat queue"/>
+                                </StackPanel>
+
+                                <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="5">
+                                    <TextBlock Text="🔊" VerticalAlignment="Center" Foreground="White"/>
+                                    <Slider Name="VolumeSlider" Width="100" Minimum="0" Maximum="100" Value="100" PropertyChanged="VolumeSlider_PropertyChanged" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Grid>
                         </Grid>
+                    </Border>
+
+    <Border DockPanel.Dock="Right" Width="360" Background="#0F0F0F" BorderBrush="#272727" BorderThickness="1,0,0,0">
+        <Grid RowDefinitions="Auto, *, Auto">
+
+            <Border Grid.Row="0" Padding="15,15,15,10" Background="#161616">
+                <StackPanel>
+                    <Grid ColumnDefinitions="*, Auto" Margin="0,0,0,5">
+                        <TextBlock Grid.Column="0" Text="Lista mea de redare" FontSize="18" FontWeight="Bold" Foreground="White" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <Button Grid.Column="1" Content="✕" Background="Transparent" Foreground="White" FontSize="16" Padding="5" VerticalAlignment="Center" ToolTip.Tip="Închide playlist"/>
                     </Grid>
+
+                    <TextBlock Name="PlaylistStatusLabel" Text="Playlist - 0/0" FontSize="13" Foreground="#AAAAAA" Margin="0,0,0,15"/>
+
+                    <Grid ColumnDefinitions="Auto, Auto, *, Auto">
+                        <Button Grid.Column="0" Content="🔁" Click="Repeat_OnClick" Background="Transparent" Foreground="White" FontSize="18" Padding="5" Margin="0,0,10,0" ToolTip.Tip="Repetă playlist-ul"/>
+                        <Button Grid.Column="1" Content="🔀" Click="Shuffle_OnClick" Background="Transparent" Foreground="White" FontSize="18" Padding="5" ToolTip.Tip="Amestecă (Shuffle)"/>
+                        <Button Grid.Column="3" Content="➕ Adaugă" Click="AddMedia_OnClick" Background="#33FFFFFF" Foreground="White" CornerRadius="10" Padding="10,5"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <ListBox Name="PlaylistBox"
+                     Grid.Row="1"
+                     Background="Transparent"
+                     Foreground="White"
+                     SelectionMode="Single"
+                     DoubleTapped="PlaylistBox_DoubleTapped"
+                     Padding="0,10">
+                <ListBox.Styles>
+                    <Style Selector="ListBoxItem">
+                        <Setter Property="Padding" Value="0"/>
+                        <Setter Property="Margin" Value="0"/>
+                    </Style>
+                </ListBox.Styles>
+    <ListBox.ItemTemplate>
+        <DataTemplate x:DataType="m:PlaylistItemUI">
+        <Border Padding="10,8" Background="Transparent" CornerRadius="8">
+            <Grid ColumnDefinitions="30, 110, *">
+
+                <TextBlock Grid.Column="0" Text="▶" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" IsVisible="{Binding $parent[ListBoxItem].IsSelected}"/>
+                <TextBlock Grid.Column="0" Text="•" FontSize="18" Foreground="#555555" VerticalAlignment="Center" HorizontalAlignment="Center" IsVisible="{Binding !$parent[ListBoxItem].IsSelected}"/>
+
+                <Border Grid.Column="1" Height="62" CornerRadius="6" Background="#222222" Margin="10,0">
+                    <Image Source="{Binding Thumbnail}" Stretch="UniformToFill"/>
                 </Border>
+
+                <StackPanel Grid.Column="2" VerticalAlignment="Center">
+                    <TextBlock Text="{Binding Title}" Foreground="White" FontWeight="SemiBold"/>
+                    <TextBlock Text="{Binding MediaType}" Foreground="#AAAAAA" FontSize="12"/>
+                </StackPanel>
             </Grid>
+        </Border>
+        </DataTemplate>
+</ListBox.ItemTemplate>
+            </ListBox>
 
+            <Border Grid.Row="2" BorderBrush="#272727" BorderThickness="0,1,0,0" Padding="10" Background="#161616">
+                <Grid ColumnDefinitions="*,*,*">
+                    <Button Grid.Column="0" Content="🗑️ Șterge" Click="Remove_OnClick" Background="Transparent" Foreground="#AAAAAA" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <Button Grid.Column="1" Content="💾 Salvează" Click="SavePlaylist_OnClick" Background="Transparent" Foreground="#AAAAAA" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                    <Button Grid.Column="2" Content="📂 Încarcă" Click="LoadPlaylist_OnClick" Background="Transparent" Foreground="#AAAAAA" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+                </Grid>
+            </Border>
+        </Grid>
+</Border>
+
+                </DockPanel>
+            </Grid>
         </vlc:VideoView>
-
     </Grid>
 </Window>

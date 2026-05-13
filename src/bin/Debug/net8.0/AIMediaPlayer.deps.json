@@ -16,7 +16,10 @@
           "CommunityToolkit.Mvvm": "8.4.2",
           "LibVLCSharp.Avalonia": "3.9.6",
           "Newtonsoft.Json": "13.0.5-beta1",
+          "System.Drawing.Common": "10.0.8",
           "VideoLAN.LibVLC.Windows": "3.0.23",
+          "WindowsAPICodePack-Core": "1.1.2",
+          "WindowsAPICodePack-Shell": "1.1.1",
           "AvaloniaUI.DiagnosticsSupport.Avalonia": "2.2.0.0"
         },
         "runtime": {
@@ -395,6 +398,22 @@
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.Win32.SystemEvents/10.0.8": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.826.23019"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.826.23019"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.5-beta1": {
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -474,6 +493,25 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "System.Drawing.Common/10.0.8": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "10.0.8"
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.826.23019"
+          },
+          "lib/net8.0/System.Private.Windows.Core.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.826.23019"
+          },
+          "lib/net8.0/System.Private.Windows.GdiPlus.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.826.23019"
           }
         }
       },
@@ -600,6 +638,25 @@
         }
       },
       "VideoLAN.LibVLC.Windows/3.0.23": {},
+      "WindowsAPICodePack-Core/1.1.2": {
+        "runtime": {
+          "lib/Microsoft.WindowsAPICodePack.dll": {
+            "assemblyVersion": "1.1.2.0",
+            "fileVersion": "1.1.2.0"
+          }
+        }
+      },
+      "WindowsAPICodePack-Shell/1.1.1": {
+        "dependencies": {
+          "WindowsAPICodePack-Core": "1.1.2"
+        },
+        "runtime": {
+          "lib/Microsoft.WindowsAPICodePack.Shell.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
       "AvaloniaUI.DiagnosticsSupport.Avalonia/2.2.0.0": {
         "runtime": {
           "AvaloniaUI.DiagnosticsSupport.Avalonia.dll": {
@@ -805,6 +862,13 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
+    "Microsoft.Win32.SystemEvents/10.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J9+VT0lkrA7wW38CGxO2sZd+iH9C0qzioMi/2ztpT32WOVr+04uNqFIrxisTRf+mvtXLtdqcio1AoS0vfAVLLQ==",
+      "path": "microsoft.win32.systemevents/10.0.8",
+      "hashPath": "microsoft.win32.systemevents.10.0.8.nupkg.sha512"
+    },
     "Newtonsoft.Json/13.0.5-beta1": {
       "type": "package",
       "serviceable": true,
@@ -853,6 +917,13 @@
       "sha512": "sha512-wb2kYgU7iy84nQLYZwMeJXixvK++GoIuECjU4ECaUKNuflyRlJKyiRhN1MAHswvlvzuvkrjRWlK0Za6+kYQK7w==",
       "path": "skiasharp.nativeassets.win32/2.88.9",
       "hashPath": "skiasharp.nativeassets.win32.2.88.9.nupkg.sha512"
+    },
+    "System.Drawing.Common/10.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LCISd6JAF80vsy9L6wuetZeOMR3FH+SwKovw5Zl0Nov9pB9ZOiCSqvOfMzooypPItQLv0mGfEePjJ1nCCQztNw==",
+      "path": "system.drawing.common/10.0.8",
+      "hashPath": "system.drawing.common.10.0.8.nupkg.sha512"
     },
     "System.Globalization/4.3.0": {
       "type": "package",
@@ -965,6 +1036,20 @@
       "sha512": "sha512-O/Elo/AxXutSJ/3Z0lIuXEm9tr1iVmUYcws4WB1X9zHgGcAHBBFk29u9B7GX8mxLLMx9e1A6n3h6C0WyTk3KeQ==",
       "path": "videolan.libvlc.windows/3.0.23",
       "hashPath": "videolan.libvlc.windows.3.0.23.nupkg.sha512"
+    },
+    "WindowsAPICodePack-Core/1.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tGEkicg61OvHHuFyD4Vu8H4R0q5H1dlpN6fqjdYG+MGIp16znEVo/I+LhMTx3nKpM46reCcE6oC8fJqVJix2Bg==",
+      "path": "windowsapicodepack-core/1.1.2",
+      "hashPath": "windowsapicodepack-core.1.1.2.nupkg.sha512"
+    },
+    "WindowsAPICodePack-Shell/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CPFamhL3jPo8O6+ErGsLS4LK3DWP5ncxqhbzpPnYkIW9rjatunUij35iTjprbr9mlYR/5Pbguw21MwSmTOKR4g==",
+      "path": "windowsapicodepack-shell/1.1.1",
+      "hashPath": "windowsapicodepack-shell.1.1.1.nupkg.sha512"
     },
     "AvaloniaUI.DiagnosticsSupport.Avalonia/2.2.0.0": {
       "type": "reference",

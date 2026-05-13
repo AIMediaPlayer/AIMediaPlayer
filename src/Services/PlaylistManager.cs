@@ -39,19 +39,17 @@ namespace AIMediaPlayer.Services
             {
                 Media media = new Media(_vlc, uri);
 
-                var status = await media.Parse(MediaParseOptions.ParseLocal);
+                // Așteptăm să încerce extragerea metadatelor (dar nu ne blocăm de statusul returnat)
+                await media.Parse(MediaParseOptions.ParseLocal);
 
-                if (status == MediaParsedStatus.Done)
-                {
-                    _mediaList.Add(media);
-                    return true;
-                }
+                // Adăugăm fișierul în lista internă indiferent dacă parsarea a returnat Done, Skipped etc.
+                _mediaList.Add(media);
 
-                return false;
+                return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine($"Eroare la adăugarea media: {ex.Message}");
                 return false;
             }
         }
@@ -84,11 +82,19 @@ namespace AIMediaPlayer.Services
             foreach (Media media in _mediaList)
             {
                 string title = media.Meta(MetadataType.Title);
+
+                // Adăugăm fallback-ul către numele fișierului
+                if (string.IsNullOrEmpty(title))
+                {
+                    title = Path.GetFileName(Uri.UnescapeDataString(media.Mrl));
+                }
+
                 titleList.Add(title);
                 count++;
             }
             if (count == 0)
                 return null;
+
             return titleList;
         }
 
@@ -147,41 +153,106 @@ namespace AIMediaPlayer.Services
 
         public void Remove(int index, string playlistPath)
         {
-            if (!File.Exists(playlistPath))
-                return;
+            if (index >= 0 && index < _mediaList.Count)
+            {
+                _mediaList.RemoveAt(index);
 
-            var json = File.ReadAllText(playlistPath);
+                if (_currentIndex >= _mediaList.Count && _mediaList.Count > 0)
+                    _currentIndex = _mediaList.Count - 1;
+                else if (_currentIndex > index)
+                    _currentIndex--;
 
-            dynamic state = JsonConvert.DeserializeObject(json);
-
-            if (state == null || state.Items == null)
-                return;
-
-            if (index < 0 || index >= state.Items.Count)
-                return;
-
-            state.Items.RemoveAt(index);
-
-            File.WriteAllText(
-                playlistPath,
-                JsonConvert.SerializeObject(state, Formatting.Indented)
-            );
-
-            Load(playlistPath);
+                SavePlaylist(playlistPath);
+            }
         }
+        public List<PlaylistItemState> GetPlaylistInfo()
+        {
+            var list = new List<PlaylistItemState>();
 
+            foreach (var m in _mediaList)
+            {
+                string artworkUrl = m.Meta(MetadataType.ArtworkURL);
+                string thumbnailLocalPath = null;
+
+                if (!string.IsNullOrEmpty(artworkUrl))
+                {
+                    if (artworkUrl.StartsWith("file:///"))
+                    {
+                        try { thumbnailLocalPath = Uri.UnescapeDataString(new Uri(artworkUrl).LocalPath); }
+                        catch { thumbnailLocalPath = artworkUrl; }
+                    }
+                    else
+                    {
+                        thumbnailLocalPath = artworkUrl;
+                    }
+                }
+
+                string cleanTitle = m.Meta(MetadataType.Title);
+                if (string.IsNullOrEmpty(cleanTitle))
+                {
+                    cleanTitle = Path.GetFileName(Uri.UnescapeDataString(m.Mrl));
+                }
+
+                list.Add(new PlaylistItemState
+                {
+                    Mrl = m.Mrl,
+                    Title = cleanTitle,
+                    ThumbnailPath = thumbnailLocalPath
+                });
+            }
+
+            return list;
+        }
         public void SavePlaylist(string path)
         {
-            PlaylistState state = new PlaylistState
+            var state = new PlaylistState
             {
                 CurrentIndex = _currentIndex,
-                Items = _mediaList.Select(m => m.Mrl).ToList()
+                Items = _mediaList.Select(m =>
+                {
+                    // 1. Extragem Artwork-ul (coperta încorporată în fișier, descărcată de VLC în cache)
+                    string artworkUrl = m.Meta(MetadataType.ArtworkURL);
+                    string thumbnailLocalPath = null;
+
+                    if (!string.IsNullOrEmpty(artworkUrl))
+                    {
+                        // LibVLC returnează de obicei un format URI (ex: "file:///C:/Users/.../art.jpg")
+                        // Trebuie să-l convertim într-o cale locală normală ca să poată fi citit de Avalonia ulterior
+                        if (artworkUrl.StartsWith("file:///"))
+                        {
+                            try
+                            {
+                                thumbnailLocalPath = Uri.UnescapeDataString(new Uri(artworkUrl).LocalPath);
+                            }
+                            catch
+                            {
+                                thumbnailLocalPath = artworkUrl; // Fallback în caz de eroare la conversie
+                            }
+                        }
+                        else
+                        {
+                            // Poate fi un link web sau un "attachment://"
+                            thumbnailLocalPath = artworkUrl;
+                        }
+                    }
+
+                    // 2. Extragem Titlul (cu fallback la numele fișierului, dacă nu are metadate)
+                    string title = m.Meta(MetadataType.Title);
+                    if (string.IsNullOrEmpty(title))
+                    {
+                        title = Path.GetFileName(Uri.UnescapeDataString(m.Mrl));
+                    }
+
+                    return new PlaylistItemState
+                    {
+                        Mrl = m.Mrl,
+                        Title = title,
+                        ThumbnailPath = thumbnailLocalPath // Calea preluată automat (va fi null dacă nu există copertă)
+                    };
+                }).ToList()
             };
 
-            File.WriteAllText(
-                path,
-                JsonConvert.SerializeObject(state, Formatting.Indented)
-            );
+            File.WriteAllText(path, JsonConvert.SerializeObject(state, Formatting.Indented));
         }
 
         public void Save(string path)
@@ -216,27 +287,35 @@ namespace AIMediaPlayer.Services
             File.WriteAllText(path, JsonConvert.SerializeObject(obj, Formatting.Indented));
         }
 
-        public void Load(string path)
+        public async Task Load(string path)
         {
-            if (!File.Exists(path))
-                return;
+            if (!File.Exists(path)) return;
 
-            var json = File.ReadAllText(path);
-            dynamic state = JsonConvert.DeserializeObject(json);
-
-            _mediaList.Clear();
-
-            foreach (var item in state.Items)
+            try
             {
-                string url = item.ToString();
-                var media = new Media(_vlc, new Uri(url));
-                _mediaList.Add(media);
+                var json = File.ReadAllText(path);
+                var state = JsonConvert.DeserializeObject<PlaylistState>(json);
+
+                _mediaList.Clear();
+                if (state?.Items != null)
+                {
+                    foreach (var item in state.Items)
+                    {
+                        // Creăm obiectul media
+                        var media = new Media(_vlc, item.Mrl, FromType.FromLocation);
+
+                        // IMPORTANT: Trebuie să așteptăm parsarea pentru a avea acces la titlu/metadate
+                        await media.Parse(MediaParseOptions.ParseLocal);
+
+                        _mediaList.Add(media);
+                    }
+                    _currentIndex = state.CurrentIndex;
+                }
             }
-
-            _currentIndex = (int)state.CurrentIndex;
-
-            if (_currentIndex < 0 || _currentIndex >= _mediaList.Count)
-                _currentIndex = 0;
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Eroare la încărcarea playlist-ului: {ex.Message}");
+            }
         }
 
         public Media GetCurrent()

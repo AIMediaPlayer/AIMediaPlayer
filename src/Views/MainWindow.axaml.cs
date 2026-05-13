@@ -1,14 +1,18 @@
-﻿using AIMediaPlayer.ViewModels;
+﻿using AIMediaPlayer.Services;
+using AIMediaPlayer.ViewModels;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
+using Avalonia.Media;
+using Avalonia.Platform;
+using Avalonia.Platform.Storage;
 using Avalonia.Threading;
 using LibVLCSharp.Avalonia;
 using LibVLCSharp.Shared;
-using AIMediaPlayer.Services;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using Avalonia.Media;
 
 namespace AIMediaPlayer.Views;
 
@@ -20,6 +24,7 @@ public partial class MainWindow : Window
     private DispatcherTimer _uiTimer;
     private IPlaylistManager _playlistManager;
     private bool _isDraggingProgress = false;
+    private string _currentPlaylistPath = "playlist.json";
 
     public MainWindow()
     {
@@ -35,7 +40,6 @@ public partial class MainWindow : Window
         LibVLCSharp.Shared.Core.Initialize();
         _libVLC = new LibVLC();
         _mediaPlayer = new MediaPlayer(_libVLC);
-
         _playlistManager = new PlaylistManager(_libVLC);
 
         _mediaPlayer.Playing += (s, e) =>
@@ -44,6 +48,15 @@ public partial class MainWindow : Window
             {
                 var playPauseBtn = this.FindControl<Button>("PlayPauseButton");
                 if (playPauseBtn != null) playPauseBtn.Content = "❚❚";
+
+                var titleLabel = this.FindControl<TextBlock>("TitleLabel");
+                if (titleLabel != null && _mediaPlayer.Media != null)
+                {
+                    titleLabel.Text = _mediaPlayer.Media.Meta(MetadataType.Title) ?? "Unknown Media";
+                }
+
+                UpdateSubtitleList();
+                SyncPlaylistSelection();
             });
         };
 
@@ -65,11 +78,9 @@ public partial class MainWindow : Window
         {
             VideoPlayer.MediaPlayer = _mediaPlayer;
 
-            // Asigură că InputLayer și VideoOverlay primesc evenimente chiar dacă ControlBar este invizibil
             InputLayer.IsHitTestVisible = true;
             InputLayer.Background = Brushes.Transparent;
 
-            // VideoOverlay (în interiorul VideoView) trebuie să capteze mișcarea mouse-ului
             var overlay = this.FindControl<Grid>("VideoOverlay");
             if (overlay != null)
             {
@@ -80,29 +91,38 @@ public partial class MainWindow : Window
                 overlay.AddHandler(InputElement.PointerPressedEvent, OnUserActivity, RoutingStrategies.Tunnel);
             }
 
-            // Prinde mișcarea mouse-ului la nivel de InputLayer (tunnel pentru a capta devreme)
+            var overlayControls = this.FindControl<DockPanel>("OverlayControls");
+            if (overlayControls != null)
+            {
+                overlayControls.AddHandler(InputElement.PointerMovedEvent, OnUserActivity, RoutingStrategies.Tunnel);
+                overlayControls.AddHandler(InputElement.PointerEnteredEvent, OnUserActivity, RoutingStrategies.Tunnel);
+            }
+
             InputLayer.AddHandler(InputElement.PointerMovedEvent, OnUserActivity, RoutingStrategies.Tunnel);
             InputLayer.AddHandler(InputElement.PointerEnteredEvent, OnUserActivity, RoutingStrategies.Tunnel);
             InputLayer.AddHandler(InputElement.PointerPressedEvent, OnUserActivity, RoutingStrategies.Tunnel);
-
-            // Fallback: prinde pointerul la nivel de fereastră
-            this.AddHandler(InputElement.PointerMovedEvent, OnUserActivity, RoutingStrategies.Tunnel);
-            this.AddHandler(InputElement.PointerEnteredEvent, OnUserActivity, RoutingStrategies.Tunnel);
-            this.AddHandler(InputElement.PointerPressedEvent, OnUserActivity, RoutingStrategies.Tunnel);
-
-            ControlBar.AddHandler(InputElement.PointerMovedEvent, OnUserActivity, RoutingStrategies.Tunnel);
-            ControlBar.AddHandler(InputElement.PointerEnteredEvent, OnUserActivity, RoutingStrategies.Tunnel);
         };
 
         _uiTimer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(500) };
         _uiTimer.Tick += (sender, e) =>
         {
-            if (_mediaPlayer.IsPlaying && !_isDraggingProgress && _mediaPlayer.Media != null && _mediaPlayer.Media.Duration > 0)
+            if (_mediaPlayer.Media != null && _mediaPlayer.Media.Duration > 0)
             {
-                var progressSlider = this.FindControl<Slider>("ProgressSlider");
-                if (progressSlider != null)
+                if (_mediaPlayer.IsPlaying && !_isDraggingProgress)
                 {
-                    progressSlider.Value = (double)_mediaPlayer.Time / _mediaPlayer.Media.Duration;
+                    var progressSliderLocal = this.FindControl<Slider>("ProgressSlider");
+                    if (progressSliderLocal != null)
+                    {
+                        progressSliderLocal.Value = (double)_mediaPlayer.Time / _mediaPlayer.Media.Duration;
+                    }
+                }
+
+                var timeLabel = this.FindControl<TextBlock>("TimeLabel");
+                if (timeLabel != null)
+                {
+                    TimeSpan current = TimeSpan.FromMilliseconds(_mediaPlayer.Time);
+                    TimeSpan total = TimeSpan.FromMilliseconds(_mediaPlayer.Media.Duration);
+                    timeLabel.Text = $"{current:hh\\:mm\\:ss} / {total:hh\\:mm\\:ss}";
                 }
             }
         };
@@ -122,20 +142,31 @@ public partial class MainWindow : Window
             }
         };
 
-        _inactivityTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(5) };
+        _inactivityTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(2.5) };
         _inactivityTimer.Tick += (sender, e) =>
         {
-            ControlBar.Opacity = 0;
-            ControlBar.IsHitTestVisible = false;
-            this.Cursor = new Cursor(StandardCursorType.None);
+            var overlayControls = this.FindControl<DockPanel>("OverlayControls");
+            if (overlayControls != null)
+            {
+                overlayControls.Opacity = 0;
+                overlayControls.IsHitTestVisible = false;
+            }
+
+            if (VideoPlayer.IsPointerOver)
+            {
+                this.Cursor = new Cursor(StandardCursorType.None);
+            }
             _inactivityTimer.Stop();
         };
-
         _inactivityTimer.Start();
 
         InputLayer.PointerPressed += (s, e) =>
         {
             if (_mediaPlayer == null) return;
+
+            var overlayControls = this.FindControl<DockPanel>("OverlayControls");
+            if (overlayControls != null && overlayControls.IsPointerOver) return;
+
             if (_mediaPlayer.IsPlaying)
                 _mediaPlayer.SetPause(true);
             else
@@ -148,17 +179,12 @@ public partial class MainWindow : Window
         bool success = await _playlistManager.Add(videoSource);
         if (success)
         {
+            UpdateMediaListUI();
+
             var titleList = _playlistManager.ListAll();
             if (titleList != null)
             {
                 _playlistManager.SetCurrentIndex(titleList.Count - 1);
-
-                var listBox = this.FindControl<ListBox>("PlaylistBox");
-                if (listBox != null)
-                {
-                    listBox.ItemsSource = titleList;
-                    listBox.SelectedIndex = titleList.Count - 1;
-                }
             }
 
             var media = _playlistManager.GetCurrent();
@@ -167,13 +193,143 @@ public partial class MainWindow : Window
         }
     }
 
+    private void UpdateMediaListUI()
+    {
+        var listBox = this.FindControl<ListBox>("PlaylistBox");
+
+        if (listBox != null)
+        {
+            var uiItems = new List<AIMediaPlayer.Models.PlaylistItemUI>();
+
+            // 1. Încărcăm imaginea default ca plan B (fallback)
+            Avalonia.Media.Imaging.Bitmap? defaultThumb = null;
+            try
+            {
+                var uri = new Uri("avares://AIMediaPlayer/Assets/default-preview.png");
+                defaultThumb = new Avalonia.Media.Imaging.Bitmap(AssetLoader.Open(uri));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Nu am putut încărca thumbnail-ul default: {ex.Message}");
+            }
+
+            // 2. Cerem lista detaliată de la PlaylistManager (inclusiv calea imaginilor)
+            var playlistInfo = _playlistManager.GetPlaylistInfo();
+
+            if (playlistInfo != null && playlistInfo.Count > 0)
+            {
+                foreach (var item in playlistInfo)
+                {
+                    Avalonia.Media.Imaging.Bitmap? thumbToUse = defaultThumb;
+
+                    // Dacă avem o cale validă în metadate și fișierul există fizic pe disc (cache-ul VLC)
+                    if (!string.IsNullOrEmpty(item.ThumbnailPath) && System.IO.File.Exists(item.ThumbnailPath))
+                    {
+                        try
+                        {
+                            // Încărcăm imaginea de pe disc
+                            thumbToUse = new Avalonia.Media.Imaging.Bitmap(item.ThumbnailPath);
+                        }
+                        catch
+                        {
+                            // Ignorăm eroarea și păstrăm defaultThumb în caz că fișierul e corupt
+                        }
+                    }
+
+                    // --- NOU: Determinăm dacă este Audio sau Video ---
+                    string mediaTypeLabel = "Video File"; // Setăm video ca mod implicit
+                    try
+                    {
+                        if (!string.IsNullOrEmpty(item.Mrl))
+                        {
+                            // Convertim MRL-ul (file:///) într-o cale locală și îi extragem extensia
+                            string localPath = Uri.UnescapeDataString(new Uri(item.Mrl).LocalPath);
+                            string extension = System.IO.Path.GetExtension(localPath).ToLower();
+
+                            // Lista de extensii audio cunoscute
+                            if (extension == ".mp3" || extension == ".wav" || extension == ".flac" ||
+                                extension == ".m4a" || extension == ".wma" || extension == ".aac" || extension == ".ogg")
+                            {
+                                mediaTypeLabel = "Audio File";
+                            }
+                        }
+                    }
+                    catch { /* Ignorăm excepțiile dacă MRL-ul nu poate fi parsat */ }
+                    // --------------------------------------------------
+
+                    uiItems.Add(new AIMediaPlayer.Models.PlaylistItemUI
+                    {
+                        Title = item.Title,
+                        Thumbnail = thumbToUse,
+                        MediaType = mediaTypeLabel // Trimitem textul corect (Video File sau Audio File)
+                    });
+                }
+
+                listBox.ItemsSource = uiItems;
+
+                // Actualizăm statusul
+                var statusLabel = this.FindControl<TextBlock>("PlaylistStatusLabel");
+                if (statusLabel != null) statusLabel.Text = $"Mixul Tău - 0 / {playlistInfo.Count}";
+            }
+            else
+            {
+                listBox.ItemsSource = null;
+                var statusLabel = this.FindControl<TextBlock>("PlaylistStatusLabel");
+                if (statusLabel != null) statusLabel.Text = "Playlist - 0 / 0";
+            }
+
+            SyncPlaylistSelection();
+        }
+    }
+
+
+    private void SyncPlaylistSelection()
+    {
+        var media = _playlistManager.GetCurrent();
+        if (media == null) return;
+
+        var listBox = this.FindControl<ListBox>("PlaylistBox");
+        if (listBox != null)
+        {
+            string? currentTitle = media.Meta(MetadataType.Title);
+
+            // Adăugăm fallback-ul și aici
+            if (string.IsNullOrEmpty(currentTitle))
+            {
+                currentTitle = System.IO.Path.GetFileName(Uri.UnescapeDataString(media.Mrl));
+            }
+
+            var items = listBox.ItemsSource as List<AIMediaPlayer.Models.PlaylistItemUI>;
+
+            if (items != null && currentTitle != null)
+            {
+                int idx = items.FindIndex(i => i.Title == currentTitle);
+                if (idx != -1)
+                {
+                    listBox.SelectedIndex = idx;
+                }
+
+                var statusLabel = this.FindControl<TextBlock>("PlaylistStatusLabel");
+                if (statusLabel != null)
+                {
+                    int currentNumber = idx == -1 ? 0 : idx + 1;
+                    statusLabel.Text = $"Mixul Tău - {currentNumber} / {items.Count}";
+                }
+            }
+        }
+    }
+
     private void OnUserActivity(object? sender, PointerEventArgs e)
     {
-        if (_isDraggingProgress)
-            return;
+        if (_isDraggingProgress) return;
 
-        ControlBar.Opacity = 1;
-        ControlBar.IsHitTestVisible = true;
+        var overlayControls = this.FindControl<DockPanel>("OverlayControls");
+        if (overlayControls != null)
+        {
+            overlayControls.Opacity = 1;
+            overlayControls.IsHitTestVisible = true;
+        }
+
         this.Cursor = new Cursor(StandardCursorType.Arrow);
         _inactivityTimer.Stop();
         _inactivityTimer.Start();
@@ -194,6 +350,19 @@ public partial class MainWindow : Window
             _mediaPlayer.SetPause(true);
         else
             _mediaPlayer.Play();
+    }
+
+    private void Stop_OnClick(object? sender, RoutedEventArgs e)
+    {
+        if (_mediaPlayer != null && _mediaPlayer.IsPlaying)
+        {
+            _mediaPlayer.Stop();
+            var playPauseBtn = this.FindControl<Button>("PlayPauseButton");
+            if (playPauseBtn != null) playPauseBtn.Content = "▶";
+
+            var titleLabel = this.FindControl<TextBlock>("TitleLabel");
+            if (titleLabel != null) titleLabel.Text = "No media loaded";
+        }
     }
 
     private void Next_OnClick(object? sender, RoutedEventArgs e) => PlayNextMedia();
@@ -220,6 +389,173 @@ public partial class MainWindow : Window
         }
     }
 
+    private void Shuffle_OnClick(object? sender, RoutedEventArgs e)
+    {
+        _playlistManager.Shuffle();
+        UpdateMediaListUI();
+        PlayNextMedia();
+    }
+
+    private void Repeat_OnClick(object? sender, RoutedEventArgs e)
+    {
+        _playlistManager.Repeat();
+    }
+
+    private void PlaylistBox_DoubleTapped(object? sender, TappedEventArgs e)
+    {
+        var listBox = sender as ListBox;
+        if (listBox != null && listBox.SelectedIndex != -1)
+        {
+            _playlistManager.SetCurrentIndex(listBox.SelectedIndex);
+            var media = _playlistManager.GetCurrent();
+            if (media != null)
+            {
+                _mediaPlayer.Media = media;
+                _mediaPlayer.Play();
+            }
+        }
+    }
+
+    private async void AddMedia_OnClick(object? sender, RoutedEventArgs e)
+    {
+        var topLevel = TopLevel.GetTopLevel(this);
+        if (topLevel == null) return;
+
+        var files = await topLevel.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
+        {
+            AllowMultiple = true,
+            Title = "Load Media",
+            FileTypeFilter = new[] { new FilePickerFileType("Media Files") { Patterns = new[] { "*.mp4", "*.mkv", "*.avi", "*.mov", "*.wmv", "*.mp3", "*.wav", "*.m4a" } } }
+        });
+
+        foreach (var file in files)
+        {
+            await _playlistManager.Add(file.Path);
+        }
+        UpdateMediaListUI();
+    }
+
+    private void Remove_OnClick(object? sender, RoutedEventArgs e)
+    {
+        var listBox = this.FindControl<ListBox>("PlaylistBox");
+        if (listBox != null && listBox.SelectedIndex != -1)
+        {
+            _playlistManager.Remove(listBox.SelectedIndex, _currentPlaylistPath);
+            UpdateMediaListUI();
+        }
+    }
+
+    private async void SavePlaylist_OnClick(object? sender, RoutedEventArgs e)
+    {
+        var topLevel = TopLevel.GetTopLevel(this);
+        if (topLevel == null) return;
+
+        var file = await topLevel.StorageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
+        {
+            Title = "Save Playlist",
+            DefaultExtension = "json",
+            ShowOverwritePrompt = true
+        });
+
+        if (file != null)
+        {
+            _currentPlaylistPath = file.Path.LocalPath;
+            _playlistManager.SavePlaylist(_currentPlaylistPath);
+        }
+    }
+
+    private async void LoadPlaylist_OnClick(object? sender, RoutedEventArgs e)
+    {
+        var topLevel = TopLevel.GetTopLevel(this);
+        if (topLevel == null) return;
+
+        var files = await topLevel.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
+        {
+            AllowMultiple = false,
+            Title = "Load Playlist",
+            FileTypeFilter = new[] { new FilePickerFileType("JSON Files") { Patterns = new[] { "*.json" } } }
+        });
+
+        if (files.Count > 0)
+        {
+            _currentPlaylistPath = files[0].Path.LocalPath;
+
+            // Adăugăm await aici pentru a aștepta încărcarea și parsarea
+            await _playlistManager.Load(_currentPlaylistPath);
+
+            // Actualizăm lista în interfață
+            UpdateMediaListUI();
+
+            // (Opțional) Încărcăm în player piesa curentă din playlist-ul salvat
+            var currentMedia = _playlistManager.GetCurrent();
+            if (currentMedia != null)
+            {
+                _mediaPlayer.Media = currentMedia;
+                _mediaPlayer.Play();
+            }
+        }
+
+
+    }
+
+    private async void AddSubtitleFile_Click(object? sender, RoutedEventArgs e)
+    {
+        if (_mediaPlayer == null || !_mediaPlayer.IsPlaying) return;
+
+        var topLevel = TopLevel.GetTopLevel(this);
+        if (topLevel == null) return;
+
+        var files = await topLevel.StorageProvider.OpenFilePickerAsync(new FilePickerOpenOptions
+        {
+            AllowMultiple = false,
+            Title = "Add Subtitle File",
+            FileTypeFilter = new[] { new FilePickerFileType("Subtitle Files") { Patterns = new[] { "*.srt", "*.ass", "*.ssa", "*.sub" } } }
+        });
+
+        if (files.Count > 0)
+        {
+            var uri = files[0].Path;
+            _mediaPlayer.AddSlave(MediaSlaveType.Subtitle, uri.AbsoluteUri, true);
+            UpdateSubtitleList();
+        }
+    }
+
+    private void UpdateSubtitleList()
+    {
+        var subtitleListMenu = this.FindControl<MenuItem>("SubtitleListMenu");
+        if (subtitleListMenu == null) return;
+
+        var items = new List<MenuItem>();
+        var descriptions = _mediaPlayer.SpuDescription;
+
+        if (descriptions != null && descriptions.Length > 0)
+        {
+            subtitleListMenu.IsEnabled = true;
+            int currentSubtitleID = _mediaPlayer.Spu;
+
+            foreach (var item in descriptions)
+            {
+                var menuItem = new MenuItem
+                {
+                    Header = item.Id == currentSubtitleID ? $"✔ {item.Name}" : item.Name,
+                    Tag = item.Id
+                };
+
+                menuItem.Click += (s, e) =>
+                {
+                    _mediaPlayer.SetSpu(item.Id);
+                    UpdateSubtitleList();
+                };
+                items.Add(menuItem);
+            }
+            subtitleListMenu.ItemsSource = items;
+        }
+        else
+        {
+            subtitleListMenu.IsEnabled = false;
+        }
+    }
+
     private void ProgressSlider_PointerPressed(object? sender, PointerPressedEventArgs e)
     {
         _isDraggingProgress = true;
@@ -229,7 +565,6 @@ public partial class MainWindow : Window
     {
         _isDraggingProgress = false;
         var slider = sender as Slider;
-
         if (slider != null && _mediaPlayer?.Media != null)
         {
             _mediaPlayer.Position = (float)slider.Value;
@@ -238,9 +573,9 @@ public partial class MainWindow : Window
 
     private void VolumeSlider_PropertyChanged(object? sender, Avalonia.AvaloniaPropertyChangedEventArgs e)
     {
-        if (e.Property.Name == "Value" && _mediaPlayer != null)
+        if (e.Property.Name == "Value" && _mediaPlayer != null && e.NewValue is double newValue)
         {
-            _mediaPlayer.Volume = (int)((double)e.NewValue);
+            _mediaPlayer.Volume = (int)newValue;
         }
     }
 }

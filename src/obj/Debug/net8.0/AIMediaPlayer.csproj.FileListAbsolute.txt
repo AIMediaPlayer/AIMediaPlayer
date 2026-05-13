@@ -1858,3 +1858,10 @@ C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\obj\Debug\net8.0\AIMediaPla
 C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\obj\Debug\net8.0\AIMediaPlayer.genruntimeconfig.cache
 C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\obj\Debug\net8.0\ref\AIMediaPlayer.dll
 C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\bin\Debug\net8.0\System.Private.Windows.Core.dll
+C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\bin\Debug\net8.0\System.Private.Windows.GdiPlus.dll
+C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\bin\Debug\net8.0\Microsoft.WindowsAPICodePack.dll
+C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\bin\Debug\net8.0\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\loghi\Desktop\GIT PROJECT\AIMediaPlayer\src\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
