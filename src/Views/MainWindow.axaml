@@ -78,7 +78,7 @@
                             <Grid Grid.Row="2" ColumnDefinitions="Auto, *, Auto">
                                 <StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="5">
                                     <Button Content="Open file" Command="{Binding OpenFileCommand}" CommandParameter="{Binding $parent[Window].StorageProvider}" Background="Transparent" Foreground="White" ToolTip.Tip="Quickly open a single file"/>
-                                    <Button Content="Stop" Click="Stop_OnClick" Background="Transparent" Foreground="White" ToolTip.Tip="Stop playback entirely"/>
+                                   
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
@@ -103,7 +103,7 @@
             <Border Grid.Row="0" Padding="15,15,15,10" Background="#161616">
                 <StackPanel>
                     <Grid ColumnDefinitions="*, Auto" Margin="0,0,0,5">
-                        <TextBlock Grid.Column="0" Text="Lista mea de redare" FontSize="18" FontWeight="Bold" Foreground="White" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBlock Grid.Column="0" Text="Playlist-ul meu" FontSize="18" FontWeight="Bold" Foreground="White" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" Margin="0,0,10,0"/>
                         <Button Grid.Column="1" Content="✕" Background="Transparent" Foreground="White" FontSize="16" Padding="5" VerticalAlignment="Center" ToolTip.Tip="Închide playlist"/>
                     </Grid>
 

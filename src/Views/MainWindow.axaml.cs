@@ -196,24 +196,23 @@ public partial class MainWindow : Window
     private void UpdateMediaListUI()
     {
         var listBox = this.FindControl<ListBox>("PlaylistBox");
+        string playlistName = System.IO.Path.GetFileNameWithoutExtension(_currentPlaylistPath);
+
+        var headerLabel = this.FindControl<TextBlock>("PlaylistHeaderLabel");
+        if (headerLabel != null) headerLabel.Text = playlistName;
 
         if (listBox != null)
         {
             var uiItems = new List<AIMediaPlayer.Models.PlaylistItemUI>();
 
-            // 1. Încărcăm imaginea default ca plan B (fallback)
             Avalonia.Media.Imaging.Bitmap? defaultThumb = null;
             try
             {
                 var uri = new Uri("avares://AIMediaPlayer/Assets/default-preview.png");
                 defaultThumb = new Avalonia.Media.Imaging.Bitmap(AssetLoader.Open(uri));
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Nu am putut încărca thumbnail-ul default: {ex.Message}");
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
 
-            // 2. Cerem lista detaliată de la PlaylistManager (inclusiv calea imaginilor)
             var playlistInfo = _playlistManager.GetPlaylistInfo();
 
             if (playlistInfo != null && playlistInfo.Count > 0)
@@ -221,61 +220,46 @@ public partial class MainWindow : Window
                 foreach (var item in playlistInfo)
                 {
                     Avalonia.Media.Imaging.Bitmap? thumbToUse = defaultThumb;
-
-                    // Dacă avem o cale validă în metadate și fișierul există fizic pe disc (cache-ul VLC)
                     if (!string.IsNullOrEmpty(item.ThumbnailPath) && System.IO.File.Exists(item.ThumbnailPath))
                     {
-                        try
-                        {
-                            // Încărcăm imaginea de pe disc
-                            thumbToUse = new Avalonia.Media.Imaging.Bitmap(item.ThumbnailPath);
-                        }
-                        catch
-                        {
-                            // Ignorăm eroarea și păstrăm defaultThumb în caz că fișierul e corupt
-                        }
+                        try { thumbToUse = new Avalonia.Media.Imaging.Bitmap(item.ThumbnailPath); }
+                        catch { }
                     }
 
-                    // --- NOU: Determinăm dacă este Audio sau Video ---
-                    string mediaTypeLabel = "Video File"; // Setăm video ca mod implicit
+                    string mediaTypeLabel = "Video File";
                     try
                     {
                         if (!string.IsNullOrEmpty(item.Mrl))
                         {
-                            // Convertim MRL-ul (file:///) într-o cale locală și îi extragem extensia
                             string localPath = Uri.UnescapeDataString(new Uri(item.Mrl).LocalPath);
                             string extension = System.IO.Path.GetExtension(localPath).ToLower();
-
-                            // Lista de extensii audio cunoscute
                             if (extension == ".mp3" || extension == ".wav" || extension == ".flac" ||
-                                extension == ".m4a" || extension == ".wma" || extension == ".aac" || extension == ".ogg")
+                                extension == ".m4a" || extension == ".wma" || extension == ".aac")
                             {
                                 mediaTypeLabel = "Audio File";
                             }
                         }
                     }
-                    catch { /* Ignorăm excepțiile dacă MRL-ul nu poate fi parsat */ }
-                    // --------------------------------------------------
+                    catch { }
 
                     uiItems.Add(new AIMediaPlayer.Models.PlaylistItemUI
                     {
                         Title = item.Title,
                         Thumbnail = thumbToUse,
-                        MediaType = mediaTypeLabel // Trimitem textul corect (Video File sau Audio File)
+                        MediaType = mediaTypeLabel
                     });
                 }
 
                 listBox.ItemsSource = uiItems;
 
-                // Actualizăm statusul
                 var statusLabel = this.FindControl<TextBlock>("PlaylistStatusLabel");
-                if (statusLabel != null) statusLabel.Text = $"Mixul Tău - 0 / {playlistInfo.Count}";
+                if (statusLabel != null) statusLabel.Text = $"{playlistName} - 0 / {playlistInfo.Count}";
             }
             else
             {
                 listBox.ItemsSource = null;
                 var statusLabel = this.FindControl<TextBlock>("PlaylistStatusLabel");
-                if (statusLabel != null) statusLabel.Text = "Playlist - 0 / 0";
+                if (statusLabel != null) statusLabel.Text = $"{playlistName} - 0 / 0";
             }
 
             SyncPlaylistSelection();
@@ -289,11 +273,11 @@ public partial class MainWindow : Window
         if (media == null) return;
 
         var listBox = this.FindControl<ListBox>("PlaylistBox");
+        string playlistName = System.IO.Path.GetFileNameWithoutExtension(_currentPlaylistPath);
         if (listBox != null)
         {
             string? currentTitle = media.Meta(MetadataType.Title);
 
-            // Adăugăm fallback-ul și aici
             if (string.IsNullOrEmpty(currentTitle))
             {
                 currentTitle = System.IO.Path.GetFileName(Uri.UnescapeDataString(media.Mrl));
@@ -313,7 +297,7 @@ public partial class MainWindow : Window
                 if (statusLabel != null)
                 {
                     int currentNumber = idx == -1 ? 0 : idx + 1;
-                    statusLabel.Text = $"Mixul Tău - {currentNumber} / {items.Count}";
+                    statusLabel.Text = $"{playlistName} - {currentNumber} / {items.Count}";
                 }
             }
         }
@@ -483,10 +467,8 @@ public partial class MainWindow : Window
             // Adăugăm await aici pentru a aștepta încărcarea și parsarea
             await _playlistManager.Load(_currentPlaylistPath);
 
-            // Actualizăm lista în interfață
             UpdateMediaListUI();
 
-            // (Opțional) Încărcăm în player piesa curentă din playlist-ul salvat
             var currentMedia = _playlistManager.GetCurrent();
             if (currentMedia != null)
             {

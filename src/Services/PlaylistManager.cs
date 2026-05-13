@@ -210,14 +210,11 @@ namespace AIMediaPlayer.Services
                 CurrentIndex = _currentIndex,
                 Items = _mediaList.Select(m =>
                 {
-                    // 1. Extragem Artwork-ul (coperta încorporată în fișier, descărcată de VLC în cache)
                     string artworkUrl = m.Meta(MetadataType.ArtworkURL);
                     string thumbnailLocalPath = null;
 
                     if (!string.IsNullOrEmpty(artworkUrl))
                     {
-                        // LibVLC returnează de obicei un format URI (ex: "file:///C:/Users/.../art.jpg")
-                        // Trebuie să-l convertim într-o cale locală normală ca să poată fi citit de Avalonia ulterior
                         if (artworkUrl.StartsWith("file:///"))
                         {
                             try
@@ -226,17 +223,15 @@ namespace AIMediaPlayer.Services
                             }
                             catch
                             {
-                                thumbnailLocalPath = artworkUrl; // Fallback în caz de eroare la conversie
+                                thumbnailLocalPath = artworkUrl;
                             }
                         }
                         else
                         {
-                            // Poate fi un link web sau un "attachment://"
                             thumbnailLocalPath = artworkUrl;
                         }
                     }
 
-                    // 2. Extragem Titlul (cu fallback la numele fișierului, dacă nu are metadate)
                     string title = m.Meta(MetadataType.Title);
                     if (string.IsNullOrEmpty(title))
                     {
@@ -247,7 +242,7 @@ namespace AIMediaPlayer.Services
                     {
                         Mrl = m.Mrl,
                         Title = title,
-                        ThumbnailPath = thumbnailLocalPath // Calea preluată automat (va fi null dacă nu există copertă)
+                        ThumbnailPath = thumbnailLocalPath 
                     };
                 }).ToList()
             };
@@ -301,10 +296,8 @@ namespace AIMediaPlayer.Services
                 {
                     foreach (var item in state.Items)
                     {
-                        // Creăm obiectul media
                         var media = new Media(_vlc, item.Mrl, FromType.FromLocation);
 
-                        // IMPORTANT: Trebuie să așteptăm parsarea pentru a avea acces la titlu/metadate
                         await media.Parse(MediaParseOptions.ParseLocal);
 
                         _mediaList.Add(media);
