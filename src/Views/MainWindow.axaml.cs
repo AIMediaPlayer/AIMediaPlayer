@@ -1,4 +1,5 @@
-﻿using AIMediaPlayer.Services;
+﻿using AIMediaPlayer.Exceptions;
+using AIMediaPlayer.Services;
 using AIMediaPlayer.ViewModels;
 using Avalonia.Controls;
 using Avalonia.Input;
@@ -479,21 +480,25 @@ public partial class MainWindow : Window
         {
             _currentPlaylistPath = files[0].Path.LocalPath;
 
-            // Adăugăm await aici pentru a aștepta încărcarea și parsarea
-            await _playlistManager.Load(_currentPlaylistPath);
-
-            UpdateMediaListUI();
-
-            var currentMedia = _playlistManager.GetCurrent();
-            if (currentMedia != null)
+            try
             {
-                _mediaPlayer.Media = currentMedia;
-                _mediaPlayer.Play();
+                await _playlistManager.Load(_currentPlaylistPath);
+                UpdateMediaListUI();
+
+                var currentMedia = _playlistManager.GetCurrent();
+                if (currentMedia != null)
+                {
+                    _mediaPlayer.Media = currentMedia;
+                    _mediaPlayer.Play();
+                }
+            }
+            catch (MediaPlayerException customEx)
+            {
+                Console.WriteLine($"[EROARE {customEx.OperationName}]: {customEx.Message}");
             }
         }
-
-
     }
+  
 
     private async void AddSubtitleFile_Click(object? sender, RoutedEventArgs e)
     {

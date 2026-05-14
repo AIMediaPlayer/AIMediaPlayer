@@ -9,6 +9,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using AIMediaPlayer.Exceptions;
 
 namespace AIMediaPlayer.Services
 {
@@ -64,8 +65,7 @@ namespace AIMediaPlayer.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Eroare la adăugarea media: {ex.Message}");
-                return false;
+                throw new MediaPlayerException($"Nu s-a putut adăuga fișierul: {uri}", "Adăugare Media", ex);
             }
         }
 
@@ -222,56 +222,63 @@ namespace AIMediaPlayer.Services
         }
         public void SavePlaylist(string path)
         {
-            var state = new PlaylistState
+            try
             {
-                CurrentIndex = _currentIndex,
-                Items = _mediaList.Select(m =>
+                var state = new PlaylistState
                 {
-                    string artworkUrl = m.Meta(MetadataType.ArtworkURL);
-                    string thumbnailLocalPath = null;
-
-                    if (!string.IsNullOrEmpty(artworkUrl))
+                    CurrentIndex = _currentIndex,
+                    Items = _mediaList.Select(m =>
                     {
-                        if (artworkUrl.StartsWith("file:///"))
+                        string artworkUrl = m.Meta(MetadataType.ArtworkURL);
+                        string thumbnailLocalPath = null;
+
+                        if (!string.IsNullOrEmpty(artworkUrl))
                         {
-                            try
+                            if (artworkUrl.StartsWith("file:///"))
                             {
-                                thumbnailLocalPath = Uri.UnescapeDataString(new Uri(artworkUrl).LocalPath);
+                                try
+                                {
+                                    thumbnailLocalPath = Uri.UnescapeDataString(new Uri(artworkUrl).LocalPath);
+                                }
+                                catch
+                                {
+                                    thumbnailLocalPath = artworkUrl;
+                                }
                             }
-                            catch
+                            else
                             {
                                 thumbnailLocalPath = artworkUrl;
                             }
                         }
-                        else
-                        {
-                            thumbnailLocalPath = artworkUrl;
-                        }
-                    }
 
-                    string title = m.Meta(MetadataType.Title);
-                    if (string.IsNullOrEmpty(title))
-                    {
-                        try
+                        string title = m.Meta(MetadataType.Title);
+                        if (string.IsNullOrEmpty(title))
                         {
-                            title = Path.GetFileName(Uri.UnescapeDataString(m.Mrl));
+                            try
+                            {
+                                title = Path.GetFileName(Uri.UnescapeDataString(m.Mrl));
+                            }
+                            catch
+                            {
+                                title = "Unknown Media";
+                            }
                         }
-                        catch
+
+                        return new PlaylistItemState
                         {
-                            title = "Unknown Media";
-                        }
-                    }
+                            Mrl = m.Mrl,
+                            Title = title,
+                            ThumbnailPath = thumbnailLocalPath
+                        };
+                    }).ToList()
+                };
 
-                    return new PlaylistItemState
-                    {
-                        Mrl = m.Mrl,
-                        Title = title,
-                        ThumbnailPath = thumbnailLocalPath
-                    };
-                }).ToList()
-            };
-
-            File.WriteAllText(path, Newtonsoft.Json.JsonConvert.SerializeObject(state, Newtonsoft.Json.Formatting.Indented));
+                File.WriteAllText(path, Newtonsoft.Json.JsonConvert.SerializeObject(state, Newtonsoft.Json.Formatting.Indented));
+            }
+            catch (Exception ex)
+            {
+                throw new MediaPlayerException($"Nu s-a putut salva playlist-ul pe disc în locația: {path}", "Salvare Playlist", ex);
+            }
         }
 
         public void Save(string path)
@@ -332,7 +339,7 @@ namespace AIMediaPlayer.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Eroare la încărcarea playlist-ului: {ex.Message}");
+                throw new MediaPlayerException($"A eșuat încărcarea playlist-ului din {path}", "Încărcare Playlist", ex);
             }
         }
 
