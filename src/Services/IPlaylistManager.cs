@@ -11,6 +11,7 @@ namespace AIMediaPlayer.Services
 {
     public interface IPlaylistManager
     {
+        event Action PlaylistUpdated;
         Task<bool> Add(Uri uri);
         Media GetMedia(string title);
         List<string> ListAll();

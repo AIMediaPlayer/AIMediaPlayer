@@ -17,6 +17,8 @@ namespace AIMediaPlayer.Services
     /// </summary>
     public class PlaylistManager : IPlaylistManager
     {
+        public event Action PlaylistUpdated;
+
         private int _currentIndex = 0;
         private bool _repeat = false;
         private List<Media> _mediaList;
@@ -27,6 +29,8 @@ namespace AIMediaPlayer.Services
             _vlc = vlc;
             _mediaList = new List<Media>();
         }
+        private void NotifyPlaylistChanged() => PlaylistUpdated?.Invoke();
+
 
         /// <summary>
         /// Functie asincrona ce asteapta parsarea fisierului media si-l adauaga in lista de obiecte Media
@@ -39,11 +43,22 @@ namespace AIMediaPlayer.Services
             {
                 Media media = new Media(_vlc, uri);
 
-                // Așteptăm să încerce extragerea metadatelor (dar nu ne blocăm de statusul returnat)
-                await media.Parse(MediaParseOptions.ParseLocal);
-
-                // Adăugăm fișierul în lista internă indiferent dacă parsarea a returnat Done, Skipped etc.
                 _mediaList.Add(media);
+                NotifyPlaylistChanged();
+
+                _ = Task.Run(async () =>
+                {
+                    try
+                    {
+                        await media.Parse(MediaParseOptions.ParseLocal);
+
+                        NotifyPlaylistChanged();
+                    }
+                    catch (Exception parseEx)
+                    {
+                        Console.WriteLine($"Eroare la parsarea media: {parseEx.Message}");
+                    }
+                });
 
                 return true;
             }
@@ -144,6 +159,7 @@ namespace AIMediaPlayer.Services
         {
             _mediaList = _mediaList.OrderBy(x => Guid.NewGuid()).ToList();
             _currentIndex = 0;
+            NotifyPlaylistChanged();
         }
 
         public void Repeat()
@@ -163,6 +179,7 @@ namespace AIMediaPlayer.Services
                     _currentIndex--;
 
                 SavePlaylist(playlistPath);
+                NotifyPlaylistChanged();
             }
         }
         public List<PlaylistItemState> GetPlaylistInfo()
@@ -235,19 +252,26 @@ namespace AIMediaPlayer.Services
                     string title = m.Meta(MetadataType.Title);
                     if (string.IsNullOrEmpty(title))
                     {
-                        title = Path.GetFileName(Uri.UnescapeDataString(m.Mrl));
+                        try
+                        {
+                            title = Path.GetFileName(Uri.UnescapeDataString(m.Mrl));
+                        }
+                        catch
+                        {
+                            title = "Unknown Media";
+                        }
                     }
 
                     return new PlaylistItemState
                     {
                         Mrl = m.Mrl,
                         Title = title,
-                        ThumbnailPath = thumbnailLocalPath 
+                        ThumbnailPath = thumbnailLocalPath
                     };
                 }).ToList()
             };
 
-            File.WriteAllText(path, JsonConvert.SerializeObject(state, Formatting.Indented));
+            File.WriteAllText(path, Newtonsoft.Json.JsonConvert.SerializeObject(state, Newtonsoft.Json.Formatting.Indented));
         }
 
         public void Save(string path)
@@ -303,6 +327,7 @@ namespace AIMediaPlayer.Services
                         _mediaList.Add(media);
                     }
                     _currentIndex = state.CurrentIndex;
+                    NotifyPlaylistChanged();
                 }
             }
             catch (Exception ex)

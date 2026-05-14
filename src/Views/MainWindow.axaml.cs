@@ -26,6 +26,12 @@ public partial class MainWindow : Window
     private bool _isDraggingProgress = false;
     private string _currentPlaylistPath = "playlist.json";
 
+    //expunem MediaPlayer-ul pentru State-uri
+    public LibVLCSharp.Shared.MediaPlayer MediaPlayer => _mediaPlayer;
+
+    // Starea curentă
+    private States.IPlayerState _currentState;
+
     public MainWindow()
     {
         InitializeComponent();
@@ -41,6 +47,14 @@ public partial class MainWindow : Window
         _libVLC = new LibVLC();
         _mediaPlayer = new MediaPlayer(_libVLC);
         _playlistManager = new PlaylistManager(_libVLC);
+
+        _currentState = new States.StoppedState(); // Starea inițială
+
+        //abonare pentru observer
+        _playlistManager.PlaylistUpdated += () =>
+        {
+            Dispatcher.UIThread.Post(() => UpdateMediaListUI());
+        };
 
         _mediaPlayer.Playing += (s, e) =>
         {
@@ -173,6 +187,17 @@ public partial class MainWindow : Window
                 _mediaPlayer.Play();
         };
     }
+
+    public void SetState(States.IPlayerState newState)
+    {
+        _currentState = newState;
+
+        // Actualizăm UI-ul butonului
+        var playPauseBtn = this.FindControl<Avalonia.Controls.Button>("PlayPauseButton");
+        if (playPauseBtn != null)
+            playPauseBtn.Content = _currentState.GetButtonIcon();
+    }
+
 
     private async Task AddAndPlayMediaAsync(Uri videoSource)
     {
@@ -329,24 +354,14 @@ public partial class MainWindow : Window
 
     private void PlayPause_OnClick(object? sender, RoutedEventArgs e)
     {
-        if (_mediaPlayer == null) return;
-        if (_mediaPlayer.IsPlaying)
-            _mediaPlayer.SetPause(true);
-        else
-            _mediaPlayer.Play();
+        _currentState.PlayPause(this);
     }
 
     private void Stop_OnClick(object? sender, RoutedEventArgs e)
     {
-        if (_mediaPlayer != null && _mediaPlayer.IsPlaying)
-        {
-            _mediaPlayer.Stop();
-            var playPauseBtn = this.FindControl<Button>("PlayPauseButton");
-            if (playPauseBtn != null) playPauseBtn.Content = "▶";
-
-            var titleLabel = this.FindControl<TextBlock>("TitleLabel");
-            if (titleLabel != null) titleLabel.Text = "No media loaded";
-        }
+        _currentState.Stop(this);
+        var titleLabel = this.FindControl<TextBlock>("TitleLabel");
+        if (titleLabel != null) titleLabel.Text = "No media loaded";
     }
 
     private void Next_OnClick(object? sender, RoutedEventArgs e) => PlayNextMedia();
