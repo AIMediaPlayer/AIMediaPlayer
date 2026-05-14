@@ -52,12 +52,11 @@ namespace AIMediaPlayer.Services
                     try
                     {
                         await media.Parse(MediaParseOptions.ParseLocal);
-
                         NotifyPlaylistChanged();
                     }
                     catch (Exception parseEx)
                     {
-                        Console.WriteLine($"Eroare la parsarea media: {parseEx.Message}");
+                        Console.WriteLine(new MediaPlayerException("Eroare în fundal la parsarea metadatelor.", "Parsare Media", parseEx).Message);
                     }
                 });
 
