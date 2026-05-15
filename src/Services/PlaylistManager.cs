@@ -1,4 +1,20 @@
-﻿using AIMediaPlayer.Models;
+﻿/**************************************************************************
+ * *
+ * File:        PlaylistManager.cs                                       *
+ * Copyright:   (c) 2026, Loghin Elisei                                  *
+ * E-mail:      elisei.loghin2@student.tuiasi.ro                         *
+ * Website:                                                              *
+ * Description: Concrete implementation of the playlist manager.         *
+ * *
+ * This program is free software; you can redistribute it and/or modify  *
+ * it under the terms of the GNU General Public License as published by  *
+ * the Free Software Foundation. This program is distributed in the      *
+ * hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
+ * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
+ * PURPOSE. See the GNU General Public License for more details.         *
+ * *
+ **************************************************************************/
+using AIMediaPlayer.Models;
 using LibVLCSharp.Shared;
 using Newtonsoft.Json;
 using System;
@@ -25,19 +41,28 @@ namespace AIMediaPlayer.Services
         private List<Media> _mediaList;
         private LibVLC _vlc;
 
+        /// <summary>
+        /// Constructor ce inițializează managerul de playlist.
+        /// </summary>
+        /// <param name="vlc">Instanța de LibVLC utilizată pentru parsarea și gestionarea fișierelor media.</param>
         public PlaylistManager(LibVLC vlc)
         {
             _vlc = vlc;
             _mediaList = new List<Media>();
         }
+
+        /// <summary>
+        /// Declanșează evenimentul PlaylistUpdated pentru a notifica interfața grafică de schimbările apărute.
+        /// </summary>
         private void NotifyPlaylistChanged() => PlaylistUpdated?.Invoke();
 
 
         /// <summary>
-        /// Functie asincrona ce asteapta parsarea fisierului media si-l adauaga in lista de obiecte Media
+        /// Funcție asincronă ce așteaptă parsarea fișierului media și îl adaugă în lista de obiecte Media.
         /// </summary>
-        /// <param name="uri"></param>
-        /// <returns></returns>
+        /// <param name="uri">Calea (URI) către fișierul media ce trebuie adăugat.</param>
+        /// <returns>Returnează true dacă fișierul a fost adăugat cu succes.</returns>
+        /// <exception cref="MediaPlayerException">Aruncată atunci când fișierul nu poate fi adăugat.</exception>
         public async Task<bool> Add(Uri uri)
         {
             try
@@ -85,9 +110,9 @@ namespace AIMediaPlayer.Services
         }
 
         /// <summary>
-        /// Furnizeaza titlul fiecarui obiect Media prezent in lista
+        /// Furnizează titlul fiecărui obiect Media prezent în listă.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>O listă de string-uri reprezentând titlurile fișierelor media, sau null dacă lista este goală.</returns>
         public List<string> ListAll()
         {
             int count = 0;
@@ -112,12 +137,19 @@ namespace AIMediaPlayer.Services
             return titleList;
         }
 
+        /// <summary>
+        /// Setează indexul fișierului media curent din playlist.
+        /// </summary>
+        /// <param name="index">Indexul la care se dorește mutarea selecției.</param>
         public void SetCurrentIndex(int index)
         {
             if (index >= 0 && index < _mediaList.Count)
                 _currentIndex = index;
         }
 
+        /// <summary>
+        /// Trece la următorul fișier media din playlist. Tratează logic și opțiunea de repetare (Repeat).
+        /// </summary>
         public void Next()
         {
             if (_mediaList.Count == 0)
@@ -136,6 +168,9 @@ namespace AIMediaPlayer.Services
             }
         }
 
+        /// <summary>
+        /// Trece la fișierul media anterior din playlist. Tratează logic și opțiunea de repetare (Repeat).
+        /// </summary>
         public void Previous()
         {
             if (_mediaList.Count == 0)
@@ -154,6 +189,9 @@ namespace AIMediaPlayer.Services
             }
         }
 
+        /// <summary>
+        /// Amestecă (shuffle) aleatoriu ordinea fișierelor media din playlist și notifică UI-ul.
+        /// </summary>
         public void Shuffle()
         {
             _mediaList = _mediaList.OrderBy(x => Guid.NewGuid()).ToList();
@@ -161,11 +199,19 @@ namespace AIMediaPlayer.Services
             NotifyPlaylistChanged();
         }
 
+        /// <summary>
+        /// Comută starea de repetare a playlist-ului (activat/dezactivat).
+        /// </summary>
         public void Repeat()
         {
             _repeat = !_repeat;
         }
 
+        /// <summary>
+        /// Elimină un fișier media din playlist pe baza indexului său și salvează noua stare.
+        /// </summary>
+        /// <param name="index">Indexul elementului de eliminat.</param>
+        /// <param name="playlistPath">Calea către fișierul unde se salvează starea playlist-ului.</param>
         public void Remove(int index, string playlistPath)
         {
             if (index >= 0 && index < _mediaList.Count)
@@ -181,6 +227,11 @@ namespace AIMediaPlayer.Services
                 NotifyPlaylistChanged();
             }
         }
+
+        /// <summary>
+        /// Obține o listă cu starea curentă a elementelor din playlist (Mrl, Titlu, Cale Thumbnail) pentru UI.
+        /// </summary>
+        /// <returns>O listă de obiecte PlaylistItemState.</returns>
         public List<PlaylistItemState> GetPlaylistInfo()
         {
             var list = new List<PlaylistItemState>();
@@ -219,6 +270,12 @@ namespace AIMediaPlayer.Services
 
             return list;
         }
+
+        /// <summary>
+        /// Salvează starea curentă a playlist-ului (elemente și index curent) într-un fișier JSON.
+        /// </summary>
+        /// <param name="path">Calea fișierului de salvare.</param>
+        /// <exception cref="MediaPlayerException">Aruncată dacă salvarea pe disc eșuează.</exception>
         public void SavePlaylist(string path)
         {
             try
@@ -280,6 +337,10 @@ namespace AIMediaPlayer.Services
             }
         }
 
+        /// <summary>
+        /// Funcție alternativă de salvare a playlist-ului care stochează doar lista de referințe (MRL-uri).
+        /// </summary>
+        /// <param name="path">Calea fișierului JSON de destinație.</param>
         public void Save(string path)
         {
             List<string> items = new List<string>();
@@ -312,6 +373,11 @@ namespace AIMediaPlayer.Services
             File.WriteAllText(path, JsonConvert.SerializeObject(obj, Formatting.Indented));
         }
 
+        /// <summary>
+        /// Încarcă un playlist salvat anterior dintr-un fișier JSON, refăcând obiectele Media.
+        /// </summary>
+        /// <param name="path">Calea fișierului de unde se face încărcarea.</param>
+        /// <exception cref="MediaPlayerException">Aruncată dacă parsarea JSON-ului eșuează.</exception>
         public async Task Load(string path)
         {
             if (!File.Exists(path)) return;
@@ -342,6 +408,10 @@ namespace AIMediaPlayer.Services
             }
         }
 
+        /// <summary>
+        /// Returnează obiectul Media selectat curent în playlist.
+        /// </summary>
+        /// <returns>Obiectul Media curent, sau null dacă lista este goală.</returns>
         public Media GetCurrent()
         {
             if (_mediaList.Count == 0) return null;
