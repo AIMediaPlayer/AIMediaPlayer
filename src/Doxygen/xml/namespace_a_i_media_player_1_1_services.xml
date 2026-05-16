@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="namespace_a_i_media_player_1_1_services" kind="namespace" language="C#">
+    <compoundname>AIMediaPlayer::Services</compoundname>
+    <innerclass refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager" prot="public">AIMediaPlayer::Services::IPlaylistManager</innerclass>
+    <innerclass refid="class_a_i_media_player_1_1_services_1_1_playlist_manager" prot="public">AIMediaPlayer::Services::PlaylistManager</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="22" column="1"/>
+  </compounddef>
+</doxygen>

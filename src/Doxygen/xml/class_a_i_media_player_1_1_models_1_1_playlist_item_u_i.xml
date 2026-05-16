@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i" kind="class" language="C#" prot="public">
+    <compoundname>AIMediaPlayer::Models::PlaylistItemUI</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i_1a82f0903c86cabff5ab800140a7588abd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string AIMediaPlayer.Models.PlaylistItemUI.Title</definition>
+        <argsstring></argsstring>
+        <name>Title</name>
+        <qualifiedname>AIMediaPlayer.Models.PlaylistItemUI.Title</qualifiedname>
+        <initializer>= string.Empty</initializer>
+        <briefdescription>
+<para>Obține sau setează titlul fișierului media, care va fi afișat în listă. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistItemUI.cs" line="30" column="23" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistItemUI.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i_1a061448c3689f47ca4109c916a6d42a66" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Bitmap?</type>
+        <definition>Bitmap? AIMediaPlayer.Models.PlaylistItemUI.Thumbnail</definition>
+        <argsstring></argsstring>
+        <name>Thumbnail</name>
+        <qualifiedname>AIMediaPlayer.Models.PlaylistItemUI.Thumbnail</qualifiedname>
+        <briefdescription>
+<para>Obține sau setează imaginea de previzualizare (thumbnail-ul) asociată fișierului media. Poate fi null dacă fișierul nu are artwork sau dacă încărcarea imaginii a eșuat. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistItemUI.cs" line="36" column="23" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistItemUI.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i_1aff4f6ce644dd0b4095e5673f7cb26522" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string AIMediaPlayer.Models.PlaylistItemUI.MediaType</definition>
+        <argsstring></argsstring>
+        <name>MediaType</name>
+        <qualifiedname>AIMediaPlayer.Models.PlaylistItemUI.MediaType</qualifiedname>
+        <initializer>= &quot;Media File&quot;</initializer>
+        <briefdescription>
+<para>Obține sau setează o descriere text a tipului de fișier (ex. &quot;Video File&quot;, &quot;Audio File&quot;). Implicit este setat pe &quot;Media File&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistItemUI.cs" line="42" column="23" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistItemUI.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Reprezintă modelul de date utilizat exclusiv pentru interfața grafică (UI). Conține informațiile necesare pentru afișarea unui element în lista vizuală a playlist-ului. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistItemUI.cs" line="25" column="11" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistItemUI.cs" bodystart="26" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i_1aff4f6ce644dd0b4095e5673f7cb26522" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Models::PlaylistItemUI</scope><name>MediaType</name></member>
+      <member refid="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i_1a061448c3689f47ca4109c916a6d42a66" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Models::PlaylistItemUI</scope><name>Thumbnail</name></member>
+      <member refid="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i_1a82f0903c86cabff5ab800140a7588abd" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Models::PlaylistItemUI</scope><name>Title</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

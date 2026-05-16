@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="dir_633db867517fc930a7645f2dac5f41c1" kind="dir">
+    <compoundname>C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/States</compoundname>
+    <innerfile refid="_i_player_state_8cs">IPlayerState.cs</innerfile>
+    <innerfile refid="_paused_state_8cs">PausedState.cs</innerfile>
+    <innerfile refid="_playing_state_8cs">PlayingState.cs</innerfile>
+    <innerfile refid="_stopped_state_8cs">StoppedState.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/States/"/>
+  </compounddef>
+</doxygen>

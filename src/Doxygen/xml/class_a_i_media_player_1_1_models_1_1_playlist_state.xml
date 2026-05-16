@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_a_i_media_player_1_1_models_1_1_playlist_state" kind="class" language="C#" prot="public">
+    <compoundname>AIMediaPlayer::Models::PlaylistState</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_a_i_media_player_1_1_models_1_1_playlist_state_1ad19b4145f43c3803bdfb27a4fb9f4b4a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int AIMediaPlayer.Models.PlaylistState.CurrentIndex</definition>
+        <argsstring></argsstring>
+        <name>CurrentIndex</name>
+        <qualifiedname>AIMediaPlayer.Models.PlaylistState.CurrentIndex</qualifiedname>
+        <briefdescription>
+<para>Obține sau setează indexul fișierului media care era redat sau selectat curent la momentul salvării. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" line="52" column="20" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="property" id="class_a_i_media_player_1_1_models_1_1_playlist_state_1afb8e5d47acd9f348f59d57b811fb7b84" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>List&lt; <ref refid="class_a_i_media_player_1_1_models_1_1_playlist_item_state" kindref="compound">PlaylistItemState</ref> &gt;</type>
+        <definition>List&lt;PlaylistItemState&gt; AIMediaPlayer.Models.PlaylistState.Items</definition>
+        <argsstring></argsstring>
+        <name>Items</name>
+        <qualifiedname>AIMediaPlayer.Models.PlaylistState.Items</qualifiedname>
+        <briefdescription>
+<para>Obține sau setează lista completă a elementelor din playlist, sub formă de obiecte <ref refid="class_a_i_media_player_1_1_models_1_1_playlist_item_state" kindref="compound">PlaylistItemState</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" line="57" column="21" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" bodystart="57" bodyend="57"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Reprezintă starea globală a playlist-ului, utilizată pentru serializare (salvare/încărcare din fișierul JSON). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" line="47" column="11" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" bodystart="48" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_a_i_media_player_1_1_models_1_1_playlist_state_1ad19b4145f43c3803bdfb27a4fb9f4b4a" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Models::PlaylistState</scope><name>CurrentIndex</name></member>
+      <member refid="class_a_i_media_player_1_1_models_1_1_playlist_state_1afb8e5d47acd9f348f59d57b811fb7b84" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Models::PlaylistState</scope><name>Items</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -24,11 +24,10 @@ using Avalonia.Media;
 using Avalonia.Platform;
 using Avalonia.Platform.Storage;
 using Avalonia.Threading;
-using LibVLCSharp.Avalonia;
 using LibVLCSharp.Shared;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace AIMediaPlayer.Views;
@@ -678,5 +677,18 @@ public partial class MainWindow : Window
         {
             _mediaPlayer.Volume = (int)newValue;
         }
+    }
+
+    /// <summary>
+    /// Deschide fișierul de ajutor al aplicației
+    /// </summary>
+    private async void About_Click(object? sender, RoutedEventArgs e)
+    {
+        Process.Start(new ProcessStartInfo
+        {
+            FileName = "hh.exe",
+            Arguments = "AIMediaPlayer_help.chm",
+            UseShellExecute = true,
+        });
     }
 }

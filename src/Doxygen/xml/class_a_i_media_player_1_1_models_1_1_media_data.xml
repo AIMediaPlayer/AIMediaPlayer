@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_a_i_media_player_1_1_models_1_1_media_data" kind="class" language="C#" prot="public">
+    <compoundname>AIMediaPlayer::Models::MediaData</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_i_media_player_1_1_models_1_1_media_data_1ab719b04b80f5b0b8588bbdaafc4eba08" prot="private" static="no" mutable="no">
+        <type>List&lt; Media &gt;</type>
+        <definition>List&lt;Media&gt; AIMediaPlayer.Models.MediaData._mediaItems</definition>
+        <argsstring></argsstring>
+        <name>_mediaItems</name>
+        <qualifiedname>AIMediaPlayer.Models.MediaData._mediaItems</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/MediaData.cs" line="27" column="22" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/MediaData.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_i_media_player_1_1_models_1_1_media_data_1a9e0ed307f52c19245c1c561988eaa863" prot="private" static="no" mutable="no">
+        <type>LibVLC</type>
+        <definition>LibVLC AIMediaPlayer.Models.MediaData.vlc</definition>
+        <argsstring></argsstring>
+        <name>vlc</name>
+        <qualifiedname>AIMediaPlayer.Models.MediaData.vlc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/MediaData.cs" line="28" column="24" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/MediaData.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_a_i_media_player_1_1_models_1_1_media_data_1abb7b73d86793ae181ba288fa6602cb34" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>List&lt; Media &gt;</type>
+        <definition>List&lt;Media&gt; AIMediaPlayer.Models.MediaData.MediaItems</definition>
+        <argsstring></argsstring>
+        <name>MediaItems</name>
+        <qualifiedname>AIMediaPlayer.Models.MediaData.MediaItems</qualifiedname>
+        <briefdescription>
+<para>Lista de obiecte Media incarcate in aplicatie. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/MediaData.cs" line="33" column="21" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/MediaData.cs" bodystart="34" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_i_media_player_1_1_models_1_1_media_data_1ae89616c08de62937eb70423c7807696e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>AIMediaPlayer.Models.MediaData.MediaData</definition>
+        <argsstring>()</argsstring>
+        <name>MediaData</name>
+        <qualifiedname>AIMediaPlayer.Models.MediaData.MediaData</qualifiedname>
+        <briefdescription>
+<para>Constructor ce initializeaza lista de fisiere media si instanta LibVLC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/MediaData.cs" line="41" column="16" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/MediaData.cs" bodystart="41" bodyend="45"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Clasa ce gestioneaza colectia de obiecte Media utilizate in aplicatie. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/MediaData.cs" line="25" column="11" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/MediaData.cs" bodystart="26" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_a_i_media_player_1_1_models_1_1_media_data_1ab719b04b80f5b0b8588bbdaafc4eba08" prot="private" virt="non-virtual"><scope>AIMediaPlayer::Models::MediaData</scope><name>_mediaItems</name></member>
+      <member refid="class_a_i_media_player_1_1_models_1_1_media_data_1ae89616c08de62937eb70423c7807696e" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Models::MediaData</scope><name>MediaData</name></member>
+      <member refid="class_a_i_media_player_1_1_models_1_1_media_data_1abb7b73d86793ae181ba288fa6602cb34" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Models::MediaData</scope><name>MediaItems</name></member>
+      <member refid="class_a_i_media_player_1_1_models_1_1_media_data_1a9e0ed307f52c19245c1c561988eaa863" prot="private" virt="non-virtual"><scope>AIMediaPlayer::Models::MediaData</scope><name>vlc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

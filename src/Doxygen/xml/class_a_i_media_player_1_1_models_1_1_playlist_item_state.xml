@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_a_i_media_player_1_1_models_1_1_playlist_item_state" kind="class" language="C#" prot="public">
+    <compoundname>AIMediaPlayer::Models::PlaylistItemState</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_a_i_media_player_1_1_models_1_1_playlist_item_state_1ae42c933df1424aee5e56cacb9d951b3d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string AIMediaPlayer.Models.PlaylistItemState.Mrl</definition>
+        <argsstring></argsstring>
+        <name>Mrl</name>
+        <qualifiedname>AIMediaPlayer.Models.PlaylistItemState.Mrl</qualifiedname>
+        <briefdescription>
+<para>Obține sau setează Media Resource Locator-ul (MRL). Reprezintă calea sau adresa (locală sau de rețea) a fișierului media. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" line="31" column="23" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_a_i_media_player_1_1_models_1_1_playlist_item_state_1a1339f0680292409f38616013acfc7436" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string AIMediaPlayer.Models.PlaylistItemState.Title</definition>
+        <argsstring></argsstring>
+        <name>Title</name>
+        <qualifiedname>AIMediaPlayer.Models.PlaylistItemState.Title</qualifiedname>
+        <briefdescription>
+<para>Obține sau setează titlul elementului media. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" line="36" column="23" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_a_i_media_player_1_1_models_1_1_playlist_item_state_1ac46100cafdb28fcbf3f0920b0cdc1e7c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string AIMediaPlayer.Models.PlaylistItemState.ThumbnailPath</definition>
+        <argsstring></argsstring>
+        <name>ThumbnailPath</name>
+        <qualifiedname>AIMediaPlayer.Models.PlaylistItemState.ThumbnailPath</qualifiedname>
+        <briefdescription>
+<para>Obține sau setează calea către fișierul imagine utilizat ca thumbnail (previzualizare). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" line="41" column="23" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" bodystart="41" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Reprezintă starea salvată a unui singur element din playlist. Este utilizată pentru a stoca și încărca rapid detaliile fișierului media fără a-l parsa din nou. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" line="25" column="11" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Models/PlaylistState.cs" bodystart="26" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_a_i_media_player_1_1_models_1_1_playlist_item_state_1ae42c933df1424aee5e56cacb9d951b3d" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Models::PlaylistItemState</scope><name>Mrl</name></member>
+      <member refid="class_a_i_media_player_1_1_models_1_1_playlist_item_state_1ac46100cafdb28fcbf3f0920b0cdc1e7c" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Models::PlaylistItemState</scope><name>ThumbnailPath</name></member>
+      <member refid="class_a_i_media_player_1_1_models_1_1_playlist_item_state_1a1339f0680292409f38616013acfc7436" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Models::PlaylistItemState</scope><name>Title</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

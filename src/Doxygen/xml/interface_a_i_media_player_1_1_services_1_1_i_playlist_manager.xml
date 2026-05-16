@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager" kind="interface" language="C#" prot="public">
+    <compoundname>AIMediaPlayer::Services::IPlaylistManager</compoundname>
+    <derivedcompoundref refid="class_a_i_media_player_1_1_services_1_1_playlist_manager" prot="public" virt="non-virtual">AIMediaPlayer.Services.PlaylistManager</derivedcompoundref>
+    <sectiondef kind="event">
+      <memberdef kind="event" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a88cf4848bd5f894058bfd4e24feb9c07" prot="public" static="no" add="no" remove="no" raise="no">
+        <type>Action</type>
+        <definition>Action AIMediaPlayer.Services.IPlaylistManager.PlaylistUpdated</definition>
+        <argsstring></argsstring>
+        <name>PlaylistUpdated</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.PlaylistUpdated</qualifiedname>
+        <briefdescription>
+<para>Eveniment declanșat atunci când structura sau starea playlist-ului a fost modificată (adăugare, ștergere, amestecare etc.). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="37" column="22" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a003ad5faf2c131dfad46d096a1e6aa1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Task&lt; bool &gt;</type>
+        <definition>Task&lt; bool &gt; AIMediaPlayer.Services.IPlaylistManager.Add</definition>
+        <argsstring>(Uri uri)</argsstring>
+        <name>Add</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.Add</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1a09c75158dca6a65946e63a9e402452d9">Add</reimplementedby>
+        <param>
+          <type>Uri</type>
+          <declname>uri</declname>
+        </param>
+        <briefdescription>
+<para>Adaugă un nou fișier media în playlist în mod asincron. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uri</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Calea (URI) către fișierul media.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returnează true dacă fișierul a fost adăugat cu succes.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="44" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a37180e19a66ca8f9474d5c2b8cc6a388" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Media</type>
+        <definition>Media AIMediaPlayer.Services.IPlaylistManager.GetMedia</definition>
+        <argsstring>(string title)</argsstring>
+        <name>GetMedia</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.GetMedia</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1ac282f321b08b99253b9b3c2d8c12e6f2">GetMedia</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+<para>Obține un obiect Media din playlist pe baza titlului său. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Titlul fișierului media căutat.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Obiectul Media corespunzător, sau null dacă nu a fost găsit.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="51" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a91f19fbc3f1e5150b3b25f9545a4a486" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt; string &gt; AIMediaPlayer.Services.IPlaylistManager.ListAll</definition>
+        <argsstring>()</argsstring>
+        <name>ListAll</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.ListAll</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1aa0c03b7e96076deb2e828b228713c983">ListAll</reimplementedby>
+        <briefdescription>
+<para>Returnează o listă cu titlurile tuturor elementelor media din playlist. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>O listă de șiruri de caractere (titluri).</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="57" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a3452a3bfbb60a755361a6a76e338eb9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AIMediaPlayer.Services.IPlaylistManager.SetCurrentIndex</definition>
+        <argsstring>(int index)</argsstring>
+        <name>SetCurrentIndex</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.SetCurrentIndex</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1ab5140c1420d4571066d593f50f2ca818">SetCurrentIndex</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Setează indexul elementului media care trebuie redat curent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Poziția în playlist (index de la 0).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="63" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1afd85faaf9c6fcb38440471fa7c88c923" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AIMediaPlayer.Services.IPlaylistManager.Next</definition>
+        <argsstring>()</argsstring>
+        <name>Next</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.Next</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1a2f4fd2fc204781469a7a41d02c505af8">Next</reimplementedby>
+        <briefdescription>
+<para>Trece la următorul element din playlist (avansare). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="68" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a99fb222751982ee3e60e94bef9654beb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AIMediaPlayer.Services.IPlaylistManager.Previous</definition>
+        <argsstring>()</argsstring>
+        <name>Previous</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.Previous</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1a17f834763aac6bb24116be2c90a7729e">Previous</reimplementedby>
+        <briefdescription>
+<para>Trece la elementul anterior din playlist. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="73" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a847c888edac18c576f6216d21e96e74f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AIMediaPlayer.Services.IPlaylistManager.Shuffle</definition>
+        <argsstring>()</argsstring>
+        <name>Shuffle</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.Shuffle</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1a851606426ef9d98e4e277d89dcc52631">Shuffle</reimplementedby>
+        <briefdescription>
+<para>Amestecă (shuffle) aleatoriu ordinea elementelor din playlist. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="78" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1aba04fa2bf761f82954ba3049c3e2a993" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AIMediaPlayer.Services.IPlaylistManager.Repeat</definition>
+        <argsstring>()</argsstring>
+        <name>Repeat</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.Repeat</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1a7be69dc4f66846cf49f53cad796ca08d">Repeat</reimplementedby>
+        <briefdescription>
+<para>Comută opțiunea de repetare a playlist-ului (On/Off). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="83" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a304ddfad7c15e9615f4255670958840a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AIMediaPlayer.Services.IPlaylistManager.Remove</definition>
+        <argsstring>(int index, string playlistPath)</argsstring>
+        <name>Remove</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.Remove</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1ab57e83d0737fc048a7dc3b39d52fe7d8">Remove</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>playlistPath</declname>
+        </param>
+        <briefdescription>
+<para>Elimină un element media din playlist de la un index specificat și actualizează fișierul salvat pe disc. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Poziția elementului ce trebuie eliminat.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>playlistPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Calea către fișierul playlist-ului pentru a persista modificarea.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="90" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a80937d04e15614fa0fb02b8c976fdcae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AIMediaPlayer.Services.IPlaylistManager.SavePlaylist</definition>
+        <argsstring>(string path)</argsstring>
+        <name>SavePlaylist</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.SavePlaylist</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1a36c8fddcba66f2432ba8cce263d176e6">SavePlaylist</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Salvează starea detaliată curentă a playlist-ului pe disc. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Calea unde va fi salvat fișierul (ex. .json).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="96" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a9de23dc910fc501654ec8e2a3d2454ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AIMediaPlayer.Services.IPlaylistManager.Save</definition>
+        <argsstring>(string path)</argsstring>
+        <name>Save</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.Save</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1a68c0926c65e743270d50f39b30497b6d">Save</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Metodă alternativă de salvare care stochează elementele playlist-ului pe disc sub formă de listă simplă. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Calea unde va fi salvat fișierul.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="102" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a09dfbaac6e9ba3c3d68ff22bc39f7307" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Task</type>
+        <definition>Task AIMediaPlayer.Services.IPlaylistManager.Load</definition>
+        <argsstring>(string path)</argsstring>
+        <name>Load</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.Load</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1a31702e7e75656681d500831399029761">Load</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Încarcă în mod asincron un playlist salvat anterior de pe disc. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Calea către fișierul playlist-ului ce trebuie încărcat.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Task asincron ce reprezintă operațiunea de încărcare.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="109" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a4b42d1d6ed2c74b958c26067610dbb96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Media</type>
+        <definition>Media AIMediaPlayer.Services.IPlaylistManager.GetCurrent</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrent</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.GetCurrent</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1ad11ee906bc42c5179f409d32509bd57a">GetCurrent</reimplementedby>
+        <briefdescription>
+<para>Returnează obiectul Media care este setat ca fiind curent în playlist. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Obiectul Media curent, sau null dacă playlist-ul este gol.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="115" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a9acd5fec79d1aff494711b35f1aea4e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>List&lt; <ref refid="class_a_i_media_player_1_1_models_1_1_playlist_item_state" kindref="compound">AIMediaPlayer.Models.PlaylistItemState</ref> &gt;</type>
+        <definition>List&lt; AIMediaPlayer.Models.PlaylistItemState &gt; AIMediaPlayer.Services.IPlaylistManager.GetPlaylistInfo</definition>
+        <argsstring>()</argsstring>
+        <name>GetPlaylistInfo</name>
+        <qualifiedname>AIMediaPlayer.Services.IPlaylistManager.GetPlaylistInfo</qualifiedname>
+        <reimplementedby refid="class_a_i_media_player_1_1_services_1_1_playlist_manager_1afc5f373e03e60f773a72d57826579b93">GetPlaylistInfo</reimplementedby>
+        <briefdescription>
+<para>Obține o listă de obiecte cu starea (metadatele vizuale și rutele) elementelor din playlist, utilă pentru afișarea în interfața grafică. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>O listă cu informațiile elementelor, de tip PlaylistItemState.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="121" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Interfață ce definește contractul pentru gestionarea unui playlist de fișiere media. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Această interfață oferă funcționalități complete pentru administrarea fișierelor media, inclusiv adăugarea, eliminarea, încărcarea și salvarea playlist-urilor, precum și controlul navigării între elemente. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AIMediaPlayer.Services.IPlaylistManager</label>
+        <link refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager"/>
+      </node>
+      <node id="2">
+        <label>AIMediaPlayer.Services.PlaylistManager</label>
+        <link refid="class_a_i_media_player_1_1_services_1_1_playlist_manager"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" line="32" column="22" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/Services/IPlaylistManager.cs" bodystart="33" bodyend="122"/>
+    <listofallmembers>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a003ad5faf2c131dfad46d096a1e6aa1d" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>Add</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a4b42d1d6ed2c74b958c26067610dbb96" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>GetCurrent</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a37180e19a66ca8f9474d5c2b8cc6a388" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>GetMedia</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a9acd5fec79d1aff494711b35f1aea4e0" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>GetPlaylistInfo</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a91f19fbc3f1e5150b3b25f9545a4a486" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>ListAll</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a09dfbaac6e9ba3c3d68ff22bc39f7307" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>Load</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1afd85faaf9c6fcb38440471fa7c88c923" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>Next</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a88cf4848bd5f894058bfd4e24feb9c07" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>PlaylistUpdated</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a99fb222751982ee3e60e94bef9654beb" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>Previous</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a304ddfad7c15e9615f4255670958840a" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>Remove</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1aba04fa2bf761f82954ba3049c3e2a993" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>Repeat</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a9de23dc910fc501654ec8e2a3d2454ec" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>Save</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a80937d04e15614fa0fb02b8c976fdcae" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>SavePlaylist</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a3452a3bfbb60a755361a6a76e338eb9d" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>SetCurrentIndex</name></member>
+      <member refid="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager_1a847c888edac18c576f6216d21e96e74f" prot="public" virt="non-virtual"><scope>AIMediaPlayer::Services::IPlaylistManager</scope><name>Shuffle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

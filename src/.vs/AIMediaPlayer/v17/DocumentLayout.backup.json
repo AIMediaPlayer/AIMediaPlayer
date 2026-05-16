@@ -1,62 +1,76 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\",
+  "WorkspaceRootPath": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\exceptions\\mediaplayerexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:exceptions\\mediaplayerexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\models\\mediadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:models\\mediadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\models\\playlistitemui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:models\\playlistitemui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\models\\playliststate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:models\\playliststate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\services\\iplaylistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:services\\iplaylistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\services\\playlistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:services\\playlistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\states\\iplayerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:states\\iplayerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\states\\pausedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:states\\pausedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\states\\stoppedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:states\\stoppedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\states\\playingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\viewlocator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:viewlocator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\leo\\AppData\\Local\\Temp\\.vsdbgsrc\\d453388fea237573f44ed0b93188111a577d05a50beae44726828d54c207aa2d\\Process.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\states\\stoppedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:states\\stoppedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\states\\playingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:states\\playingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\states\\pausedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:states\\pausedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\states\\iplayerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:states\\iplayerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\services\\playlistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:services\\playlistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\services\\iplaylistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:services\\iplaylistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\models\\playliststate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:models\\playliststate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\models\\playlistitemui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:models\\playlistitemui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\models\\mediadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:models\\mediadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\exceptions\\mediaplayerexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:exceptions\\mediaplayerexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\leo\\appdata\\roaming\\spb_data\\ip_proiect\\remote\\src\\views\\mainwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:views\\mainwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,183 +88,237 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IPlaylistManager.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Services\\IPlaylistManager.cs",
-              "RelativeDocumentMoniker": "Services\\IPlaylistManager.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Services\\IPlaylistManager.cs",
-              "RelativeToolTip": "Services\\IPlaylistManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T17:43:35.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlaylistState.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Models\\PlaylistState.cs",
-              "RelativeDocumentMoniker": "Models\\PlaylistState.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Models\\PlaylistState.cs",
-              "RelativeToolTip": "Models\\PlaylistState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T17:33:22.802Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlaylistItemUI.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Models\\PlaylistItemUI.cs",
-              "RelativeDocumentMoniker": "Models\\PlaylistItemUI.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Models\\PlaylistItemUI.cs",
-              "RelativeToolTip": "Models\\PlaylistItemUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T17:46:39.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MediaData.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Models\\MediaData.cs",
-              "RelativeDocumentMoniker": "Models\\MediaData.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Models\\MediaData.cs",
-              "RelativeToolTip": "Models\\MediaData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwDQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T13:18:01.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MediaPlayerException.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Exceptions\\MediaPlayerException.cs",
-              "RelativeDocumentMoniker": "Exceptions\\MediaPlayerException.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Exceptions\\MediaPlayerException.cs",
-              "RelativeToolTip": "Exceptions\\MediaPlayerException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T13:57:15.812Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PlaylistManager.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Services\\PlaylistManager.cs",
-              "RelativeDocumentMoniker": "Services\\PlaylistManager.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Services\\PlaylistManager.cs",
-              "RelativeToolTip": "Services\\PlaylistManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T17:42:34.057Z",
+              "WhenOpened": "2026-05-16T14:36:26.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IPlayerState.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\States\\IPlayerState.cs",
-              "RelativeDocumentMoniker": "States\\IPlayerState.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\States\\IPlayerState.cs",
-              "RelativeToolTip": "States\\IPlayerState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T13:18:11.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PausedState.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\States\\PausedState.cs",
-              "RelativeDocumentMoniker": "States\\PausedState.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\States\\PausedState.cs",
-              "RelativeToolTip": "States\\PausedState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T13:19:26.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "StoppedState.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\States\\StoppedState.cs",
-              "RelativeDocumentMoniker": "States\\StoppedState.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\States\\StoppedState.cs",
-              "RelativeToolTip": "States\\StoppedState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T13:20:20.011Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainWindowViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\ViewModels\\MainWindowViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\MainWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\ViewModels\\MainWindowViewModel.cs",
-              "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T18:09:09.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "ViewModelBase.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\ViewModels\\ViewModelBase.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\ViewModels\\ViewModelBase.cs",
               "RelativeDocumentMoniker": "ViewModels\\ViewModelBase.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\ViewModels\\ViewModelBase.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\ViewModels\\ViewModelBase.cs",
               "RelativeToolTip": "ViewModels\\ViewModelBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T18:09:10.534Z",
+              "WhenOpened": "2026-05-16T13:49:43.962Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
+              "Title": "ViewLocator.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\ViewLocator.cs",
+              "RelativeDocumentMoniker": "ViewLocator.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\ViewLocator.cs",
+              "RelativeToolTip": "ViewLocator.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T14:40:00.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Microsoft.NET.TargetFrameworkInference.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAUwKUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-05-16T14:44:39.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MainWindow.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Views\\MainWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Views\\MainWindow.axaml.cs",
               "RelativeDocumentMoniker": "Views\\MainWindow.axaml.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Views\\MainWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Views\\MainWindow.axaml.cs",
               "RelativeToolTip": "Views\\MainWindow.axaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAIgCAAAAAAAAAAAAwKoCAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-11T18:11:45.068Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PlayingState.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\States\\PlayingState.cs",
-              "RelativeDocumentMoniker": "States\\PlayingState.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\States\\PlayingState.cs",
-              "RelativeToolTip": "States\\PlayingState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Process.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Local\\Temp\\.vsdbgsrc\\d453388fea237573f44ed0b93188111a577d05a50beae44726828d54c207aa2d\\Process.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Local\\Temp\\.vsdbgsrc\\d453388fea237573f44ed0b93188111a577d05a50beae44726828d54c207aa2d\\Process.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Local\\Temp\\.vsdbgsrc\\d453388fea237573f44ed0b93188111a577d05a50beae44726828d54c207aa2d\\Process.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Local\\Temp\\.vsdbgsrc\\d453388fea237573f44ed0b93188111a577d05a50beae44726828d54c207aa2d\\Process.cs [Read Only]",
+              "ViewState": "AgIAAGIHAAAAAAAAAAAAwG8HAAAFAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T13:18:50.15Z",
+              "WhenOpened": "2026-05-16T15:02:48.695Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StoppedState.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\States\\StoppedState.cs",
+              "RelativeDocumentMoniker": "States\\StoppedState.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\States\\StoppedState.cs",
+              "RelativeToolTip": "States\\StoppedState.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvxEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T14:33:34.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T14:58:51.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlayingState.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\States\\PlayingState.cs",
+              "RelativeDocumentMoniker": "States\\PlayingState.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\States\\PlayingState.cs",
+              "RelativeToolTip": "States\\PlayingState.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwvxEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T14:32:36.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PausedState.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\States\\PausedState.cs",
+              "RelativeDocumentMoniker": "States\\PausedState.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\States\\PausedState.cs",
+              "RelativeToolTip": "States\\PausedState.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T14:31:40.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IPlayerState.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\States\\IPlayerState.cs",
+              "RelativeDocumentMoniker": "States\\IPlayerState.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\States\\IPlayerState.cs",
+              "RelativeToolTip": "States\\IPlayerState.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvxEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T14:30:02.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PlaylistManager.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Services\\PlaylistManager.cs",
+              "RelativeDocumentMoniker": "Services\\PlaylistManager.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Services\\PlaylistManager.cs",
+              "RelativeToolTip": "Services\\PlaylistManager.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T14:36:17.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IPlaylistManager.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Services\\IPlaylistManager.cs",
+              "RelativeDocumentMoniker": "Services\\IPlaylistManager.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Services\\IPlaylistManager.cs",
+              "RelativeToolTip": "Services\\IPlaylistManager.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T14:33:37.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "PlaylistState.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Models\\PlaylistState.cs",
+              "RelativeDocumentMoniker": "Models\\PlaylistState.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Models\\PlaylistState.cs",
+              "RelativeToolTip": "Models\\PlaylistState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T14:35:59.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PlaylistItemUI.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Models\\PlaylistItemUI.cs",
+              "RelativeDocumentMoniker": "Models\\PlaylistItemUI.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Models\\PlaylistItemUI.cs",
+              "RelativeToolTip": "Models\\PlaylistItemUI.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T14:36:02.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MediaData.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Models\\MediaData.cs",
+              "RelativeDocumentMoniker": "Models\\MediaData.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Models\\MediaData.cs",
+              "RelativeToolTip": "Models\\MediaData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T14:36:04.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MediaPlayerException.cs",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Exceptions\\MediaPlayerException.cs",
+              "RelativeDocumentMoniker": "Exceptions\\MediaPlayerException.cs",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Exceptions\\MediaPlayerException.cs",
+              "RelativeToolTip": "Exceptions\\MediaPlayerException.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T14:36:07.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "MainWindow.axaml",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Views\\MainWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Views\\MainWindow.axaml",
               "RelativeDocumentMoniker": "Views\\MainWindow.axaml",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Views\\MainWindow.axaml",
+              "ToolTip": "C:\\Users\\leo\\AppData\\Roaming\\SPB_Data\\IP_Proiect\\Remote\\src\\Views\\MainWindow.axaml",
               "RelativeToolTip": "Views\\MainWindow.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-11T17:05:05.246Z"
+              "ViewState": "AgIAAC4AAAAAAAAAAAAIwD4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-16T13:49:52.85Z",
+              "EditorCaption": ""
             }
           ]
         }

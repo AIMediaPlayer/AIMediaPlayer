@@ -15,14 +15,18 @@
  * *
  **************************************************************************/
 using AIMediaPlayer.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AIMediaPlayer.States
 {
+    /// <summary>
+    /// Definește comportamentele specifice fiecărei stări a player-ului media
+    /// conform șablonului de proiectare State.
+    /// </summary>
+    /// <remarks>
+    /// Interfața permite separarea logicii de control a player-ului în funcție
+    /// de starea curentă (ex.: Play, Pause, Stop), oferind implementări diferite
+    /// pentru acțiunile disponibile utilizatorului.
+    /// </remarks>
     public interface IPlayerState
     {
         /// <summary>

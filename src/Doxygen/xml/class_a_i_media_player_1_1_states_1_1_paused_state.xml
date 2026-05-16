@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="class_a_i_media_player_1_1_states_1_1_paused_state" kind="class" language="C#" prot="public">
+    <compoundname>AIMediaPlayer::States::PausedState</compoundname>
+    <basecompoundref refid="interface_a_i_media_player_1_1_states_1_1_i_player_state" prot="public" virt="non-virtual">AIMediaPlayer.States.IPlayerState</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_i_media_player_1_1_states_1_1_paused_state_1a1975dcccb508a7dbb9a0afe044b88b5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AIMediaPlayer.States.PausedState.PlayPause</definition>
+        <argsstring>(MainWindow context)</argsstring>
+        <name>PlayPause</name>
+        <qualifiedname>AIMediaPlayer.States.PausedState.PlayPause</qualifiedname>
+        <reimplements refid="interface_a_i_media_player_1_1_states_1_1_i_player_state_1ab8dba6af141f6aaf2e00daea9dd76fed">PlayPause</reimplements>
+        <param>
+          <type><ref refid="class_a_i_media_player_1_1_views_1_1_main_window" kindref="compound">MainWindow</ref></type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Gestionează acțiunea butonului Play/Pause în funcție de starea curentă a player-ului. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fereastra principală care conține instanța MediaPlayer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/States/PausedState.cs" line="31" column="21" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/States/PausedState.cs" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_i_media_player_1_1_states_1_1_paused_state_1aa8cfe2f535b6dece8c925716e2578349" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AIMediaPlayer.States.PausedState.Stop</definition>
+        <argsstring>(MainWindow context)</argsstring>
+        <name>Stop</name>
+        <qualifiedname>AIMediaPlayer.States.PausedState.Stop</qualifiedname>
+        <reimplements refid="interface_a_i_media_player_1_1_states_1_1_i_player_state_1a0b3092a9c29e189473c80973546a7919">Stop</reimplements>
+        <param>
+          <type><ref refid="class_a_i_media_player_1_1_views_1_1_main_window" kindref="compound">MainWindow</ref></type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Gestionează acțiunea butonului de Stop. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fereastra principală care conține instanța MediaPlayer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/States/PausedState.cs" line="41" column="21" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/States/PausedState.cs" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_i_media_player_1_1_states_1_1_paused_state_1aadf7216b2cee4e3af02e7796a3b10b84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string AIMediaPlayer.States.PausedState.GetButtonIcon</definition>
+        <argsstring>()</argsstring>
+        <name>GetButtonIcon</name>
+        <qualifiedname>AIMediaPlayer.States.PausedState.GetButtonIcon</qualifiedname>
+        <reimplements refid="interface_a_i_media_player_1_1_states_1_1_i_player_state_1ac1923cf1881558b35103c7c5bab7d29f">GetButtonIcon</reimplements>
+        <briefdescription>
+<para>Oferă iconița (caracterul vizual) potrivită pentru butonul de Play/Pause conform stării curente. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Un string reprezentând iconița (ex. &quot;▶&quot; sau &quot;❚❚&quot;).</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/States/PausedState.cs" line="51" column="23" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/States/PausedState.cs" bodystart="51" bodyend="51"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Reprezintă starea de pauză a player-ului media în cadrul șablonului de proiectare State. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AIMediaPlayer.States.PausedState</label>
+        <link refid="class_a_i_media_player_1_1_states_1_1_paused_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AIMediaPlayer.States.IPlayerState</label>
+        <link refid="interface_a_i_media_player_1_1_states_1_1_i_player_state"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AIMediaPlayer.States.PausedState</label>
+        <link refid="class_a_i_media_player_1_1_states_1_1_paused_state"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AIMediaPlayer.States.IPlayerState</label>
+        <link refid="interface_a_i_media_player_1_1_states_1_1_i_player_state"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/States/PausedState.cs" line="25" column="11" bodyfile="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/States/PausedState.cs" bodystart="26" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_a_i_media_player_1_1_states_1_1_paused_state_1aadf7216b2cee4e3af02e7796a3b10b84" prot="public" virt="non-virtual"><scope>AIMediaPlayer::States::PausedState</scope><name>GetButtonIcon</name></member>
+      <member refid="class_a_i_media_player_1_1_states_1_1_paused_state_1a1975dcccb508a7dbb9a0afe044b88b5a" prot="public" virt="non-virtual"><scope>AIMediaPlayer::States::PausedState</scope><name>PlayPause</name></member>
+      <member refid="class_a_i_media_player_1_1_states_1_1_paused_state_1aa8cfe2f535b6dece8c925716e2578349" prot="public" virt="non-virtual"><scope>AIMediaPlayer::States::PausedState</scope><name>Stop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

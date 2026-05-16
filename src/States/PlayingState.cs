@@ -15,14 +15,13 @@
  * *
  **************************************************************************/
 using AIMediaPlayer.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AIMediaPlayer.States
 {
+    /// <summary>
+    /// Reprezintă starea activă de redare a player-ului media în cadrul
+    /// șablonului de proiectare State.
+    /// </summary>
     public class PlayingState : IPlayerState
     {
         /// <summary>

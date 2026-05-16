@@ -16,9 +16,6 @@
  **************************************************************************/
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
 using System.Threading.Tasks;
 using LibVLCSharp.Shared;
 
@@ -27,6 +24,11 @@ namespace AIMediaPlayer.Services
     /// <summary>
     /// Interfață ce definește contractul pentru gestionarea unui playlist de fișiere media.
     /// </summary>
+    /// <remarks>
+    /// Această interfață oferă funcționalități complete pentru administrarea
+    /// fișierelor media, inclusiv adăugarea, eliminarea, încărcarea și salvarea
+    /// playlist-urilor, precum și controlul navigării între elemente.
+    /// </remarks>
     public interface IPlaylistManager
     {
         /// <summary>

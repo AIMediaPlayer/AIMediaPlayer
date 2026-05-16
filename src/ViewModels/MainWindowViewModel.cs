@@ -24,6 +24,16 @@ using System.Threading.Tasks;
 
 namespace AIMediaPlayer.ViewModels
 {
+    /// <summary>
+    /// Reprezintă ViewModel-ul principal al aplicației media player,
+    /// responsabil pentru gestionarea comenzilor și a datelor utilizate
+    /// de interfața grafică principală.
+    /// </summary>
+    /// <remarks>
+    /// Clasa implementează logica specifică modelului arhitectural MVVM
+    /// (Model-View-ViewModel), facilitând comunicarea dintre interfața
+    /// utilizator și serviciile aplicației.
+    /// </remarks>
     public partial class MainWindowViewModel : ViewModelBase
     {
         [ObservableProperty]
@@ -36,6 +46,10 @@ namespace AIMediaPlayer.ViewModels
         /// <returns>Un Task asincron reprezentând operațiunea.</returns>
         public ObservableCollection<string> PlaylistItems { get; set; } = new ObservableCollection<string>();
 
+        /// <summary>
+        /// Deschide un dialog de selecție pentru alegerea unui fișier media
+        /// de pe disc și actualizează sursa media curentă a aplicației.
+        /// </summary>
         [RelayCommand]
         private async Task OpenFile(IStorageProvider storageProvider)
         {

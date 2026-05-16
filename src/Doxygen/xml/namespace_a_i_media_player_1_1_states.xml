@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="namespace_a_i_media_player_1_1_states" kind="namespace" language="C#">
+    <compoundname>AIMediaPlayer::States</compoundname>
+    <innerclass refid="interface_a_i_media_player_1_1_states_1_1_i_player_state" prot="public">AIMediaPlayer::States::IPlayerState</innerclass>
+    <innerclass refid="class_a_i_media_player_1_1_states_1_1_paused_state" prot="public">AIMediaPlayer::States::PausedState</innerclass>
+    <innerclass refid="class_a_i_media_player_1_1_states_1_1_playing_state" prot="public">AIMediaPlayer::States::PlayingState</innerclass>
+    <innerclass refid="class_a_i_media_player_1_1_states_1_1_stopped_state" prot="public">AIMediaPlayer::States::StoppedState</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/States/IPlayerState.cs" line="19" column="1"/>
+  </compounddef>
+</doxygen>
