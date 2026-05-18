@@ -37,7 +37,7 @@ namespace AIMediaPlayer.ViewModels
     public partial class MainWindowViewModel : ViewModelBase
     {
         [ObservableProperty]
-        private Uri? _videoSource;
+        private Uri _videoSource;
 
         /// <summary>
         /// Deschide un dialog pentru selectarea unui fișier media de pe disc și setează VideoSource.

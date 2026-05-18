@@ -33,7 +33,7 @@ namespace AIMediaPlayer.Models
         /// Obține sau setează imaginea de previzualizare (thumbnail-ul) asociată fișierului media.
         /// Poate fi null dacă fișierul nu are artwork sau dacă încărcarea imaginii a eșuat.
         /// </summary>
-        public Bitmap? Thumbnail { get; set; }
+        public Bitmap Thumbnail { get; set; }
 
         /// <summary>
         /// Obține sau setează o descriere text a tipului de fișier (ex. "Video File", "Audio File").

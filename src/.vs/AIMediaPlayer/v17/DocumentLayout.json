@@ -3,41 +3,79 @@
   "WorkspaceRootPath": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B78EE8FD-D83C-4622-8A95-66FD2F732B46}|..\\MediaPlayer.Services\\MediaPlayer.Services.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.services\\playlistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FA2EA9-04F1-4925-A977-1CA579B14698}|..\\MediaPlayer.States\\MediaPlayer.States.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.states\\stoppedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FA2EA9-04F1-4925-A977-1CA579B14698}|..\\MediaPlayer.States\\MediaPlayer.States.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.states\\playingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1FF0D2E-8C72-4A12-A29F-159F4A4AA51D}|..\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78EE8FD-D83C-4622-8A95-66FD2F732B46}|..\\MediaPlayer.Services\\MediaPlayer.Services.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.services\\iplaylistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78EE8FD-D83C-4622-8A95-66FD2F732B46}|..\\MediaPlayer.Services\\MediaPlayer.Services.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.services\\mediaplayer.services.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1FF0D2E-8C72-4A12-A29F-159F4A4AA51D}|..\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77B38DDB-6E9F-42C0-B2EB-3244AA56F3BD}|..\\MediaPlayer.Models\\MediaPlayer.Models.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.models\\playlistitemui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\aimediaplayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:aimediaplayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E3C1C89-5C5D-D970-1F5A-013368191C44}|..\\MediaPlayerTests\\MediaPlayerTests.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayertests\\mediaplayertests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|solutionrelative:views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77B38DDB-6E9F-42C0-B2EB-3244AA56F3BD}|..\\MediaPlayer.Models\\MediaPlayer.Models.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.models\\mediadata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FA2EA9-04F1-4925-A977-1CA579B14698}|..\\MediaPlayer.States\\MediaPlayer.States.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.states\\pausedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FA2EA9-04F1-4925-A977-1CA579B14698}|..\\MediaPlayer.States\\MediaPlayer.States.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.states\\iplayerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77B38DDB-6E9F-42C0-B2EB-3244AA56F3BD}|..\\MediaPlayer.Models\\MediaPlayer.Models.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.models\\playliststate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A640A10D-3CE6-48BB-959F-76BA41DBC471}|..\\MediaPlayer.Exceptions\\MediaPlayer.Exceptions.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.exceptions\\mediaplayerexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A640A10D-3CE6-48BB-959F-76BA41DBC471}|..\\MediaPlayer.Exceptions\\MediaPlayer.Exceptions.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.exceptions\\mediaplayer.exceptions.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E3C1C89-5C5D-D970-1F5A-013368191C44}|..\\MediaPlayerTests\\MediaPlayerTests.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayertests\\playliststatetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1FF0D2E-8C72-4A12-A29F-159F4A4AA51D}|..\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.viewmodels\\mediaplayer.viewmodels.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95FA2EA9-04F1-4925-A977-1CA579B14698}|..\\MediaPlayer.States\\MediaPlayer.States.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.states\\mediaplayer.states.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77B38DDB-6E9F-42C0-B2EB-3244AA56F3BD}|..\\MediaPlayer.Models\\MediaPlayer.Models.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.models\\mediaplayer.models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E3C1C89-5C5D-D970-1F5A-013368191C44}|..\\MediaPlayerTests\\MediaPlayerTests.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayertests\\playlistmanagertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E3C1C89-5C5D-D970-1F5A-013368191C44}|..\\MediaPlayerTests\\MediaPlayerTests.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayertests\\playlistitemuitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FA2EA9-04F1-4925-A977-1CA579B14698}|..\\MediaPlayer.States\\MediaPlayer.States.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.states\\iplayerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B78EE8FD-D83C-4622-8A95-66FD2F732B46}|..\\MediaPlayer.Services\\MediaPlayer.Services.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.services\\playlistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B78EE8FD-D83C-4622-8A95-66FD2F732B46}|..\\MediaPlayer.Services\\MediaPlayer.Services.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.services\\iplaylistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FF0D2E-8C72-4A12-A29F-159F4A4AA51D}|..\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FA2EA9-04F1-4925-A977-1CA579B14698}|..\\MediaPlayer.States\\MediaPlayer.States.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.states\\pausedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FA2EA9-04F1-4925-A977-1CA579B14698}|..\\MediaPlayer.States\\MediaPlayer.States.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.states\\playingstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95FA2EA9-04F1-4925-A977-1CA579B14698}|..\\MediaPlayer.States\\MediaPlayer.States.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.states\\stoppedstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FF0D2E-8C72-4A12-A29F-159F4A4AA51D}|..\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1FF0D2E-8C72-4A12-A29F-159F4A4AA51D}|..\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\mediaplayer.viewmodels\\mediaplayer.viewmodels.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6834A0F9-310B-4B29-A66E-E786D674B37E}|AIMediaPlayer.csproj|c:\\users\\loghi\\desktop\\git project\\aimediaplayer\\src\\views\\mainwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -77,7 +115,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -85,7 +123,292 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MediaPlayer.Services",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Services\\MediaPlayer.Services.csproj",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.Services\\MediaPlayer.Services.csproj",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Services\\MediaPlayer.Services.csproj",
+              "RelativeToolTip": "..\\MediaPlayer.Services\\MediaPlayer.Services.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T16:14:52.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IPlaylistManager.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Services\\IPlaylistManager.cs",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.Services\\IPlaylistManager.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Services\\IPlaylistManager.cs",
+              "RelativeToolTip": "..\\MediaPlayer.Services\\IPlaylistManager.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAtwGoAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:49:08.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.ViewModels\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.ViewModels\\ViewModelBase.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.ViewModels\\ViewModelBase.cs",
+              "RelativeToolTip": "..\\MediaPlayer.ViewModels\\ViewModelBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:43:12.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StoppedState.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\StoppedState.cs",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.States\\StoppedState.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\StoppedState.cs",
+              "RelativeToolTip": "..\\MediaPlayer.States\\StoppedState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:43:14.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PlayingState.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\PlayingState.cs",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.States\\PlayingState.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\PlayingState.cs",
+              "RelativeToolTip": "..\\MediaPlayer.States\\PlayingState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:43:14.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlaylistManager.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Services\\PlaylistManager.cs",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.Services\\PlaylistManager.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Services\\PlaylistManager.cs",
+              "RelativeToolTip": "..\\MediaPlayer.Services\\PlaylistManager.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAIwG8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:48:48.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "..\\MediaPlayer.ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAACcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:43:08.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlaylistItemUI.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Models\\PlaylistItemUI.cs",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.Models\\PlaylistItemUI.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Models\\PlaylistItemUI.cs",
+              "RelativeToolTip": "..\\MediaPlayer.Models\\PlaylistItemUI.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwCMAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T16:17:02.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Views\\MainWindow.axaml.cs",
+              "RelativeDocumentMoniker": "Views\\MainWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Views\\MainWindow.axaml.cs",
+              "RelativeToolTip": "Views\\MainWindow.axaml.cs",
+              "ViewState": "AgIAAJQCAAAAAAAAAAAqwK8CAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T18:11:45.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MediaPlayerTests",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayerTests\\MediaPlayerTests.csproj",
+              "RelativeDocumentMoniker": "..\\MediaPlayerTests\\MediaPlayerTests.csproj",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayerTests\\MediaPlayerTests.csproj",
+              "RelativeToolTip": "..\\MediaPlayerTests\\MediaPlayerTests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T16:10:58.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AIMediaPlayer",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\AIMediaPlayer.csproj",
+              "RelativeDocumentMoniker": "AIMediaPlayer.csproj",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\AIMediaPlayer.csproj",
+              "RelativeToolTip": "AIMediaPlayer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T16:10:42.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Views\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "Views\\MainWindow.axaml",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Views\\MainWindow.axaml",
+              "RelativeToolTip": "Views\\MainWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-18T16:17:44.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MediaData.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Models\\MediaData.cs",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.Models\\MediaData.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Models\\MediaData.cs",
+              "RelativeToolTip": "..\\MediaPlayer.Models\\MediaData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T16:16:59.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PausedState.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\PausedState.cs",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.States\\PausedState.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\PausedState.cs",
+              "RelativeToolTip": "..\\MediaPlayer.States\\PausedState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:43:15.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IPlayerState.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\IPlayerState.cs",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.States\\IPlayerState.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\IPlayerState.cs",
+              "RelativeToolTip": "..\\MediaPlayer.States\\IPlayerState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T11:50:46.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PlaylistState.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Models\\PlaylistState.cs",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.Models\\PlaylistState.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Models\\PlaylistState.cs",
+              "RelativeToolTip": "..\\MediaPlayer.Models\\PlaylistState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T16:17:05.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MediaPlayerException.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Exceptions\\MediaPlayerException.cs",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.Exceptions\\MediaPlayerException.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Exceptions\\MediaPlayerException.cs",
+              "RelativeToolTip": "..\\MediaPlayer.Exceptions\\MediaPlayerException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T16:16:57.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MediaPlayer.Exceptions",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Exceptions\\MediaPlayer.Exceptions.csproj",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.Exceptions\\MediaPlayer.Exceptions.csproj",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Exceptions\\MediaPlayer.Exceptions.csproj",
+              "RelativeToolTip": "..\\MediaPlayer.Exceptions\\MediaPlayer.Exceptions.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T16:16:32.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MediaPlayer.Models",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Models\\MediaPlayer.Models.csproj",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.Models\\MediaPlayer.Models.csproj",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Models\\MediaPlayer.Models.csproj",
+              "RelativeToolTip": "..\\MediaPlayer.Models\\MediaPlayer.Models.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T16:14:26.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MediaPlayer.ViewModels.csproj",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj",
+              "RelativeToolTip": "..\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T11:41:23.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PlaylistStateTests.cs",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayerTests\\PlaylistStateTests.cs",
+              "RelativeDocumentMoniker": "..\\MediaPlayerTests\\PlaylistStateTests.cs",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayerTests\\PlaylistStateTests.cs",
+              "RelativeToolTip": "..\\MediaPlayerTests\\PlaylistStateTests.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAuwEIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T16:12:51.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MediaPlayer.States",
+              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\MediaPlayer.States.csproj",
+              "RelativeDocumentMoniker": "..\\MediaPlayer.States\\MediaPlayer.States.csproj",
+              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\MediaPlayer.States.csproj",
+              "RelativeToolTip": "..\\MediaPlayer.States\\MediaPlayer.States.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T16:14:58.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "PlaylistItemUITests.cs",
               "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayerTests\\PlaylistItemUITests.cs",
               "RelativeDocumentMoniker": "..\\MediaPlayerTests\\PlaylistItemUITests.cs",
@@ -93,11 +416,12 @@
               "RelativeToolTip": "..\\MediaPlayerTests\\PlaylistItemUITests.cs",
               "ViewState": "AgIAADwAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T11:51:28.3Z"
+              "WhenOpened": "2026-05-18T11:51:28.3Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 22,
               "Title": "PlayListManagerTests.cs",
               "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayerTests\\PlayListManagerTests.cs",
               "RelativeDocumentMoniker": "..\\MediaPlayerTests\\PlayListManagerTests.cs",
@@ -110,129 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IPlaylistManager.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Services\\IPlaylistManager.cs",
-              "RelativeDocumentMoniker": "..\\MediaPlayer.Services\\IPlaylistManager.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Services\\IPlaylistManager.cs",
-              "RelativeToolTip": "..\\MediaPlayer.Services\\IPlaylistManager.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAtwHgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T11:49:08.317Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlaylistManager.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Services\\PlaylistManager.cs",
-              "RelativeDocumentMoniker": "..\\MediaPlayer.Services\\PlaylistManager.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.Services\\PlaylistManager.cs",
-              "RelativeToolTip": "..\\MediaPlayer.Services\\PlaylistManager.cs",
-              "ViewState": "AgIAAEQBAAAAAAAAAAApwFsBAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T11:48:48.587Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PausedState.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\PausedState.cs",
-              "RelativeDocumentMoniker": "..\\MediaPlayer.States\\PausedState.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\PausedState.cs",
-              "RelativeToolTip": "..\\MediaPlayer.States\\PausedState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T11:43:15.859Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PlayingState.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\PlayingState.cs",
-              "RelativeDocumentMoniker": "..\\MediaPlayer.States\\PlayingState.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\PlayingState.cs",
-              "RelativeToolTip": "..\\MediaPlayer.States\\PlayingState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T11:43:14.916Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindowViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.ViewModels\\MainWindowViewModel.cs",
-              "RelativeDocumentMoniker": "..\\MediaPlayer.ViewModels\\MainWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.ViewModels\\MainWindowViewModel.cs",
-              "RelativeToolTip": "..\\MediaPlayer.ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAhwDUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T11:43:08.746Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Views\\MainWindow.axaml.cs",
-              "RelativeDocumentMoniker": "Views\\MainWindow.axaml.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Views\\MainWindow.axaml.cs",
-              "RelativeToolTip": "Views\\MainWindow.axaml.cs",
-              "ViewState": "AgIAAJMCAAAAAAAAAAAiwKQCAABqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T18:11:45.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IPlayerState.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\IPlayerState.cs",
-              "RelativeDocumentMoniker": "..\\MediaPlayer.States\\IPlayerState.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\IPlayerState.cs",
-              "RelativeToolTip": "..\\MediaPlayer.States\\IPlayerState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T11:50:46.308Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "StoppedState.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\StoppedState.cs",
-              "RelativeDocumentMoniker": "..\\MediaPlayer.States\\StoppedState.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.States\\StoppedState.cs",
-              "RelativeToolTip": "..\\MediaPlayer.States\\StoppedState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T11:43:14.111Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ViewModelBase.cs",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.ViewModels\\ViewModelBase.cs",
-              "RelativeDocumentMoniker": "..\\MediaPlayer.ViewModels\\ViewModelBase.cs",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.ViewModels\\ViewModelBase.cs",
-              "RelativeToolTip": "..\\MediaPlayer.ViewModels\\ViewModelBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T11:43:12.683Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MediaPlayer.ViewModels.csproj",
-              "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj",
-              "RelativeDocumentMoniker": "..\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj",
-              "ToolTip": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj",
-              "RelativeToolTip": "..\\MediaPlayer.ViewModels\\MediaPlayer.ViewModels.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-18T11:41:23.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 24,
               "Title": "MainWindow.axaml",
               "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Views\\MainWindow.axaml",
               "RelativeDocumentMoniker": "Views\\MainWindow.axaml",
@@ -240,11 +442,12 @@
               "RelativeToolTip": "Views\\MainWindow.axaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-16T13:49:52.85Z"
+              "WhenOpened": "2026-05-16T13:49:52.85Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 29,
               "Title": "MainWindowViewModel.cs",
               "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\AVMediaPlayer.ViewModels\\MainWindowViewModel.cs",
               "RelativeDocumentMoniker": "..\\AVMediaPlayer.ViewModels\\MainWindowViewModel.cs",
@@ -255,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 30,
               "Title": "MediaData.cs",
               "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\AVMediaPlayer.Models\\MediaData.cs",
               "RelativeDocumentMoniker": "..\\AVMediaPlayer.Models\\MediaData.cs",
@@ -266,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 31,
               "Title": "ViewModelBase.cs",
               "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\AVMediaPlayer.ViewModels\\ViewModelBase.cs",
               "RelativeDocumentMoniker": "..\\AVMediaPlayer.ViewModels\\ViewModelBase.cs",
@@ -277,7 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 32,
               "Title": "IPlaylistManager.cs",
               "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\AVMediaPlayer.Services\\IPlaylistManager.cs",
               "RelativeDocumentMoniker": "..\\AVMediaPlayer.Services\\IPlaylistManager.cs",
@@ -288,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 25,
               "Title": "ViewLocator.cs",
               "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\ViewLocator.cs",
               "RelativeDocumentMoniker": "ViewLocator.cs",
@@ -300,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 26,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\loghi\\Desktop\\GIT PROJECT\\AIMediaPlayer\\src\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -312,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 27,
               "Title": "Microsoft.NET.TargetFrameworkInference.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.TargetFrameworkInference.targets",
@@ -323,7 +526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 28,
               "Title": "Process.cs",
               "DocumentMoniker": "C:\\Users\\leo\\AppData\\Local\\Temp\\.vsdbgsrc\\d453388fea237573f44ed0b93188111a577d05a50beae44726828d54c207aa2d\\Process.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\leo\\AppData\\Local\\Temp\\.vsdbgsrc\\d453388fea237573f44ed0b93188111a577d05a50beae44726828d54c207aa2d\\Process.cs",
