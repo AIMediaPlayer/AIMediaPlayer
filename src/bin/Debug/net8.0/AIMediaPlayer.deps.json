@@ -665,7 +665,7 @@
       "MediaPlayer.Exceptions/1.0.0": {
         "runtime": {
           "MediaPlayer.Exceptions.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -678,7 +678,7 @@
         },
         "runtime": {
           "MediaPlayer.Models.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -692,7 +692,7 @@
         },
         "runtime": {
           "MediaPlayer.Services.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -703,7 +703,7 @@
         },
         "runtime": {
           "MediaPlayer.States.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
@@ -716,7 +716,7 @@
         },
         "runtime": {
           "MediaPlayer.ViewModels.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }

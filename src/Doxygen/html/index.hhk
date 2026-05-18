@@ -10,14 +10,23 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a088d62d2719be637744a07dc466ea5d9"><param name="Name" value="_inactivityTimer"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#ae88f5fffa9952a56d9ea6c04eca9f86a"><param name="Name" value="_isDraggingProgress"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a793a4b42ea868b5d04f0cf3f20fba6da"><param name="Name" value="_libVLC"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a66fdb8ea6a3f30a751f27671ae8a5c23"><param name="Name" value="_manager"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_media_data.html#ab719b04b80f5b0b8588bbdaafc4eba08"><param name="Name" value="_mediaItems"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_services_1_1_playlist_manager.html#a42fd3c12013b6e8b274e6eecefce62d8"><param name="Name" value="_mediaList"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#adddc414c258aa27e5f35b709aa3431bc"><param name="Name" value="_mediaPlayer"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#ae5343cbbddcc475884f21038f15a0321"><param name="Name" value="_playlistManager"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_services_1_1_playlist_manager.html#a7de5910dd2926abd5b956bb2482aa2a3"><param name="Name" value="_repeat"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#ac127de899dc5edae2ebe84dafd39797b"><param name="Name" value="_tempDir"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#ad71a68dcfe0589023312c295cd2e71c4"><param name="Name" value="_uiTimer"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_view_models_1_1_main_window_view_model.html#afaf20815d3e8e2b7b99452a025a7f08f"><param name="Name" value="_videoSource"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_view_models_1_1_main_window_view_model.html#a21b692380ab9c5bb9e63619aba9cbfad"><param name="Name" value="_videoSource"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_services_1_1_playlist_manager.html#a5baa1065ef9778bd0c712002ab6e917d"><param name="Name" value="_vlc"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_services_1_1_playlist_manager.html#a5baa1065ef9778bd0c712002ab6e917d"><param name="Name" value="AIMediaPlayer::Services::PlaylistManager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a3ca0ce8849c260f92a33cbf5bf00bac3"><param name="Name" value="_vlc"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a3ca0ce8849c260f92a33cbf5bf00bac3"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a58db97417bec2e6b692de143bbae0f0a"><param name="Name" value="About_Click(object&quest; sender, RoutedEventArgs e)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager.html#a003ad5faf2c131dfad46d096a1e6aa1d"><param name="Name" value="Add(Uri uri)"></OBJECT>
   <UL>
@@ -27,6 +36,7 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_services_1_1_playlist_manager.html#a09c75158dca6a65946e63a9e402452d9"><param name="Name" value="AIMediaPlayer::Services::PlaylistManager"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a0fd08f8ecd921475fa7c10b8b28ae07c"><param name="Name" value="Add_ValidAudioFile_ReturnsTrue()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#ae8289a14c8a8c4bd2ed1df5f4820720b"><param name="Name" value="AddAndPlayMediaAsync(Uri videoSource)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a214ed36afd93bcd2332e5620617350ac"><param name="Name" value="AddMedia_OnClick(object&quest; sender, RoutedEventArgs e)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a7634c91ab308f8db99b508aa8bfed46d"><param name="Name" value="AddSubtitleFile_Click(object&quest; sender, RoutedEventArgs e)"></OBJECT>
@@ -100,7 +110,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i.html"><param name="Name" value="AIMediaPlayer::Models::PlaylistItemUI"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i.html#a061448c3689f47ca4109c916a6d42a66"><param name="Name" value="Thumbnail"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i.html#a6c0b6c8e07b6c4baed6458538fc4ffb4"><param name="Name" value="Thumbnail"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i.html"><param name="Name" value="AIMediaPlayer::Models::PlaylistItemUI"></OBJECT>
   <UL>
@@ -270,11 +280,11 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html"><param name="Name" value="AIMediaPlayer::States::IPlayerState"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#ab8dba6af141f6aaf2e00daea9dd76fed"><param name="Name" value="PlayPause(MainWindow context)"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#aa8e5b583e579c1034cf617fba27dee38"><param name="Name" value="PlayPause(MediaPlayer mediaPlayer)"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html"><param name="Name" value="AIMediaPlayer::States::IPlayerState"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#a0b3092a9c29e189473c80973546a7919"><param name="Name" value="Stop(MainWindow context)"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#ac677b9b52ad92b50a2946918d2f90973"><param name="Name" value="Stop(MediaPlayer mediaPlayer)"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html"><param name="Name" value="AIMediaPlayer::States::PausedState"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html"><param name="Name" value="AIMediaPlayer::States::PausedState"></OBJECT>
@@ -283,11 +293,11 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html"><param name="Name" value="AIMediaPlayer::States::PausedState"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html#a1975dcccb508a7dbb9a0afe044b88b5a"><param name="Name" value="PlayPause(MainWindow context)"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html#ad5e1145a95f63e0d15bff95590389a81"><param name="Name" value="PlayPause(MediaPlayer mediaPlayer)"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html"><param name="Name" value="AIMediaPlayer::States::PausedState"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html#aa8cfe2f535b6dece8c925716e2578349"><param name="Name" value="Stop(MainWindow context)"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html#a8624950d5c2997d78e1ff37fe2b79a44"><param name="Name" value="Stop(MediaPlayer mediaPlayer)"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html"><param name="Name" value="AIMediaPlayer::States::PlayingState"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html"><param name="Name" value="AIMediaPlayer::States::PlayingState"></OBJECT>
@@ -296,11 +306,11 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html"><param name="Name" value="AIMediaPlayer::States::PlayingState"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html#aed8e6febdcdbfe87ce1bcdffdbe6c8fe"><param name="Name" value="PlayPause(MainWindow context)"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html#ac8cfc1e7720b492f5951b38925478408"><param name="Name" value="PlayPause(MediaPlayer mediaPlayer)"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html"><param name="Name" value="AIMediaPlayer::States::PlayingState"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html#a8043fa36c494d0494a7c08c0670575ce"><param name="Name" value="Stop(MainWindow context)"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html#a70cbca285e7e79b92a94d822fe1ebcfc"><param name="Name" value="Stop(MediaPlayer mediaPlayer)"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html"><param name="Name" value="AIMediaPlayer::States::StoppedState"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html"><param name="Name" value="AIMediaPlayer::States::StoppedState"></OBJECT>
@@ -309,11 +319,11 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html"><param name="Name" value="AIMediaPlayer::States::StoppedState"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html#aa112fa33e7b641a839b903f7f6bd15a2"><param name="Name" value="PlayPause(MainWindow context)"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html#a2441c7f6f525026e8fe7e5f20dce4ff7"><param name="Name" value="PlayPause(MediaPlayer mediaPlayer)"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html"><param name="Name" value="AIMediaPlayer::States::StoppedState"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html#a4c91780e3e9950addfd127dffec531c8"><param name="Name" value="Stop(MainWindow context)"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html#af6b64df71c14099e3c54701107191f91"><param name="Name" value="Stop(MediaPlayer mediaPlayer)"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_view_locator.html"><param name="Name" value="AIMediaPlayer::ViewLocator"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_view_locator.html"><param name="Name" value="AIMediaPlayer::ViewLocator"></OBJECT>
@@ -328,7 +338,7 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_view_models_1_1_main_window_view_model.html"><param name="Name" value="AIMediaPlayer::ViewModels::MainWindowViewModel"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_view_models_1_1_main_window_view_model.html"><param name="Name" value="AIMediaPlayer::ViewModels::MainWindowViewModel"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_view_models_1_1_main_window_view_model.html#afaf20815d3e8e2b7b99452a025a7f08f"><param name="Name" value="_videoSource"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_view_models_1_1_main_window_view_model.html#a21b692380ab9c5bb9e63619aba9cbfad"><param name="Name" value="_videoSource"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_view_models_1_1_main_window_view_model.html"><param name="Name" value="AIMediaPlayer::ViewModels::MainWindowViewModel"></OBJECT>
   <UL>
@@ -475,10 +485,17 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html"><param name="Name" value="AIMediaPlayer::Views::MainWindow"></OBJECT>
   <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a4b877c6f06b6384cefcc1443712dce45"><param name="Name" value="UserManual_Click(object&quest; sender, RoutedEventArgs e)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html"><param name="Name" value="AIMediaPlayer::Views::MainWindow"></OBJECT>
+  <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a814fabda44a46bb559a95e454b9ac056"><param name="Name" value="VolumeSlider_PropertyChanged(object&quest; sender, Avalonia.AvaloniaPropertyChangedEventArgs e)"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_view_locator.html#a6526049b249a36b0bbda00a4655e179d"><param name="Name" value="Build(object&quest; param)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#a8e6c694bffcb9a8549ae8bc7fcdcf753"><param name="Name" value="Constructor_AllPropertiesCanBeSetViaInitializer()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a928d14b21ea6222cdd381732341c1dc7"><param name="Name" value="CreateSilentWav(string dir, string name=&quot;test.wav&quot;)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_state.html#ad19b4145f43c3803bdfb27a4fb9f4b4a"><param name="Name" value="CurrentIndex"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_state_tests.html#a7da5e502f208454acc1a9bd453773c84"><param name="Name" value="CurrentIndex_SetAndGet_ReturnsCorrectValue()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#ac1923cf1881558b35103c7c5bab7d29f"><param name="Name" value="GetButtonIcon()"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#ac1923cf1881558b35103c7c5bab7d29f"><param name="Name" value="AIMediaPlayer::States::IPlayerState"></OBJECT>
@@ -503,6 +520,8 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_services_1_1_playlist_manager.html#ad11ee906bc42c5179f409d32509bd57a"><param name="Name" value="AIMediaPlayer::Services::PlaylistManager"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a1d7cf2bc77fa77c878d0568f108d9d8a"><param name="Name" value="GetCurrent_AfterAdd_ReturnsMedia()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a8d8a94880c48d9144d896b7cf66e0aab"><param name="Name" value="GetCurrent_EmptyPlaylist_ReturnsNull()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager.html#a37180e19a66ca8f9474d5c2b8cc6a388"><param name="Name" value="GetMedia(string title)"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager.html#a37180e19a66ca8f9474d5c2b8cc6a388"><param name="Name" value="AIMediaPlayer::Services::IPlaylistManager"></OBJECT>
@@ -521,6 +540,11 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_app.html#a306f5e8177b61a3c4a23e389c3ea297e"><param name="Name" value="Initialize()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_state.html#afb8e5d47acd9f348f59d57b811fb7b84"><param name="Name" value="Items"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_state_tests.html#aa1704dd805cf7c841827ec47ddcd9b93"><param name="Name" value="Items_DefaultsToNull_WhenNotAssigned()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_state_tests.html#ab2f466120224417b3cb525b6518d4121"><param name="Name" value="Items_SetAndGet_ReturnsCorrectList()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html#ad48ae3dedbf496ff9d24ff24291a9193"><param name="Name" value="JsonDeserialization_MissingFields_DefaultsToNull()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html#a80119e08d8c3dd70d6c135dd67ab591a"><param name="Name" value="JsonSerialization_RoundTrip_PreservesAllFields()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_state_tests.html#af14f46408a45e2be08378247775d5af7"><param name="Name" value="JsonSerialization_RoundTrip_PreservesIndexAndItems()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager.html#a91f19fbc3f1e5150b3b25f9545a4a486"><param name="Name" value="ListAll()"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager.html#a91f19fbc3f1e5150b3b25f9545a4a486"><param name="Name" value="AIMediaPlayer::Services::IPlaylistManager"></OBJECT>
@@ -547,8 +571,136 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_exceptions_1_1_media_player_exception.html#a497e4056e561c28e5a8098c98325eea2"><param name="Name" value="MediaPlayerException(string message)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_exceptions_1_1_media_player_exception.html#a78c53782d3bfc96a9634c303d6e20d8d"><param name="Name" value="MediaPlayerException(string message, Exception innerException)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_exceptions_1_1_media_player_exception.html#afffdf405c15266e6c33315e547181270"><param name="Name" value="MediaPlayerException(string message, string operationName, Exception innerException=null)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="namespace_media_player_tests.html"><param name="Name" value="MediaPlayerTests"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemStateTests"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemStateTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html#ad48ae3dedbf496ff9d24ff24291a9193"><param name="Name" value="JsonDeserialization_MissingFields_DefaultsToNull()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemStateTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html#a80119e08d8c3dd70d6c135dd67ab591a"><param name="Name" value="JsonSerialization_RoundTrip_PreservesAllFields()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemStateTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html#abd4b77e0f0952502375dac341c5f2d6d"><param name="Name" value="Mrl_SetAndGet_ReturnsCorrectValue()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemStateTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html#a3539859063b9427021cff23b128ef83f"><param name="Name" value="ThumbnailPath_SetAndGet_ReturnsCorrectValue()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemStateTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html#aea8a75842e66ff7467c4ea78e7d02f53"><param name="Name" value="Title_SetAndGet_ReturnsCorrectValue()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemUITests"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemUITests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#a8e6c694bffcb9a8549ae8bc7fcdcf753"><param name="Name" value="Constructor_AllPropertiesCanBeSetViaInitializer()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemUITests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#ad801314cdc98265b9c309d1fb0466c2e"><param name="Name" value="MediaType_Default_IsMediaFile()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemUITests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#ab2db00abf6766a60fbff7dc17583b858"><param name="Name" value="MediaType_SetToKnownValues_ReturnsExpectedString(string mediaType)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemUITests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#a1b0dc5c3972a667612bdda960c0eb80f"><param name="Name" value="Thumbnail_Default_IsNull()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemUITests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#a7b347c709c39d4f35deb600c4d6537cc"><param name="Name" value="Thumbnail_SetToNonNull_ThenBackToNull_IsNull()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemUITests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#affc198adf18f6414e8c887c106e7bdb3"><param name="Name" value="Title_Default_IsEmptyString()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemUITests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#a5d87b6d6e1d89e95019210c6f2dd0090"><param name="Name" value="Title_SetAndGet_ReturnsCorrectValue()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistItemUITests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#af4bb6d82b5e7a53a7c9ed5e508bb18e1"><param name="Name" value="Title_SetToNull_IsNull()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a66fdb8ea6a3f30a751f27671ae8a5c23"><param name="Name" value="_manager"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#ac127de899dc5edae2ebe84dafd39797b"><param name="Name" value="_tempDir"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a3ca0ce8849c260f92a33cbf5bf00bac3"><param name="Name" value="_vlc"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a0fd08f8ecd921475fa7c10b8b28ae07c"><param name="Name" value="Add_ValidAudioFile_ReturnsTrue()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a928d14b21ea6222cdd381732341c1dc7"><param name="Name" value="CreateSilentWav(string dir, string name=&quot;test.wav&quot;)"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a1d7cf2bc77fa77c878d0568f108d9d8a"><param name="Name" value="GetCurrent_AfterAdd_ReturnsMedia()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a8d8a94880c48d9144d896b7cf66e0aab"><param name="Name" value="GetCurrent_EmptyPlaylist_ReturnsNull()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a830aa31b0003d147ef4e40e478353419"><param name="Name" value="OneTimeSetUp()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a2cad8e3c1acc640e33d4c278518814ed"><param name="Name" value="OneTimeTearDown()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a2ae1238cd614f94586ed97b83d524188"><param name="Name" value="SaveAndLoad_RoundTrip_RestoresItemCount()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a0c24944f5c759ed1292ff6db73db9b25"><param name="Name" value="SavePlaylist_CreatesJsonFile()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a5cae46fbfd7fb63058c8776231cbba79"><param name="Name" value="SetUp()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistManagerIntegrationTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a41680ec88d846e2e51ea445d8cb4f916"><param name="Name" value="TearDown()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_state_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistStateTests"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_state_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistStateTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_state_tests.html#a7da5e502f208454acc1a9bd453773c84"><param name="Name" value="CurrentIndex_SetAndGet_ReturnsCorrectValue()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_state_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistStateTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_state_tests.html#aa1704dd805cf7c841827ec47ddcd9b93"><param name="Name" value="Items_DefaultsToNull_WhenNotAssigned()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_state_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistStateTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_state_tests.html#ab2f466120224417b3cb525b6518d4121"><param name="Name" value="Items_SetAndGet_ReturnsCorrectList()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_state_tests.html"><param name="Name" value="MediaPlayerTests::PlaylistStateTests"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_state_tests.html#af14f46408a45e2be08378247775d5af7"><param name="Name" value="JsonSerialization_RoundTrip_PreservesIndexAndItems()"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i.html#aff4f6ce644dd0b4095e5673f7cb26522"><param name="Name" value="MediaType"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#ad801314cdc98265b9c309d1fb0466c2e"><param name="Name" value="MediaType_Default_IsMediaFile()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#ab2db00abf6766a60fbff7dc17583b858"><param name="Name" value="MediaType_SetToKnownValues_ReturnsExpectedString(string mediaType)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_item_state.html#ae42c933df1424aee5e56cacb9d951b3d"><param name="Name" value="Mrl"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html#abd4b77e0f0952502375dac341c5f2d6d"><param name="Name" value="Mrl_SetAndGet_ReturnsCorrectValue()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager.html#afd85faaf9c6fcb38440471fa7c88c923"><param name="Name" value="Next()"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager.html#afd85faaf9c6fcb38440471fa7c88c923"><param name="Name" value="AIMediaPlayer::Services::IPlaylistManager"></OBJECT>
@@ -560,6 +712,8 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a44ee423b72f52666314afc385c014a66"><param name="Name" value="Next_OnClick(object&quest; sender, RoutedEventArgs e)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_services_1_1_playlist_manager.html#a3c731fa1e13ea5c1106fbde3b4f1006d"><param name="Name" value="NotifyPlaylistChanged()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a2ae451da5b02dfbbf27331c5629b00fd"><param name="Name" value="OnClosed(EventArgs e)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a830aa31b0003d147ef4e40e478353419"><param name="Name" value="OneTimeSetUp()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a2cad8e3c1acc640e33d4c278518814ed"><param name="Name" value="OneTimeTearDown()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_app.html#afd427272c4cc6d22684c4549844cbba6"><param name="Name" value="OnFrameworkInitializationCompleted()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a15d1ab748522e5c106decd1046cce57d"><param name="Name" value="OnUserActivity(object&quest; sender, PointerEventArgs e)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_view_models_1_1_main_window_view_model.html#aaa2ef9793803dfcc2e8aada467baf1d2"><param name="Name" value="OpenFile(IStorageProvider storageProvider)"></OBJECT>
@@ -576,21 +730,21 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_services_1_1_playlist_manager.html#aa3914d15fbb836a4ce476d5a095d621e"><param name="Name" value="AIMediaPlayer::Services::PlaylistManager"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#ac5371de1df2fe480b71c0dc45374e61b"><param name="Name" value="PlayNextMedia()"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#ab8dba6af141f6aaf2e00daea9dd76fed"><param name="Name" value="PlayPause(MainWindow context)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#aa8e5b583e579c1034cf617fba27dee38"><param name="Name" value="PlayPause(MediaPlayer mediaPlayer)"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#ab8dba6af141f6aaf2e00daea9dd76fed"><param name="Name" value="AIMediaPlayer::States::IPlayerState"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#aa8e5b583e579c1034cf617fba27dee38"><param name="Name" value="AIMediaPlayer::States::IPlayerState"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html#a1975dcccb508a7dbb9a0afe044b88b5a"><param name="Name" value="PlayPause(MainWindow context)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html#ad5e1145a95f63e0d15bff95590389a81"><param name="Name" value="PlayPause(MediaPlayer mediaPlayer)"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html#a1975dcccb508a7dbb9a0afe044b88b5a"><param name="Name" value="AIMediaPlayer::States::PausedState"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html#ad5e1145a95f63e0d15bff95590389a81"><param name="Name" value="AIMediaPlayer::States::PausedState"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html#aed8e6febdcdbfe87ce1bcdffdbe6c8fe"><param name="Name" value="PlayPause(MainWindow context)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html#ac8cfc1e7720b492f5951b38925478408"><param name="Name" value="PlayPause(MediaPlayer mediaPlayer)"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html#aed8e6febdcdbfe87ce1bcdffdbe6c8fe"><param name="Name" value="AIMediaPlayer::States::PlayingState"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html#ac8cfc1e7720b492f5951b38925478408"><param name="Name" value="AIMediaPlayer::States::PlayingState"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html#aa112fa33e7b641a839b903f7f6bd15a2"><param name="Name" value="PlayPause(MainWindow context)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html#a2441c7f6f525026e8fe7e5f20dce4ff7"><param name="Name" value="PlayPause(MediaPlayer mediaPlayer)"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html#aa112fa33e7b641a839b903f7f6bd15a2"><param name="Name" value="AIMediaPlayer::States::StoppedState"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html#a2441c7f6f525026e8fe7e5f20dce4ff7"><param name="Name" value="AIMediaPlayer::States::StoppedState"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#ac8e87ee4f073e845ac69a29b68565e5d"><param name="Name" value="PlayPause_OnClick(object&quest; sender, RoutedEventArgs e)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a56eefeb6d669fcc3186fde7f63dc6c28"><param name="Name" value="Prev_OnClick(object&quest; sender, RoutedEventArgs e)"></OBJECT>
@@ -630,6 +784,7 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_services_1_1_playlist_manager.html#a68c0926c65e743270d50f39b30497b6d"><param name="Name" value="AIMediaPlayer::Services::PlaylistManager"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a2ae1238cd614f94586ed97b83d524188"><param name="Name" value="SaveAndLoad_RoundTrip_RestoresItemCount()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager.html#a80937d04e15614fa0fb02b8c976fdcae"><param name="Name" value="SavePlaylist(string path)"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager.html#a80937d04e15614fa0fb02b8c976fdcae"><param name="Name" value="AIMediaPlayer::Services::IPlaylistManager"></OBJECT>
@@ -638,6 +793,7 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_services_1_1_playlist_manager.html#a36c8fddcba66f2432ba8cce263d176e6"><param name="Name" value="AIMediaPlayer::Services::PlaylistManager"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a0c24944f5c759ed1292ff6db73db9b25"><param name="Name" value="SavePlaylist_CreatesJsonFile()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#ac96f6518954fcf1dfff6cf26d4410175"><param name="Name" value="SavePlaylist_OnClick(object&quest; sender, RoutedEventArgs e)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager.html#a3452a3bfbb60a755361a6a76e338eb9d"><param name="Name" value="SetCurrentIndex(int index)"></OBJECT>
   <UL>
@@ -648,6 +804,7 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_services_1_1_playlist_manager.html#ab5140c1420d4571066d593f50f2ca818"><param name="Name" value="AIMediaPlayer::Services::PlaylistManager"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#abf0e50ac9dc0e9508c8857d9cb772186"><param name="Name" value="SetState(States.IPlayerState newState)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a5cae46fbfd7fb63058c8776231cbba79"><param name="Name" value="SetUp()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager.html#a847c888edac18c576f6216d21e96e74f"><param name="Name" value="Shuffle()"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_services_1_1_i_playlist_manager.html#a847c888edac18c576f6216d21e96e74f"><param name="Name" value="AIMediaPlayer::Services::IPlaylistManager"></OBJECT>
@@ -657,26 +814,30 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_services_1_1_playlist_manager.html#a851606426ef9d98e4e277d89dcc52631"><param name="Name" value="AIMediaPlayer::Services::PlaylistManager"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#abeb491272be5fe8f689ae171ad852285"><param name="Name" value="Shuffle_OnClick(object&quest; sender, RoutedEventArgs e)"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#a0b3092a9c29e189473c80973546a7919"><param name="Name" value="Stop(MainWindow context)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#ac677b9b52ad92b50a2946918d2f90973"><param name="Name" value="Stop(MediaPlayer mediaPlayer)"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#a0b3092a9c29e189473c80973546a7919"><param name="Name" value="AIMediaPlayer::States::IPlayerState"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#ac677b9b52ad92b50a2946918d2f90973"><param name="Name" value="AIMediaPlayer::States::IPlayerState"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html#aa8cfe2f535b6dece8c925716e2578349"><param name="Name" value="Stop(MainWindow context)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html#a8624950d5c2997d78e1ff37fe2b79a44"><param name="Name" value="Stop(MediaPlayer mediaPlayer)"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html#aa8cfe2f535b6dece8c925716e2578349"><param name="Name" value="AIMediaPlayer::States::PausedState"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_paused_state.html#a8624950d5c2997d78e1ff37fe2b79a44"><param name="Name" value="AIMediaPlayer::States::PausedState"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html#a8043fa36c494d0494a7c08c0670575ce"><param name="Name" value="Stop(MainWindow context)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html#a70cbca285e7e79b92a94d822fe1ebcfc"><param name="Name" value="Stop(MediaPlayer mediaPlayer)"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html#a8043fa36c494d0494a7c08c0670575ce"><param name="Name" value="AIMediaPlayer::States::PlayingState"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_playing_state.html#a70cbca285e7e79b92a94d822fe1ebcfc"><param name="Name" value="AIMediaPlayer::States::PlayingState"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html#a4c91780e3e9950addfd127dffec531c8"><param name="Name" value="Stop(MainWindow context)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html#af6b64df71c14099e3c54701107191f91"><param name="Name" value="Stop(MediaPlayer mediaPlayer)"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html#a4c91780e3e9950addfd127dffec531c8"><param name="Name" value="AIMediaPlayer::States::StoppedState"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_states_1_1_stopped_state.html#af6b64df71c14099e3c54701107191f91"><param name="Name" value="AIMediaPlayer::States::StoppedState"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a2493988cde4da2242001ff15434616ce"><param name="Name" value="Stop_OnClick(object&quest; sender, RoutedEventArgs e)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#ac47501e190db366cba73c974bc54cbc6"><param name="Name" value="SyncPlaylistSelection()"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i.html#a061448c3689f47ca4109c916a6d42a66"><param name="Name" value="Thumbnail"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_manager_integration_tests.html#a41680ec88d846e2e51ea445d8cb4f916"><param name="Name" value="TearDown()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i.html#a6c0b6c8e07b6c4baed6458538fc4ffb4"><param name="Name" value="Thumbnail"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#a1b0dc5c3972a667612bdda960c0eb80f"><param name="Name" value="Thumbnail_Default_IsNull()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#a7b347c709c39d4f35deb600c4d6537cc"><param name="Name" value="Thumbnail_SetToNonNull_ThenBackToNull_IsNull()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_item_state.html#ac46100cafdb28fcbf3f0920b0cdc1e7c"><param name="Name" value="ThumbnailPath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html#a3539859063b9427021cff23b128ef83f"><param name="Name" value="ThumbnailPath_SetAndGet_ReturnsCorrectValue()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_item_state.html#a1339f0680292409f38616013acfc7436"><param name="Name" value="Title"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_item_state.html#a1339f0680292409f38616013acfc7436"><param name="Name" value="AIMediaPlayer::Models::PlaylistItemState"></OBJECT>
@@ -685,8 +846,19 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_playlist_item_u_i.html#a82f0903c86cabff5ab800140a7588abd"><param name="Name" value="AIMediaPlayer::Models::PlaylistItemUI"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#affc198adf18f6414e8c887c106e7bdb3"><param name="Name" value="Title_Default_IsEmptyString()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html#aea8a75842e66ff7467c4ea78e7d02f53"><param name="Name" value="Title_SetAndGet_ReturnsCorrectValue()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_state_tests.html#aea8a75842e66ff7467c4ea78e7d02f53"><param name="Name" value="MediaPlayerTests::PlaylistItemStateTests"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#a5d87b6d6e1d89e95019210c6f2dd0090"><param name="Name" value="Title_SetAndGet_ReturnsCorrectValue()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#a5d87b6d6e1d89e95019210c6f2dd0090"><param name="Name" value="MediaPlayerTests::PlaylistItemUITests"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_media_player_tests_1_1_playlist_item_u_i_tests.html#af4bb6d82b5e7a53a7c9ed5e508bb18e1"><param name="Name" value="Title_SetToNull_IsNull()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#abd7d7734407aed8df5863bd530d62bd9"><param name="Name" value="UpdateMediaListUI()"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a08c0a7b4dc33383b0d431d7fd0852dcc"><param name="Name" value="UpdateSubtitleList()"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a4b877c6f06b6384cefcc1443712dce45"><param name="Name" value="UserManual_Click(object&quest; sender, RoutedEventArgs e)"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_models_1_1_media_data.html#a9e0ed307f52c19245c1c561988eaa863"><param name="Name" value="vlc"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="class_a_i_media_player_1_1_views_1_1_main_window.html#a814fabda44a46bb559a95e454b9ac056"><param name="Name" value="VolumeSlider_PropertyChanged(object&quest; sender, Avalonia.AvaloniaPropertyChangedEventArgs e)"></OBJECT>
 </UL>

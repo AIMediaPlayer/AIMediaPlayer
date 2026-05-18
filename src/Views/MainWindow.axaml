@@ -60,6 +60,8 @@
                                 <MenuItem Header="Subtitle list" Name="SubtitleListMenu" IsEnabled="False" ToolTip.Tip="Select an embedded subtitle track"/>
                             </MenuItem>
 							<MenuItem Header="Help">
+								<MenuItem Header="User Manual" Click="UserManual_Click"/>
+                                <Separator Background="Gray"/>
 								<MenuItem Header="About" Click="About_Click" ToolTip.Tip="About the application"/>
 							</MenuItem>
                         </Menu>

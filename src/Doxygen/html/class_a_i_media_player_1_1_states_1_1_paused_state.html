@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AIMediaPlayer: AIMediaPlayer.States.PausedState Class Reference</title>
+<title>AIMediPlayer: AIMediaPlayer.States.PausedState Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -19,7 +19,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo.ico"/></td>
   <td id="projectalign">
-   <div id="projectname">AIMediaPlayer<span id="projectnumber">&#160;1.0.0</span>
+   <div id="projectname">AIMediPlayer<span id="projectnumber">&#160;1.0.0</span>
    </div>
   </td>
  </tr>
@@ -77,12 +77,12 @@ Inheritance diagram for AIMediaPlayer.States.PausedState:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1975dcccb508a7dbb9a0afe044b88b5a" id="r_a1975dcccb508a7dbb9a0afe044b88b5a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1975dcccb508a7dbb9a0afe044b88b5a">PlayPause</a> (<a class="el" href="class_a_i_media_player_1_1_views_1_1_main_window.html">MainWindow</a> context)</td></tr>
-<tr class="memdesc:a1975dcccb508a7dbb9a0afe044b88b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestionează acțiunea butonului Play/Pause în funcție de starea curentă a player-ului.  <br /></td></tr>
-<tr class="memitem:aa8cfe2f535b6dece8c925716e2578349" id="r_aa8cfe2f535b6dece8c925716e2578349"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa8cfe2f535b6dece8c925716e2578349">Stop</a> (<a class="el" href="class_a_i_media_player_1_1_views_1_1_main_window.html">MainWindow</a> context)</td></tr>
-<tr class="memdesc:aa8cfe2f535b6dece8c925716e2578349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestionează acțiunea butonului de Stop.  <br /></td></tr>
+<tr class="memitem:ad5e1145a95f63e0d15bff95590389a81" id="r_ad5e1145a95f63e0d15bff95590389a81"><td class="memItemLeft"><a class="el" href="interface_a_i_media_player_1_1_states_1_1_i_player_state.html">IPlayerState</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad5e1145a95f63e0d15bff95590389a81">PlayPause</a> (MediaPlayer mediaPlayer)</td></tr>
+<tr class="memdesc:ad5e1145a95f63e0d15bff95590389a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestionează acțiunea butonului Play/Pause în starea de pauză, reluând redarea fluxului media.  <br /></td></tr>
+<tr class="memitem:a8624950d5c2997d78e1ff37fe2b79a44" id="r_a8624950d5c2997d78e1ff37fe2b79a44"><td class="memItemLeft"><a class="el" href="interface_a_i_media_player_1_1_states_1_1_i_player_state.html">IPlayerState</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8624950d5c2997d78e1ff37fe2b79a44">Stop</a> (MediaPlayer mediaPlayer)</td></tr>
+<tr class="memdesc:a8624950d5c2997d78e1ff37fe2b79a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestionează acțiunea butonului de Stop în starea de pauză, oprind complet redarea fișierului.  <br /></td></tr>
 <tr class="memitem:aadf7216b2cee4e3af02e7796a3b10b84" id="r_aadf7216b2cee4e3af02e7796a3b10b84"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#aadf7216b2cee4e3af02e7796a3b10b84">GetButtonIcon</a> ()</td></tr>
-<tr class="memdesc:aadf7216b2cee4e3af02e7796a3b10b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oferă iconița (caracterul vizual) potrivită pentru butonul de Play/Pause conform stării curente.  <br /></td></tr>
+<tr class="memdesc:aadf7216b2cee4e3af02e7796a3b10b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oferă iconița (caracterul vizual) potrivită pentru butonul de Play/Pause conform stării de pauză.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Reprezintă starea de pauză a player-ului media în cadrul șablonului de proiectare State. </p>
@@ -102,69 +102,71 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Oferă iconița (caracterul vizual) potrivită pentru butonul de Play/Pause conform stării curente. </p>
-<dl class="section return"><dt>Returns</dt><dd>Un string reprezentând iconița (ex. "▶" sau "❚❚").</dd></dl>
+<p>Oferă iconița (caracterul vizual) potrivită pentru butonul de Play/Pause conform stării de pauză. </p>
+<dl class="section return"><dt>Returns</dt><dd>Un string reprezentând iconița de redare ("▶").</dd></dl>
 
 <p>Implements <a class="el" href="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#ac1923cf1881558b35103c7c5bab7d29f">AIMediaPlayer.States.IPlayerState</a>.</p>
 
 </div>
 </div>
-<a id="a1975dcccb508a7dbb9a0afe044b88b5a" name="a1975dcccb508a7dbb9a0afe044b88b5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1975dcccb508a7dbb9a0afe044b88b5a">&#9670;&#160;</a></span>PlayPause()</h2>
+<a id="ad5e1145a95f63e0d15bff95590389a81" name="ad5e1145a95f63e0d15bff95590389a81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5e1145a95f63e0d15bff95590389a81">&#9670;&#160;</a></span>PlayPause()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AIMediaPlayer.States.PausedState.PlayPause </td>
+          <td class="memname"><a class="el" href="interface_a_i_media_player_1_1_states_1_1_i_player_state.html">IPlayerState</a> AIMediaPlayer.States.PausedState.PlayPause </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_a_i_media_player_1_1_views_1_1_main_window.html">MainWindow</a></td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td class="paramtype">MediaPlayer</td>          <td class="paramname"><span class="paramname"><em>mediaPlayer</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gestionează acțiunea butonului Play/Pause în funcție de starea curentă a player-ului. </p>
+<p>Gestionează acțiunea butonului Play/Pause în starea de pauză, reluând redarea fluxului media. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">context</td><td>Fereastra principală care conține instanța MediaPlayer.</td></tr>
+    <tr><td class="paramname">mediaPlayer</td><td>Instanța de MediaPlayer pe care se execută acțiunea.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Noua stare a player-ului media după pornire (<a class="el" href="class_a_i_media_player_1_1_states_1_1_playing_state.html" title="Reprezintă starea activă de redare a player-ului media în cadrul șablonului de proiectare State.">PlayingState</a>).</dd></dl>
 
-<p>Implements <a class="el" href="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#ab8dba6af141f6aaf2e00daea9dd76fed">AIMediaPlayer.States.IPlayerState</a>.</p>
+<p>Implements <a class="el" href="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#aa8e5b583e579c1034cf617fba27dee38">AIMediaPlayer.States.IPlayerState</a>.</p>
 
 </div>
 </div>
-<a id="aa8cfe2f535b6dece8c925716e2578349" name="aa8cfe2f535b6dece8c925716e2578349"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8cfe2f535b6dece8c925716e2578349">&#9670;&#160;</a></span>Stop()</h2>
+<a id="a8624950d5c2997d78e1ff37fe2b79a44" name="a8624950d5c2997d78e1ff37fe2b79a44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8624950d5c2997d78e1ff37fe2b79a44">&#9670;&#160;</a></span>Stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AIMediaPlayer.States.PausedState.Stop </td>
+          <td class="memname"><a class="el" href="interface_a_i_media_player_1_1_states_1_1_i_player_state.html">IPlayerState</a> AIMediaPlayer.States.PausedState.Stop </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_a_i_media_player_1_1_views_1_1_main_window.html">MainWindow</a></td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td class="paramtype">MediaPlayer</td>          <td class="paramname"><span class="paramname"><em>mediaPlayer</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gestionează acțiunea butonului de Stop. </p>
+<p>Gestionează acțiunea butonului de Stop în starea de pauză, oprind complet redarea fișierului. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">context</td><td>Fereastra principală care conține instanța MediaPlayer.</td></tr>
+    <tr><td class="paramname">mediaPlayer</td><td>Instanța de MediaPlayer pe care se execută acțiunea.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Noua stare a player-ului media după oprire (<a class="el" href="class_a_i_media_player_1_1_states_1_1_stopped_state.html" title="Reprezintă starea de oprire a player-ului media în cadrul șablonului de proiectare State.">StoppedState</a>).</dd></dl>
 
-<p>Implements <a class="el" href="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#a0b3092a9c29e189473c80973546a7919">AIMediaPlayer.States.IPlayerState</a>.</p>
+<p>Implements <a class="el" href="interface_a_i_media_player_1_1_states_1_1_i_player_state.html#ac677b9b52ad92b50a2946918d2f90973">AIMediaPlayer.States.IPlayerState</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/src/States/<a class="el" href="_paused_state_8cs.html">PausedState.cs</a></li>
+<li>C:/Users/leo/AppData/Roaming/SPB_Data/IP_Proiect/Remote/MediaPlayer.States/<a class="el" href="_paused_state_8cs.html">PausedState.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

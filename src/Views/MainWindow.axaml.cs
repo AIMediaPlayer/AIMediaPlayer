@@ -683,14 +683,28 @@ public partial class MainWindow : Window
     }
 
     /// <summary>
-    /// Deschide fișierul de ajutor al aplicației
+    /// Deschide fișierul .chm despre program
     /// </summary>
     private async void About_Click(object? sender, RoutedEventArgs e)
     {
         Process.Start(new ProcessStartInfo
         {
             FileName = "hh.exe",
-            Arguments = "AIMediaPlayer_help.chm",
+            Arguments = "AIMediaPlayer_About.chm",
+            UseShellExecute = true,
+        });
+    }
+
+
+    /// <summary>
+    /// Deschide un manual de utilizare pentru utilizatori care vor sa foloseasca aplicatia
+    /// </summary>
+    private async void UserManual_Click(object? sender, RoutedEventArgs e)
+    {
+        Process.Start(new ProcessStartInfo
+        {
+            FileName = "hh.exe",
+            Arguments = "AIMediaPlayer_UserManual.chm",
             UseShellExecute = true,
         });
     }

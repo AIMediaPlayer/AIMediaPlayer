@@ -1,0 +1,33 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=AIMediaPlayer_UserManual.chm
+Contents file=AIMediaPlayer.hhc
+Default Font=Arial,8,0
+Default topic=Index.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x418 Româna (România)
+Title=AIMediaPlayer_UserManual
+
+
+[FILES]
+Redare.htm
+SeekRedare.htm
+Subtitrari.htm
+SelectareSubtitrari.htm
+ButoaneRedare.htm
+VolumRedare.htm
+ManipularePlaylist.htm
+AdugareSubtitrari.htm
+AdaugarePlaylist.htm
+EliminarePlaylist.htm
+RedarePlaylist.htm
+SalavarePlaylist.htm
+IncarcarePlaylist.htm
+Index.htm
+Pornire.htm
+Introducere.htm
+Playlist.htm
+
+[INFOTYPES]
+
