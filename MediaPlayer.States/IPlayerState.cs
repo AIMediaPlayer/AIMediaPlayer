@@ -14,7 +14,8 @@
  * PURPOSE. See the GNU General Public License for more details.         *
  * *
  **************************************************************************/
-using AIMediaPlayer.Views;
+using LibVLCSharp.Shared;
+
 
 namespace AIMediaPlayer.States
 {
@@ -33,13 +34,13 @@ namespace AIMediaPlayer.States
         /// Gestionează acțiunea butonului Play/Pause în funcție de starea curentă a player-ului.
         /// </summary>
         /// <param name="context">Fereastra principală care conține instanța MediaPlayer.</param>
-        void PlayPause(MainWindow context);
+        IPlayerState PlayPause(MediaPlayer mediaPlayer);
 
         /// <summary>
         /// Gestionează acțiunea butonului de Stop.
         /// </summary>
         /// <param name="context">Fereastra principală care conține instanța MediaPlayer.</param>
-        void Stop(MainWindow context);
+        IPlayerState Stop(MediaPlayer mediaPlayer);
 
         /// <summary>
         /// Oferă iconița (caracterul vizual) potrivită pentru butonul de Play/Pause conform stării curente.

@@ -14,7 +14,7 @@
  * PURPOSE. See the GNU General Public License for more details.         *
  * *
  **************************************************************************/
-using AIMediaPlayer.Views;
+using LibVLCSharp.Shared;
 
 namespace AIMediaPlayer.States
 {
@@ -25,29 +25,31 @@ namespace AIMediaPlayer.States
     public class PausedState : IPlayerState
     {
         /// <summary>
-        /// Gestionează acțiunea butonului Play/Pause în funcție de starea curentă a player-ului.
+        /// Gestionează acțiunea butonului Play/Pause în starea de pauză, reluând redarea fluxului media.
         /// </summary>
-        /// <param name="context">Fereastra principală care conține instanța MediaPlayer.</param>
-        public void PlayPause(MainWindow context)
+        /// <param name="mediaPlayer">Instanța de MediaPlayer pe care se execută acțiunea.</param>
+        /// <returns>Noua stare a player-ului media după pornire (PlayingState).</returns>
+        public IPlayerState PlayPause(MediaPlayer mediaPlayer)
         {
-            context.MediaPlayer.Play();
-            context.SetState(new PlayingState());
+            mediaPlayer.Play();
+            return new PlayingState();
         }
 
         /// <summary>
-        /// Gestionează acțiunea butonului de Stop.
+        /// Gestionează acțiunea butonului de Stop în starea de pauză, oprind complet redarea fișierului.
         /// </summary>
-        /// <param name="context">Fereastra principală care conține instanța MediaPlayer.</param>
-        public void Stop(MainWindow context)
+        /// <param name="mediaPlayer">Instanța de MediaPlayer pe care se execută acțiunea.</param>
+        /// <returns>Noua stare a player-ului media după oprire (StoppedState).</returns>
+        public IPlayerState Stop(MediaPlayer mediaPlayer)
         {
-            context.MediaPlayer.Stop();
-            context.SetState(new StoppedState());
+            mediaPlayer.Stop();
+            return new StoppedState();
         }
 
         /// <summary>
-        /// Oferă iconița (caracterul vizual) potrivită pentru butonul de Play/Pause conform stării curente.
+        /// Oferă iconița (caracterul vizual) potrivită pentru butonul de Play/Pause conform stării de pauză.
         /// </summary>
-        /// <returns>Un string reprezentând iconița (ex. "▶" sau "❚❚").</returns>
+        /// <returns>Un string reprezentând iconița de redare ("▶").</returns>
         public string GetButtonIcon() => "▶";
     }
 }

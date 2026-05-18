@@ -30,6 +30,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
+
 namespace AIMediaPlayer.Views;
 
 /// <summary>
@@ -406,7 +407,8 @@ public partial class MainWindow : Window
     /// </summary>
     private void PlayPause_OnClick(object? sender, RoutedEventArgs e)
     {
-        _currentState.PlayPause(this);
+        var newState = _currentState.PlayPause(_mediaPlayer);
+        SetState(newState);
     }
 
     /// <summary>
@@ -414,7 +416,8 @@ public partial class MainWindow : Window
     /// </summary>
     private void Stop_OnClick(object? sender, RoutedEventArgs e)
     {
-        _currentState.Stop(this);
+        var newState = _currentState.Stop(_mediaPlayer);
+        SetState(newState);
         var titleLabel = this.FindControl<TextBlock>("TitleLabel");
         if (titleLabel != null) titleLabel.Text = "No media loaded";
     }

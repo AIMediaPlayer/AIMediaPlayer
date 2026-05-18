@@ -33,6 +33,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AVMediaPlayer.Models\AIMediaPlayer.Models.csproj" />
+    <ProjectReference Include="..\AVMediaPlayer.Services\AIMediaPlayer.Services.csproj" />
+    <ProjectReference Include="..\AVMediaPlayer.ViewModels\AIMediaPlayer.ViewModels.csproj" />
+    <ProjectReference Include="..\MediaPlayer.Exceptions\MediaPlayer.Exceptions.csproj" />
+    <ProjectReference Include="..\MediaPlayer.Models\MediaPlayer.Models.csproj" />
+    <ProjectReference Include="..\MediaPlayer.Services\MediaPlayer.Services.csproj" />
+    <ProjectReference Include="..\MediaPlayer.States\MediaPlayer.States.csproj" />
+    <ProjectReference Include="..\MediaPlayer.ViewModels\MediaPlayer.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="resources\transcript.srt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

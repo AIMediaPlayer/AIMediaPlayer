@@ -107,7 +107,6 @@
                 <StackPanel>
                     <Grid ColumnDefinitions="*, Auto" Margin="0,0,0,5">
                         <TextBlock Grid.Column="0" Text="Playlist-ul meu" FontSize="18" FontWeight="Bold" Foreground="White" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" Margin="0,0,10,0"/>
-                        <Button Grid.Column="1" Content="✕" Background="Transparent" Foreground="White" FontSize="16" Padding="5" VerticalAlignment="Center" ToolTip.Tip="Închide playlist"/>
                     </Grid>
 
                     <TextBlock Name="PlaylistStatusLabel" Text="Playlist - 0/0" FontSize="13" Foreground="#AAAAAA" Margin="0,0,0,15"/>
