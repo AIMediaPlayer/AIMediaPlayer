@@ -206,15 +206,27 @@ public partial class MainWindow : Window
 
         InputLayer.PointerPressed += (s, e) =>
         {
-            if (_mediaPlayer == null) return;
+            if (_mediaPlayer == null)
+                return;
+
+            var source = e.Source;
+
+            if (source is Control)
+                return;
 
             var overlayControls = this.FindControl<DockPanel>("OverlayControls");
-            if (overlayControls != null && overlayControls.IsPointerOver) return;
+
+            if (overlayControls != null && overlayControls.IsPointerOver)
+                return;
 
             if (_mediaPlayer.IsPlaying)
                 _mediaPlayer.SetPause(true);
             else
+            {
                 _mediaPlayer.Play();
+                SetState(new States.PlayingState());
+            }
+
         };
     }
 
@@ -440,6 +452,7 @@ public partial class MainWindow : Window
         {
             _mediaPlayer.Media = prevMedia;
             _mediaPlayer.Play();
+            SetState(new States.PlayingState());
         }
     }
 
@@ -454,6 +467,7 @@ public partial class MainWindow : Window
         {
             _mediaPlayer.Media = nextMedia;
             _mediaPlayer.Play();
+            SetState(new States.PlayingState());
         }
     }
 
@@ -489,6 +503,7 @@ public partial class MainWindow : Window
             {
                 _mediaPlayer.Media = media;
                 _mediaPlayer.Play();
+                SetState(new States.PlayingState());
             }
         }
     }
@@ -579,6 +594,7 @@ public partial class MainWindow : Window
                 {
                     _mediaPlayer.Media = currentMedia;
                     _mediaPlayer.Play();
+                    SetState(new States.PlayingState());
                 }
             }
             catch (MediaPlayerException customEx)
@@ -609,6 +625,18 @@ public partial class MainWindow : Window
         {
             var uri = files[0].Path;
             _mediaPlayer.AddSlave(MediaSlaveType.Subtitle, uri.AbsoluteUri, true);
+
+            await Task.Delay(500);
+
+            var descriptions = _mediaPlayer.SpuDescription;
+
+            if (descriptions != null && descriptions.Length > 0)
+            {
+                var lastSubtitle = descriptions[descriptions.Length - 1];
+
+                _mediaPlayer.SetSpu(lastSubtitle.Id);
+            }
+
             UpdateSubtitleList();
         }
     }
