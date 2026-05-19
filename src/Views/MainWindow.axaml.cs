@@ -75,6 +75,7 @@ public partial class MainWindow : Window
         LibVLCSharp.Shared.Core.Initialize();
         _libVLC = new LibVLC();
         _mediaPlayer = new MediaPlayer(_libVLC);
+        _mediaPlayer.Volume = 100;
         _playlistManager = new PlaylistManager(_libVLC);
 
         _currentState = new States.StoppedState(); // Starea inițială
@@ -252,6 +253,7 @@ public partial class MainWindow : Window
             var media = _playlistManager.GetCurrent();
             _mediaPlayer.Media = media;
             _mediaPlayer.Play();
+            SetState(new States.PlayingState());
         }
     }
 
