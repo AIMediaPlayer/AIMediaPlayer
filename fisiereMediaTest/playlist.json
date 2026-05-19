@@ -1,0 +1,20 @@
+{
+  "CurrentIndex": 1,
+  "Items": [
+    {
+      "Mrl": "file:///C:/Users/leo/Downloads/AIMediaPlayer_CHM_Project/fisiereMediaTest/file_example_MP4_1920_18MG.mp4",
+      "Title": "file_example_MP4_1920_18MG.mp4",
+      "ThumbnailPath": null
+    },
+    {
+      "Mrl": "file:///C:/Users/leo/Downloads/AIMediaPlayer_CHM_Project/fisiereMediaTest/file_example_MOV_1920_2_2MB.mov",
+      "Title": "file_example_MOV_1920_2_2MB.mov",
+      "ThumbnailPath": null
+    },
+    {
+      "Mrl": "file:///C:/Users/leo/Downloads/AIMediaPlayer_CHM_Project/fisiereMediaTest/file_example_MOV_1920_2_2MB.mov",
+      "Title": "file_example_MOV_1920_2_2MB.mov",
+      "ThumbnailPath": null
+    }
+  ]
+}
